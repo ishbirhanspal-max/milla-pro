@@ -1,0 +1,299 @@
+<div class="milld-hs" style="position:relative; background-color:#fffbef; color:#121212; font-family:'Inter',system-ui,sans-serif; -webkit-font-smoothing:antialiased; padding-top:0.5rem; padding-bottom:0;">
+<!-- Grain texture overlay: opacity 0.06, mix-blend-mode multiply -->
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0.06;mix-blend-mode:multiply;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+<!-- Floating grain particles (FloatingGrains.tsx — 14 seeds, clipped inside own div) -->
+<div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;">
+<span class="mg-dot" style="left:0%;   width:6px;  height:10px; animation-delay:-3s;  animation-duration:14s; --gx:0px;"></span>
+<span class="mg-dot" style="left:73%;  width:10px; height:16px; animation-delay:-6s;  animation-duration:17s; --gx:-30px;"></span>
+<span class="mg-dot" style="left:46%;  width:14px; height:22px; animation-delay:-9s;  animation-duration:20s; --gx:0px;"></span>
+<span class="mg-dot" style="left:19%;  width:18px; height:29px; animation-delay:-3s;  animation-duration:23s; --gx:30px;"></span>
+<span class="mg-dot" style="left:92%;  width:6px;  height:10px; animation-delay:-6s;  animation-duration:26s; --gx:60px;"></span>
+<span class="mg-dot" style="left:65%;  width:10px; height:16px; animation-delay:-9s;  animation-duration:14s; --gx:-60px;"></span>
+<span class="mg-dot" style="left:38%;  width:14px; height:22px; animation-delay:-3s;  animation-duration:17s; --gx:-30px;"></span>
+<span class="mg-dot" style="left:11%;  width:18px; height:29px; animation-delay:-6s;  animation-duration:20s; --gx:0px;"></span>
+<span class="mg-dot" style="left:84%;  width:6px;  height:10px; animation-delay:-9s;  animation-duration:23s; --gx:30px;"></span>
+<span class="mg-dot" style="left:57%;  width:10px; height:16px; animation-delay:-3s;  animation-duration:26s; --gx:60px;"></span>
+<span class="mg-dot" style="left:30%;  width:14px; height:22px; animation-delay:-6s;  animation-duration:14s; --gx:-60px;"></span>
+<span class="mg-dot" style="left:3%;   width:18px; height:29px; animation-delay:-9s;  animation-duration:17s; --gx:-30px;"></span>
+<span class="mg-dot" style="left:76%;  width:6px;  height:10px; animation-delay:-3s;  animation-duration:20s; --gx:0px;"></span>
+<span class="mg-dot" style="left:49%;  width:10px; height:16px; animation-delay:-6s;  animation-duration:23s; --gx:30px;"></span>
+</div>
+<!-- Doodle blob — spa: absolute -top-10 left-[5%] hidden h-40 w-40 text-teal/10 lg:block -->
+<svg aria-hidden="true" class="mh-doodle" fill="currentColor" style="position:absolute;top:-2.5rem;left:5%;width:10rem;height:10rem;pointer-events:none;color:rgba(212,148,42,0.1);z-index:1;" viewbox="0 0 100 100">
+<path d="M50 0c20 10 50 20 50 50s-30 40-50 50S0 80 0 50 30-10 50 0Z"></path>
+</svg>
+<!-- ═══════════════════════════════════════
+
+       MAIN CONTENT — z-index:1, above grain
+
+       ═══════════════════════════════════════ -->
+<div style="position:relative;z-index:1;">
+<!-- ── Inner wrapper: max-w-7xl, px-6, gap-10, grid on desktop ── -->
+<div class="mh-grid" style="display:block; max-width:80rem; margin:0 auto; padding:0 1.5rem; gap:2.5rem;">
+<!-- ══════════ COPY COLUMN — z-10, py-4, text-center ══════════ -->
+<div class="mh-copy" style="position:relative; z-index:10; padding-top:1rem; padding-bottom:1rem; text-align:center; width:100%;">
+<!-- Badge — spa: border-teal/30 bg-teal/10 text-[9px] tracking-[0.06em] text-teal -->
+<div style="margin-bottom:1.5rem;">
+<span class="mh-badge" style="display:inline-flex;align-items:center;white-space:nowrap;border-radius:9999px;border:1px solid #121212;background:#ffc107;padding:0.35rem 0.9rem;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:#121212;box-shadow:0 4px 0 -1px rgba(18,18,18,0.25);">
+
+            India's Most Affordable Protein Source
+
+          </span>
+</div>
+<!-- H1 — spa: font-display text-[13vw] uppercase leading-[1.08] tracking-tight -->
+<h1 class="mh-h1" style="font-family:'Anton','Bebas Neue',system-ui,sans-serif; text-transform:uppercase; line-height:1.08; letter-spacing:-0.01em; margin:0; color:#121212; font-weight:400;">
+<span style="color:#121212;">India loves roti.</span>
+<br/>
+<span style="color:#d4942a;">MillD</span><span style="color:#121212;"> makes it </span><br class="mh-br-sm"/><span class="mh-brush" style="color:#121212;white-space:nowrap;">high protein</span>
+</h1>
+<!-- Subheading — spa: mx-auto mt-8 max-w-xl text-lg leading-relaxed text-ink/75 lg:mx-0
+
+             <strong> is inline (not block), <br lg:hidden> creates mobile line break only -->
+<p class="mh-sub" style="margin:2rem auto 0;max-width:36rem;font-size:1.125rem;line-height:1.625;color:rgba(18,18,18,0.75);">
+<strong style="font-family:'Caveat',cursive;font-size:1.75rem;line-height:1;font-weight:400;color:#fffbef;background-image:linear-gradient(120deg,#d4942a 0%,#d4942a 100%);background-size:100% 100%;background-repeat:no-repeat;padding:0.05em 0.3em;-webkit-box-decoration-break:clone;box-decoration-break:clone;">46g protein in 3 rotis.</strong>
+<br class="mh-br-lg"/>
+<span style="white-space:nowrap;color:rgba(18,18,18,0.75);">No change in taste or softness!</span>
+</p>
+<!-- ── MOBILE ONLY: model image + trust strip (lg:hidden) ── -->
+<div class="mh-mob-only" style="margin-top:2rem;">
+<!-- Image wrapper: max-w-[380px], glow at -inset-4 = -1rem -->
+<div style="position:relative;margin:0 auto;max-width:380px;width:100%;">
+<div style="position:absolute;top:-1rem;right:-1rem;bottom:-1rem;left:-1rem;z-index:0;border-radius:3rem;background:linear-gradient(135deg,rgba(255,193,7,0.4),#fffbef,rgba(212,148,42,0.15));filter:blur(2.5rem);"></div><img alt="Milind Soman holding MillD High Protein Atta with 46g protein per 100g " height="760" loading="eager" sizes="(max-width:420px) 380px, 760px" src="//milld.com/cdn/shop/files/milind-hero_1.webp?v=1784862556&amp;width=760" srcset="//milld.com/cdn/shop/files/milind-hero_1.webp?v=1784862556&amp;width=380 380w, //milld.com/cdn/shop/files/milind-hero_1.webp?v=1784862556&amp;width=760 760w" style="position:relative;z-index:1;display:block;width:100%;filter:drop-shadow(0 30px 45px rgba(18,18,18,0.18));" width="760"/><!-- spa: absolute -left-1 -top-1 z-30 h-20 w-20 -rotate-[8deg] -->
+<img alt="Trustified — 100% Blind Testing" height="80" loading="eager" src="//milld.com/cdn/shop/files/trustified.webp?v=1784862555&amp;width=200" style="position:absolute;left:-0.25rem;top:-0.25rem;z-index:30;width:5rem;height:5rem;transform:rotate(-8deg);object-fit:contain;filter:drop-shadow(4px 6px 14px rgba(0,0,0,0.28));" width="80"/></div>
+<!-- overflow-x:clip clips horizontal bleed without cutting rotated corners -->
+<div style="margin-left:-1.5rem;margin-right:-1.5rem;position:relative;z-index:20;margin-top:-0.75rem;padding:0.5rem 0;overflow-x:clip;">
+<div style="margin-left:-5%;width:110%;transform:rotate(-2.15deg);transform-origin:center;overflow:hidden;border-top:1px solid rgba(18,18,18,0.1);border-bottom:1px solid rgba(18,18,18,0.1);background:#ffc107;box-shadow:0 10px 28px -4px rgba(18,18,18,0.18);">
+<div class="ms-track"><span class="ms-text" style="flex-shrink:0;margin:0 0.75rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">Loved by 300K+ families</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1rem;height:1rem;margin:0 0.75rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 0.75rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">100% Plant Based</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1rem;height:1rem;margin:0 0.75rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 0.75rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">ZERO Preservatives</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1rem;height:1rem;margin:0 0.75rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 0.75rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">LAB Tested</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1rem;height:1rem;margin:0 0.75rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 0.75rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">Loved by 300K+ families</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1rem;height:1rem;margin:0 0.75rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 0.75rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">100% Plant Based</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1rem;height:1rem;margin:0 0.75rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 0.75rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">ZERO Preservatives</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1rem;height:1rem;margin:0 0.75rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 0.75rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">LAB Tested</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1rem;height:1rem;margin:0 0.75rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span></div>
+</div>
+</div>
+</div>
+<!-- end mobile only -->
+<!-- CTA buttons — spa: mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start -->
+<div class="mh-ctas" style="margin-top:2.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;">
+<!-- Primary: py-3 pl-10 pr-4 on mobile, lg:pl-7 lg:pr-3 via CSS -->
+<a class="mh-btn-shop" href="/products/milld-high-protein-atta" style="display:inline-flex;align-items:center;gap:0.75rem;border-radius:9999px;background:#121212;padding:0.75rem 1rem 0.75rem 2.5rem;color:#fffbef;text-decoration:none;box-shadow:0 8px 0 -2px #ffc107;transition:transform 0.2s ease;border:none;">
+<span style="font-size:0.875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#fffbef;">Shop Now</span>
+<span class="mh-btn-icon" style="display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:9999px;background:#ffc107;color:#121212;flex-shrink:0;transition:transform 0.3s ease;">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+<path d="M5 12h14M13 5l7 7-7 7"></path>
+</svg>
+</span>
+</a>
+<a class="mh-btn-learn" href="/pages/our-science" style="font-size:0.875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#121212;text-decoration:underline;text-decoration-color:#ffc107;text-decoration-thickness:4px;text-underline-offset:4px;transition:color 0.2s;">
+
+            How it works →
+
+          </a>
+</div>
+<!-- Stats — spa: mx-auto mt-10 grid max-w-md grid-cols-3 gap-3 sm:mt-12 sm:gap-4 lg:mx-0
+
+             Numbers: text-2xl sm:text-3xl lg:text-4xl text-teal -->
+<div class="mh-stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;max-width:28rem;margin:2.5rem auto 1.5rem;">
+<div>
+<div class="mh-stat-n" style="font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;line-height:1;color:#d4942a;">46g</div>
+<div style="margin-top:0.25rem;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:rgba(18,18,18,0.6);">Protein in 100g</div>
+</div>
+<div>
+<div class="mh-stat-n" style="font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;line-height:1;color:#d4942a;">ALL 9</div>
+<div style="margin-top:0.25rem;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:rgba(18,18,18,0.6);">Amino acids</div>
+</div>
+<div>
+<div class="mh-stat-n" style="font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;line-height:1;color:#d4942a;">LOW GI 42</div>
+<div style="margin-top:0.25rem;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:rgba(18,18,18,0.6);">Diabetic friendly</div>
+</div>
+</div>
+</div>
+<!-- end copy column -->
+<!-- ══════════ DESKTOP IMAGE COLUMN — hidden self-end lg:col-span-5 lg:block ══════════ -->
+<div class="mh-desk-only mh-img-col" style="position:relative; align-self:end;">
+<div style="position:relative;">
+<!-- Glow: absolute -inset-4 -z-10 rounded-[3rem] blur-2xl -->
+<div style="position:absolute;top:-1rem;right:-1rem;bottom:-1rem;left:-1rem;z-index:0;border-radius:3rem;background:linear-gradient(135deg,rgba(255,193,7,0.4),#fffbef,rgba(212,148,42,0.15));filter:blur(2.5rem);"></div><!-- spa: relative mx-auto block mb-0 w-full max-w-[720px] origin-bottom -->
+<img alt="Milind Soman holding MillD High Protein Atta with 46g protein per 100g " height="1200" loading="eager" sizes="(min-width:1024px) 42vw, 100vw" src="//milld.com/cdn/shop/files/milind-hero_1.webp?v=1784862556&amp;width=1200" srcset="//milld.com/cdn/shop/files/milind-hero_1.webp?v=1784862556&amp;width=600 600w, //milld.com/cdn/shop/files/milind-hero_1.webp?v=1784862556&amp;width=1200 1200w" style="position:relative;z-index:1;display:block;margin:0 auto;margin-bottom:0;width:100%;max-width:720px;transform-origin:bottom;filter:drop-shadow(0 40px 60px rgba(18,18,18,0.18));" width="1200"/><!-- spa: absolute -top-2 left-2 z-30 h-24 w-24 lg:-top-4 lg:left-4 lg:h-36 lg:w-36 -->
+<img alt="Trustified — 100% Blind Testing" class="mh-trust-desk" height="144" loading="eager" src="//milld.com/cdn/shop/files/trustified.webp?v=1784862555&amp;width=300" style="position:absolute;top:-0.5rem;left:0.5rem;z-index:30;width:6rem;height:6rem;transform:rotate(-8deg);object-fit:contain;filter:drop-shadow(4px 6px 14px rgba(0,0,0,0.28));" width="144"/></div>
+</div>
+</div><!-- end mh-grid -->
+<!-- ══════════ DESKTOP TRUST STRIP (mh-desk-strip, hidden on mobile via CSS) ══════════ -->
+<div class="mh-desk-strip" style="position:relative;z-index:20;margin-top:-1rem;padding:0.5rem 0;overflow-x:clip;">
+<div style="margin-left:-5%;width:110%;transform:rotate(-2.15deg);transform-origin:center;overflow:hidden;border-top:1px solid rgba(18,18,18,0.1);border-bottom:1px solid rgba(18,18,18,0.1);background:#ffc107;box-shadow:0 10px 28px -4px rgba(18,18,18,0.18);">
+<div class="ms-track"><span class="ms-text" style="flex-shrink:0;margin:0 2.5rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">Loved by 300K+ families</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1.25rem;height:1.25rem;margin:0 2.5rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 2.5rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">100% Plant Based</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1.25rem;height:1.25rem;margin:0 2.5rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 2.5rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">ZERO Preservatives</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1.25rem;height:1.25rem;margin:0 2.5rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 2.5rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">LAB Tested</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1.25rem;height:1.25rem;margin:0 2.5rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 2.5rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">Loved by 300K+ families</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1.25rem;height:1.25rem;margin:0 2.5rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 2.5rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">100% Plant Based</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1.25rem;height:1.25rem;margin:0 2.5rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 2.5rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">ZERO Preservatives</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1.25rem;height:1.25rem;margin:0 2.5rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span><span class="ms-text" style="flex-shrink:0;margin:0 2.5rem;font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.05em;color:#121212;">LAB Tested</span>
+<span class="ms-icon" style="display:inline-flex;align-items:center;flex-shrink:0;width:1.25rem;height:1.25rem;margin:0 2.5rem;">
+<svg aria-hidden="true" class="milld-marquee-icon" style="display:inline-block;" viewbox="0 0 28 28">
+<path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path>
+<ellipse cx="14" cy="14" fill="none" opacity="0.45" rx="8.5" ry="7.5" stroke="#b07a1f" stroke-width="0.6"></ellipse>
+<circle cx="10.5" cy="11" fill="#b07a1f" opacity="0.70" r="1.2"></circle>
+<circle cx="17" cy="15.5" fill="#b07a1f" opacity="0.65" r="0.9"></circle>
+<circle cx="14" cy="9" fill="#b07a1f" opacity="0.55" r="0.65"></circle>
+<circle cx="11.5" cy="17.5" fill="#b07a1f" opacity="0.50" r="0.7"></circle>
+<circle cx="18.5" cy="11" fill="#b07a1f" opacity="0.45" r="0.55"></circle>
+</svg>
+</span></div>
+</div>
+</div>
+</div><!-- end z-index:1 content wrapper -->
+</div>
