@@ -1,0 +1,33 @@
+# Python scripts (build tools, tests, dev only)
+*.py
+__pycache__/
+
+# Old/versioned CSS files (not needed in production)
+style_ver_*.css
+milld_base.css
+footer_styles.css
+products_inline.js
+milld_extracted_scripts.js
+
+# Raw HTML source extracts (not production pages)
+milld_home.html
+milld_product.html
+milld_science_extracted.html
+milld_raw_sections/
+elementor-bundle.html
+every_roti_section.html
+
+# Build artifacts
+milla-pro-store-netlify.zip
+netlify_deploy_result.json
+sections_list.txt
+extracted_milld_sections.json
+
+# WhatsApp image filename (non-standard)
+WhatsApp Image 2026-10-02 at 11.46.54 PM.jpeg
+
+# netlify.toml (not needed for GitHub Pages)
+netlify.toml
+
+# Dev/test files
+netlify.toml

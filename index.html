@@ -1,0 +1,1862 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>MILLA PRO™ | 100% Natural High-Protein Atta | 15g Protein in Every Roti</title>
+  <meta name="description" content="India loves roti. MILLA PRO makes it high protein. 44.1g pure plant protein per 100g with 0% whey bloat, Low GI 42. India's most affordable clean protein upgrade.">
+  <link rel="canonical" href="https://milla-pro-store.netlify.app/">
+
+  <!-- Google Fonts: Anton (punchy title), Caveat (script accent), Inter (clean body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=23.0">
+</head>
+<body>
+
+  <!-- 1. Top Ultra-Thin Moving Marquee Ticker -->
+  <div class="top-ticker-bar">
+    <div class="ticker-scroll-track">
+      <div class="ticker-scroll-content">
+        <span>✨ <strong>PAN-INDIA DELIVERY IN 10–15 DAYS</strong></span>
+        <span class="ticker-dot">•</span>
+        <span>⚡ <strong>15G PROTEIN PER ROTI</strong></span>
+        <span class="ticker-dot">•</span>
+        <span>🌿 <strong>100% CLEAN PLANT FRACTIONS</strong></span>
+        <span class="ticker-dot">•</span>
+        <span>🔬 <strong>NABL CERTIFIED LAB TESTED (44.1G / 100G)</strong></span>
+        <span class="ticker-dot">•</span>
+        <span>🛡️ <strong>INCL. 5% GST</strong></span>
+        <span class="ticker-dot">•</span>
+      </div>
+      <div class="ticker-scroll-content" aria-hidden="true">
+        <span>✨ <strong>PAN-INDIA DELIVERY IN 10–15 DAYS</strong></span>
+        <span class="ticker-dot">•</span>
+        <span>⚡ <strong>15G PROTEIN PER ROTI</strong></span>
+        <span class="ticker-dot">•</span>
+        <span>🌿 <strong>100% CLEAN PLANT FRACTIONS</strong></span>
+        <span class="ticker-dot">•</span>
+        <span>🔬 <strong>NABL CERTIFIED LAB TESTED (44.1G / 100G)</strong></span>
+        <span class="ticker-dot">•</span>
+        <span>🛡️ <strong>INCL. 5% GST</strong></span>
+        <span class="ticker-dot">•</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Authentic Sticky Master Header -->
+  <header class="master-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="MILLA PRO Home">
+        <span class="logo-main">MILLA <span>PRO</span>™</span>
+        <span class="logo-sub">15G PROTEIN ATTA</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html" class="shop-pill-nav">Shop Products</a>
+        <a href="our-science.html">Our Science</a>
+        <a href="#whey-calculator">Whey Calculator</a>
+        <a href="reports.html">NABL Reports</a>
+        <a href="#faq">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="icon-btn" title="Account / Login" aria-label="Account">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <button type="button" class="icon-btn" onclick="openCartDrawer()" title="View Cart" aria-label="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="cart-badge-count" id="cartCountBadge">1</span>
+        </button>
+        <button type="button" class="mobile-menu-btn" onclick="openMobileSidebar()" title="Menu" aria-label="Open Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sidebar Drawer -->
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeMobileSidebar()"></div>
+  <aside id="mobileSidebar" class="mobile-sidebar" aria-label="Navigation Menu">
+    <div class="sidebar-header">
+      <a href="index.html" class="brand-logo" onclick="closeMobileSidebar()">
+        <span class="logo-main">MILLA <span>PRO</span>™</span>
+        <span class="logo-sub">15G PROTEIN ATTA</span>
+      </a>
+      <button type="button" class="cart-close-btn" onclick="closeMobileSidebar()" aria-label="Close Menu">✕</button>
+    </div>
+
+    <!-- Prominent Primary Shop Now CTA -->
+    <a href="products.html" class="mobile-shop-cta-btn" onclick="closeMobileSidebar()">
+      <span>⚡ SHOP NOW — 15G PROTEIN ATTA</span>
+      <span style="font-size:1.15rem;">&rarr;</span>
+    </a>
+
+    <!-- Clean Navigation Links -->
+    <nav class="mobile-nav-links">
+      <a href="index.html" onclick="closeMobileSidebar()">
+        <span>🌾 Home</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+      <a href="products.html" onclick="closeMobileSidebar()">
+        <span>🛒 Shop Packs (1KG &amp; 5KG)</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+      <a href="our-science.html" onclick="closeMobileSidebar()">
+        <span>🔬 Our Science &amp; Fractions</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+      <a href="#whey-calculator" onclick="closeMobileSidebar()">
+        <span>🧮 Whey vs Atta Calculator</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+      <a href="reports.html" onclick="closeMobileSidebar()">
+        <span>📊 NABL Lab Reports</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+      <a href="about.html" onclick="closeMobileSidebar()">
+        <span>🌿 About Our Mission</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+      <a href="#faq" onclick="closeMobileSidebar()">
+        <span>❓ FAQ &amp; Cooking Guide</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+      <a href="contact.html" onclick="closeMobileSidebar()">
+        <span>📞 Contact &amp; Support</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+      <a href="login.html" onclick="closeMobileSidebar()" style="color:var(--color-accent); font-weight:800;">
+        <span>👤 Account / Track Order</span>
+        <span class="nav-arrow">&rarr;</span>
+      </a>
+    </nav>
+
+    <!-- Sidebar Bottom Trust Bar -->
+    <div class="sidebar-trust-footer">
+      <div class="stf-item">
+        <span>🚚</span>
+        <span>Pan-India Delivery in 10–15 Days</span>
+      </div>
+      <div class="stf-item">
+        <span>🌿</span>
+        <span>100% Clean Plant-Based • 0% Whey Bloat</span>
+      </div>
+      <div class="stf-item">
+        <span>📞</span>
+        <a href="tel:+919876543210" style="color:inherit; text-decoration:none;">WhatsApp: +91 98765 43210</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="cartOverlay" class="cart-overlay" onclick="closeCartDrawer()"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span style="font-size:1.2rem;">🛒</span>
+        <span class="cart-drawer-title">YOUR CART (<span id="cartDrawerHeaderCount">1</span>)</span>
+      </div>
+      <button type="button" class="cart-close-btn" onclick="closeCartDrawer()" aria-label="Close Cart">✕</button>
+    </div>
+
+    <!-- Prominent Delivery & Payment Policy Banner -->
+    <div class="cart-policy-strip">
+      <div class="cart-policy-item">
+        <span style="font-size:1rem;">🚚</span>
+        <div>
+          <strong>Pan-India Delivery: 10–15 Days</strong>
+          <span>Freshly milled batch dispatch from Mumbai</span>
+        </div>
+      </div>
+      <div class="cart-policy-item">
+        <span style="font-size:1rem;">🚫</span>
+        <div>
+          <strong>Prepaid Orders Only • Strictly No COD</strong>
+          <span>100% Secure Checkout via UPI, GPay, PhonePe &amp; Cards</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Populated dynamically by script.js?v=23.0 -->
+    </div>
+
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div id="couponActiveArea" style="display:none; margin-bottom:10px;"></div>
+      <div id="couponInputArea" style="display:flex; gap:8px; margin-bottom:12px;">
+        <input type="text" id="couponCodeInput" placeholder="Enter coupon (e.g. MILLA10)" style="flex:1; padding:8px 12px; border:1px solid rgba(18,18,18,0.2); border-radius:6px; font-size:0.85rem; text-transform:uppercase;">
+        <button type="button" onclick="applyCartCoupon()" style="background:#121212; color:#FFF; border:none; padding:8px 14px; border-radius:6px; font-size:0.8rem; font-weight:700; cursor:pointer;">Apply</button>
+      </div>
+
+      <div class="bill-row">
+        <span>Subtotal (MRP)</span>
+        <span id="billMrpTotal">₹299</span>
+      </div>
+      <div class="bill-row" id="billDiscountRow">
+        <span>Savings</span>
+        <span id="billDiscount" style="color:#2E7D32;">-₹50</span>
+      </div>
+      <div class="bill-row" id="billCouponDiscountRow" style="display:none;">
+        <span id="billCouponLabel">Promo Discount</span>
+        <span id="billCouponDiscount" style="color:#2E7D32;">-₹0</span>
+      </div>
+      <div class="bill-row">
+        <span>Taxable Base (5% GST Incl.)</span>
+        <span id="billBaseTotal">₹237.14</span>
+      </div>
+      <div class="bill-row">
+        <span>GST (5%)</span>
+        <span id="billGstTotal">₹11.86</span>
+      </div>
+      <div class="bill-row total-row">
+        <span>Total Payable</span>
+        <span id="billGrandTotal" style="color:var(--color-accent);">₹249</span>
+      </div>
+      <button type="button" class="cart-checkout-btn" onclick="triggerRazorpayCheckout()">
+        <span>PROCEED TO CHECKOUT • <span id="checkoutBtnTotal">₹249</span></span>
+        <span>&rarr;</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+
+    <!-- 3. HERO SECTION (milld-hs) - NO PACKAGING IMAGE ON HOMEPAGE -->
+    <section class="milld-hs" style="position:relative; background-color:#fffbef; color:#121212; padding-top:1rem; padding-bottom:0;">
+      <!-- Grain texture overlay -->
+      <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0.06;mix-blend-mode:multiply;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+      
+      <!-- Floating grain particles -->
+      <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;">
+        <span class="mg-dot" style="left:0%; width:6px; height:10px; animation-delay:-3s; animation-duration:14s; --gx:0px;"></span>
+        <span class="mg-dot" style="left:73%; width:10px; height:16px; animation-delay:-6s; animation-duration:17s; --gx:-30px;"></span>
+        <span class="mg-dot" style="left:46%; width:14px; height:22px; animation-delay:-9s; animation-duration:20s; --gx:0px;"></span>
+        <span class="mg-dot" style="left:19%; width:18px; height:29px; animation-delay:-3s; animation-duration:23s; --gx:30px;"></span>
+        <span class="mg-dot" style="left:92%; width:6px; height:10px; animation-delay:-6s; animation-duration:26s; --gx:60px;"></span>
+        <span class="mg-dot" style="left:65%; width:10px; height:16px; animation-delay:-9s; animation-duration:14s; --gx:-60px;"></span>
+        <span class="mg-dot" style="left:38%; width:14px; height:22px; animation-delay:-3s; animation-duration:17s; --gx:-30px;"></span>
+        <span class="mg-dot" style="left:11%; width:18px; height:29px; animation-delay:-6s; animation-duration:20s; --gx:0px;"></span>
+        <span class="mg-dot" style="left:84%; width:6px; height:10px; animation-delay:-9s; animation-duration:23s; --gx:30px;"></span>
+        <span class="mg-dot" style="left:57%; width:10px; height:16px; animation-delay:-3s; animation-duration:26s; --gx:60px;"></span>
+      </div>
+
+      <!-- Doodle blob -->
+      <svg aria-hidden="true" class="mh-doodle" fill="currentColor" style="position:absolute;top:-2.5rem;left:5%;width:10rem;height:10rem;pointer-events:none;color:rgba(212,148,42,0.1);z-index:1;" viewBox="0 0 100 100">
+        <path d="M50 0c20 10 50 20 50 50s-30 40-50 50S0 80 0 50 30-10 50 0Z"></path>
+      </svg>
+
+      <div style="position:relative; z-index:1;">
+        <div class="mh-grid">
+          
+          <div class="mh-copy">
+            
+            <!-- Badge pill -->
+            <div style="margin-bottom:1.25rem;">
+              <span class="mh-badge" style="display:inline-flex;align-items:center;white-space:nowrap;border-radius:9999px;border:1.5px solid #121212;background:#ffc107;padding:0.35rem 0.9rem;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:#121212;box-shadow:0 4px 0 -1px rgba(18,18,18,0.25);">
+                🌿 100% Clean High-Protein Grain Atta • NABL Certified
+              </span>
+            </div>
+
+            <!-- H1 Anton Headline -->
+            <h1 class="mh-h1" style="font-family:'Anton','Bebas Neue',system-ui,sans-serif; text-transform:uppercase; line-height:1.06; letter-spacing:-0.01em; margin:0; color:#121212; font-weight:400;">
+              <span style="color:#121212;">India loves roti.</span><br/>
+              <span style="color:#d4942a;">MILLA PRO</span><span style="color:#121212;"> makes it </span><br class="mh-br-sm"/><span class="mh-brush" style="color:#121212;white-space:nowrap;">high protein</span>
+            </h1>
+
+            <!-- Caveat Script Subheading -->
+            <p class="mh-sub" style="margin:1.75rem auto 0; max-width:38rem; font-size:1.15rem; line-height:1.6; color:rgba(18,18,18,0.85);">
+              <strong style="font-family:'Caveat',cursive; font-size:1.85rem; line-height:1; font-weight:600; color:#fffbef; background-image:linear-gradient(120deg,#d4942a 0%,#d4942a 100%); background-size:100% 100%; background-repeat:no-repeat; padding:0.05em 0.35em; border-radius:4px; -webkit-box-decoration-break:clone; box-decoration-break:clone;">44.1g protein in 3 rotis.</strong>
+              <br class="mh-br-lg"/>
+              <span style="color:rgba(18,18,18,0.8); font-weight:500;">Same authentic home taste &amp; softness — 0% whey bloat!</span>
+            </p>
+
+            <!-- REAL FOOD HERO VISUAL (NO PACKAGING IMAGE ON HOMEPAGE) -->
+            <!-- CTA Buttons -->
+            <div class="mh-ctas" style="margin-top:2.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;">
+              <a class="mh-btn-shop" href="products.html" style="display:inline-flex;align-items:center;gap:0.75rem;border-radius:9999px;background:#121212;padding:0.75rem 1.25rem 0.75rem 2.25rem;color:#fffbef;text-decoration:none;box-shadow:0 8px 0 -2px #ffc107;transition:transform 0.2s ease;">
+                <span style="font-size:0.875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#fffbef;">Shop Now</span>
+                <span class="mh-btn-icon" style="display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:9999px;background:#ffc107;color:#121212;flex-shrink:0;">
+                  <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+                </span>
+              </a>
+              <a class="mh-btn-learn" href="our-science.html" style="font-size:0.875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#121212;text-decoration:underline;text-decoration-color:#ffc107;text-decoration-thickness:4px;text-underline-offset:4px;">
+                How it works &rarr;
+              </a>
+            </div>
+
+            <!-- 3 Macro Stat Badges -->
+            <div class="mh-stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;max-width:28rem;margin:2.5rem auto 1.5rem;">
+              <div>
+                <div class="mh-stat-n" style="font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.75rem;line-height:1;color:#d4942a;">44.1g</div>
+                <div style="margin-top:0.25rem;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:rgba(18,18,18,0.6);">Protein in 100g</div>
+              </div>
+              <div>
+                <div class="mh-stat-n" style="font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.75rem;line-height:1;color:#d4942a;">ALL 9</div>
+                <div style="margin-top:0.25rem;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:rgba(18,18,18,0.6);">Amino acids</div>
+              </div>
+              <div>
+                <div class="mh-stat-n" style="font-family:'Anton','Bebas Neue',system-ui,sans-serif;font-size:1.75rem;line-height:1;color:#d4942a;">LOW GI 42</div>
+                <div style="margin-top:0.25rem;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:rgba(18,18,18,0.6);">Diabetic friendly</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- FULL-SCREEN EDGE-TO-EDGE TILTED MARQUEE STRIP -->
+    <div class="hero-full-marquee-wrap">
+      <div class="hero-full-marquee-inner">
+        <div class="ms-track">
+          <span class="ms-text">Loved by 30,000+ families</span>
+          <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path></svg></span>
+          <span class="ms-text">100% Plant Based</span>
+          <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path></svg></span>
+          <span class="ms-text">ZERO Preservatives</span>
+          <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path></svg></span>
+          <span class="ms-text">NABL LAB Tested (44.1g Protein)</span>
+          <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path></svg></span>
+          <span class="ms-text">Low GI 42 (Diabetic Friendly)</span>
+          <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path></svg></span>
+          <span class="ms-text">0% Whey Bloat</span>
+          <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d4942a"></path></svg></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. PROTEIN GAP & CALCULATOR SECTION (pg-section) WITH WHEY CALCULATOR -->
+    <section class="pg-section" id="whey-calculator">
+      <div class="pg-container">
+        
+        <!-- Top Row: Heading + Wavy Note Card -->
+        <div class="pg-top-grid">
+          <div class="pg-heading-col">
+            <h2 class="pg-heading">
+              Your atta needs A<br class="pg-br-mobile"/>
+              <span class="pg-heading-accent">protein upgrade</span>
+            </h2>
+          </div>
+          <div class="pg-note-col">
+            <div class="pg-note-wrap">
+              <div aria-hidden="true" class="pg-qmark">
+                <svg fill="none" height="56" viewBox="0 0 48 48" width="56">
+                  <path d="M17 14c0-6 4-9 9-9s9 4 9 9c0 5-4 7-7 9s-3 4-3 7" stroke="#d4942a" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+                  <circle cx="25" cy="39" fill="#d4942a" r="3"></circle>
+                </svg>
+              </div>
+              <p class="pg-note-text">
+                Regular wheat atta gives you just 10g–12g protein per 100g. Most Indians need around 50–60g daily.
+                <strong>The math never really worked, until now.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Protein Calculator & The MILLA PRO Math -->
+        <div class="pg-calc-wrap">
+          <div class="pg-calc" id="pg-calc-template--23901876781272__protein_gap_fnpWcK">
+            <svg aria-hidden="true" class="pg-calc-deco" fill="currentColor" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <div class="pg-calc-inner">
+              
+              <!-- LEFT: Title + Slider -->
+              <div class="pg-calc-left">
+                <div class="pg-calc-title">The MILLA PRO Math</div>
+                <div class="pg-slider-box">
+                  <div class="pg-slider-row">
+                    <span class="pg-slider-label">How many rotis do you eat daily?</span>
+                    <span class="pg-slider-count">
+                      <span class="pg-roti-count" id="pgRotiCount">3</span>
+                      <span class="pg-slider-unit" id="pgRotiUnit">rotis</span>
+                    </span>
+                  </div>
+                  <div class="pg-slider-track">
+                    <input aria-label="Number of rotis per day" class="roti-slider pg-roti-slider" id="pgRotiSlider" max="10" min="1" type="range" value="3" oninput="updateWheyCostCalc(this.value)"/>
+                  </div>
+                </div>
+              </div>
+
+              <!-- RIGHT: Comparison + Result -->
+              <div class="pg-calc-right">
+                <div class="pg-compare-grid">
+                  <div class="pg-compare-box pg-compare-regular">
+                    <div class="pg-compare-label">Regular Atta</div>
+                    <div class="pg-compare-value pg-regular-val" id="pgRegularVal">9g</div>
+                    <div class="pg-compare-sub">protein</div>
+                  </div>
+                  <div class="pg-compare-box pg-compare-milld">
+                    <div class="pg-compare-label pg-compare-label--milld">With MILLA PRO</div>
+                    <div class="pg-compare-value pg-compare-value--milld pg-milld-val" id="pgMillaVal">44.1g</div>
+                    <div class="pg-compare-sub pg-compare-sub--milld">protein</div>
+                  </div>
+                </div>
+                <div class="pg-result-box">
+                  <p class="pg-result-text">
+                    That's <span class="pg-result-num pg-gain-val" id="pgGainVal">35.1g</span> more protein every single day!
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- WORKING WHEY PROTEIN COST CALCULATOR (₹3,500/kg Average Price Benchmark) -->
+        <div class="pg-whey-card">
+          <div class="pg-whey-header">
+            <span class="pg-whey-kicker">★ REAL FOOD VS SYNTHETIC POWDER</span>
+            <h3 class="pg-whey-title">Whey Protein Cost Calculator</h3>
+            <p class="pg-whey-sub">
+              Average branded Whey Protein in India costs <strong>₹3,500 / kg</strong>. MILLA PRO delivers 44.1g pure protein per 100g for only <strong>₹20</strong>. See how much money you save every month!
+            </p>
+          </div>
+
+          <div class="pg-whey-grid">
+            <div class="pg-whey-box">
+              <div class="pg-whey-box-title">Whey Protein Powder (@ ₹3,500/kg)</div>
+              <div class="pg-whey-box-price" id="wheyMonthlyCostVal">₹6,440</div>
+              <div class="pg-whey-box-sub">Cost per month &bull; Causes whey bloat &amp; digestive gas</div>
+            </div>
+
+            <div class="pg-whey-box winner">
+              <span class="pg-whey-box-badge">Real Food Winner</span>
+              <div class="pg-whey-box-title">With MILLA PRO Atta (15g/Roti)</div>
+              <div class="pg-whey-box-price" id="millaMonthlyCostVal">₹600</div>
+              <div class="pg-whey-box-sub">Cost per month &bull; Hot phulkas &bull; 0% bloat</div>
+            </div>
+          </div>
+
+          <div class="pg-savings-banner">
+            <div class="pg-savings-text">
+              🎉 You save <strong id="wheySavingsMonthlyVal">₹5,840</strong> every month (<strong id="wheySavingsYearlyVal">₹70,080</strong> / year) while enjoying authentic home food!
+            </div>
+            <a href="products.html" class="pg-savings-btn">
+              <span>Claim Your Savings &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. EVERY ROTI BROKEN DOWN (rr-section) -->
+    <section class="rr-section" id="breakdown">
+      <div class="rr-container">
+        <div class="rr-heading-wrap">
+          <h2 class="rr-heading">
+            Every roti,&nbsp;<span class="rr-brush">broken down.</span>
+          </h2>
+        </div>
+
+        <div class="rr-grid" id="rr-grid-template--23901876781272__roti_break_down_UPtKi4">
+          <!-- LEFT: Roti Photo Card -->
+          <div class="rr-photo-col">
+            <img alt="MILLA PRO high protein roti broken in half showing authentic soft texture and steam" class="rr-photo" height="675" loading="lazy" src="roti-broken-down.jpeg" width="900"/>
+            <div class="rr-badge">
+              <div class="rr-badge-protein">44.1g</div>
+              <div class="rr-badge-label">Protein /100g</div>
+            </div>
+          </div>
+
+          <!-- RIGHT: 3 Natural Fraction Progress Bars -->
+          <div class="rr-bars-col">
+            <ul class="rr-bars-list">
+              <li class="rr-bar-item">
+                <div class="rr-bar-header">
+                  <span class="rr-bar-name">
+                    <span class="rr-bar-dot" style="background:#c8881f;"></span>
+                    Fine Chakki Whole Wheat Fraction
+                  </span>
+                  <span class="rr-bar-pct" data-delay="0" data-target="60">60%</span>
+                </div>
+                <div class="rr-bar-track">
+                  <div class="rr-bar-fill" data-delay="0" data-target="60" style="background:#c8881f; width:60%;"></div>
+                </div>
+                <p style="font-size:0.8rem; color:rgba(18,18,18,0.7); margin:0.4rem 0 0;">Stone-ground MP whole wheat preserving the endosperm, germ, and natural bran fiber. Ensures soft rolling and authentic home roti flavor.</p>
+              </li>
+
+              <li class="rr-bar-item">
+                <div class="rr-bar-header">
+                  <span class="rr-bar-name">
+                    <span class="rr-bar-dot" style="background:#9a6a1a;"></span>
+                    Defatted Non-GMO Soya Flour Fraction
+                  </span>
+                  <span class="rr-bar-pct" data-delay="170" data-target="30">30%</span>
+                </div>
+                <div class="rr-bar-track">
+                  <div class="rr-bar-fill" data-delay="170" data-target="30" style="background:#9a6a1a; width:30%;"></div>
+                </div>
+                <p style="font-size:0.8rem; color:rgba(18,18,18,0.7); margin:0.4rem 0 0;">Air-classified natural plant protein fraction. Delivers all essential amino acids with high protein concentration and zero dairy digestive bloat.</p>
+              </li>
+
+              <li class="rr-bar-item">
+                <div class="rr-bar-header">
+                  <span class="rr-bar-name">
+                    <span class="rr-bar-dot" style="background:#e7b73e;"></span>
+                    Roasted Saurashtra Peanut Flour Fraction
+                  </span>
+                  <span class="rr-bar-pct" data-delay="340" data-target="10">10%</span>
+                </div>
+                <div class="rr-bar-track">
+                  <div class="rr-bar-fill" data-delay="340" data-target="10" style="background:#e7b73e; width:10%;"></div>
+                </div>
+                <p style="font-size:0.8rem; color:rgba(18,18,18,0.7); margin:0.4rem 0 0;">Slow-roasted micro-milled peanuts adding natural monounsaturated healthy fats, rich nutty warmth, and natural moisture to keep rotis soft for hours.</p>
+              </li>
+            </ul>
+
+            <div class="rr-cta-wrap">
+              <a class="rr-cta-btn" href="products.html">
+                <span class="rr-cta-label">Shop Now</span>
+                <span aria-hidden="true" class="rr-cta-arrow">
+                  <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. THE MILLA PRO DIFFERENCE (Continuous Moving Ticker - Right to Left) -->
+    <section class="bc-section" id="difference">
+      <div class="bc-container">
+        <div class="bc-heading-wrap">
+          <div class="lab-badge-pill" style="margin-bottom:0.75rem;">
+            <span>★ THE CLEAN HIGH-PROTEIN UPGRADE</span>
+          </div>
+          <h2 class="bc-heading">
+            The <span class="bc-heading-accent">MILLA PRO</span> difference
+          </h2>
+          <p class="bc-subheading">
+            Tap or hover on any card to flip and discover the science behind our 100% natural formula.
+          </p>
+        </div>
+      </div>
+
+      <!-- Moving Ticker Container (Right to Left Continuous Motion) -->
+      <div class="bc-ticker-wrap">
+        <div class="bc-ticker-track" id="bcTickerTrack">
+          
+          <!-- SET 1: 4 Authentic Difference Cards -->
+          <!-- Card 01 -->
+          <div class="bc-card-outer is-shown">
+            <div aria-hidden="true" class="bc-card-shadow"></div>
+            <button aria-label="4× More Protein. Flip card for details." class="bc-card-btn" type="button" onclick="this.classList.toggle('is-flipped')">
+              <div class="bc-card-inner">
+                <div class="bc-face bc-face--front">
+                  <div class="bc-photo-wrap">
+                    <img alt="Hot high-protein roti" class="bc-photo" loading="lazy" src="roti-broken-down.jpeg"/>
+                    <div class="bc-photo-overlay" style="background:#d4942a;"></div>
+                    <div aria-hidden="true" class="bc-photo-fade"></div>
+                    <div class="bc-tag-badge" style="background:#d4942a;">01</div>
+                  </div>
+                  <div class="bc-front-body">
+                    <h3 class="bc-front-title">4× More Protein</h3>
+                    <p class="bc-front-script" style="color:#b07a1f;">than regular roti</p>
+                  </div>
+                </div>
+                <div class="bc-face bc-face--back">
+                  <div class="bc-back-inner">
+                    <div class="bc-back-top">
+                      <span class="bc-back-tag" style="color:#d4942a;">01</span>
+                    </div>
+                    <p class="bc-back-text">15g protein in every single roti compared to just ~3g in normal wheat roti. Reach your daily protein goals effortlessly during regular meals.</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="bc-card-outer is-shown">
+            <div aria-hidden="true" class="bc-card-shadow"></div>
+            <button aria-label="Low GI of 42. Flip card for details." class="bc-card-btn" type="button" onclick="this.classList.toggle('is-flipped')">
+              <div class="bc-card-inner">
+                <div class="bc-face bc-face--front">
+                  <div class="bc-photo-wrap">
+                    <img alt="Fine Chakki Whole Wheat Fraction" class="bc-photo" loading="lazy" src="wheat-fraction.jpeg"/>
+                    <div class="bc-photo-overlay" style="background:#b07a1f;"></div>
+                    <div aria-hidden="true" class="bc-photo-fade"></div>
+                    <div class="bc-tag-badge" style="background:#b07a1f;">02</div>
+                  </div>
+                  <div class="bc-front-body">
+                    <h3 class="bc-front-title">Low GI of 42</h3>
+                    <p class="bc-front-script" style="color:#b07a1f;">balanced blood sugar</p>
+                  </div>
+                </div>
+                <div class="bc-face bc-face--back">
+                  <div class="bc-back-inner">
+                    <div class="bc-back-top">
+                      <span class="bc-back-tag" style="color:#b07a1f;">02</span>
+                    </div>
+                    <p class="bc-back-text">MILLA PRO digests slower and releases energy steadily. Prevents afternoon blood sugar spikes, brain fog, and post-lunch lethargy.</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="bc-card-outer is-shown">
+            <div aria-hidden="true" class="bc-card-shadow"></div>
+            <button aria-label="All 9 Essential Amino Acids. Flip card for details." class="bc-card-btn" type="button" onclick="this.classList.toggle('is-flipped')">
+              <div class="bc-card-inner">
+                <div class="bc-face bc-face--front">
+                  <div class="bc-photo-wrap">
+                    <img alt="Defatted Non-GMO Soya Flour Fraction" class="bc-photo" loading="lazy" src="soya-fraction.jpeg"/>
+                    <div class="bc-photo-overlay" style="background:#d4942a;"></div>
+                    <div aria-hidden="true" class="bc-photo-fade"></div>
+                    <div class="bc-tag-badge" style="background:#d4942a;">03</div>
+                  </div>
+                  <div class="bc-front-body">
+                    <h3 class="bc-front-title">All 9 Essential</h3>
+                    <p class="bc-front-script" style="color:#b07a1f;">complete amino acid profile</p>
+                  </div>
+                </div>
+                <div class="bc-face bc-face--back">
+                  <div class="bc-back-inner">
+                    <div class="bc-back-top">
+                      <span class="bc-back-tag" style="color:#d4942a;">03</span>
+                    </div>
+                    <p class="bc-back-text">Combines whole wheat, non-GMO defatted soya and roasted peanut fractions to provide all 9 essential amino acids for complete muscle recovery.</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="bc-card-outer is-shown">
+            <div aria-hidden="true" class="bc-card-shadow"></div>
+            <button aria-label="100% Plant Based. Flip card for details." class="bc-card-btn" type="button" onclick="this.classList.toggle('is-flipped')">
+              <div class="bc-card-inner">
+                <div class="bc-face bc-face--front">
+                  <div class="bc-photo-wrap">
+                    <img alt="Roasted Saurashtra Peanut Flour Fraction" class="bc-photo" loading="lazy" src="peanut-fraction.jpeg"/>
+                    <div class="bc-photo-overlay" style="background:#b07a1f;"></div>
+                    <div aria-hidden="true" class="bc-photo-fade"></div>
+                    <div class="bc-tag-badge" style="background:#b07a1f;">04</div>
+                  </div>
+                  <div class="bc-front-body">
+                    <h3 class="bc-front-title">100% Plant Based</h3>
+                    <p class="bc-front-script" style="color:#b07a1f;">13.1g prebiotic fiber</p>
+                  </div>
+                </div>
+                <div class="bc-face bc-face--back">
+                  <div class="bc-back-inner">
+                    <div class="bc-back-top">
+                      <span class="bc-back-tag" style="color:#b07a1f;">04</span>
+                    </div>
+                    <p class="bc-back-text">Crafted purely from natural whole grains and legumes with 13.1g prebiotic dietary fiber per 100g. Zero dairy digestive bloat, zero stomach discomfort.</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- SET 2: Identical Clones for Seamless Infinite Right-to-Left Ticker Loop -->
+          <!-- Card 01 Clone -->
+          <div class="bc-card-outer is-shown" aria-hidden="true">
+            <div aria-hidden="true" class="bc-card-shadow"></div>
+            <button aria-label="4× More Protein. Flip card for details." class="bc-card-btn" type="button" onclick="this.classList.toggle('is-flipped')">
+              <div class="bc-card-inner">
+                <div class="bc-face bc-face--front">
+                  <div class="bc-photo-wrap">
+                    <img alt="Hot high-protein roti" class="bc-photo" loading="lazy" src="roti-broken-down.jpeg"/>
+                    <div class="bc-photo-overlay" style="background:#d4942a;"></div>
+                    <div aria-hidden="true" class="bc-photo-fade"></div>
+                    <div class="bc-tag-badge" style="background:#d4942a;">01</div>
+                  </div>
+                  <div class="bc-front-body">
+                    <h3 class="bc-front-title">4× More Protein</h3>
+                    <p class="bc-front-script" style="color:#b07a1f;">than regular roti</p>
+                  </div>
+                </div>
+                <div class="bc-face bc-face--back">
+                  <div class="bc-back-inner">
+                    <div class="bc-back-top">
+                      <span class="bc-back-tag" style="color:#d4942a;">01</span>
+                    </div>
+                    <p class="bc-back-text">15g protein in every single roti compared to just ~3g in normal wheat roti. Reach your daily protein goals effortlessly during regular meals.</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- Card 02 Clone -->
+          <div class="bc-card-outer is-shown" aria-hidden="true">
+            <div aria-hidden="true" class="bc-card-shadow"></div>
+            <button aria-label="Low GI of 42. Flip card for details." class="bc-card-btn" type="button" onclick="this.classList.toggle('is-flipped')">
+              <div class="bc-card-inner">
+                <div class="bc-face bc-face--front">
+                  <div class="bc-photo-wrap">
+                    <img alt="Fine Chakki Whole Wheat Fraction" class="bc-photo" loading="lazy" src="wheat-fraction.jpeg"/>
+                    <div class="bc-photo-overlay" style="background:#b07a1f;"></div>
+                    <div aria-hidden="true" class="bc-photo-fade"></div>
+                    <div class="bc-tag-badge" style="background:#b07a1f;">02</div>
+                  </div>
+                  <div class="bc-front-body">
+                    <h3 class="bc-front-title">Low GI of 42</h3>
+                    <p class="bc-front-script" style="color:#b07a1f;">balanced blood sugar</p>
+                  </div>
+                </div>
+                <div class="bc-face bc-face--back">
+                  <div class="bc-back-inner">
+                    <div class="bc-back-top">
+                      <span class="bc-back-tag" style="color:#b07a1f;">02</span>
+                    </div>
+                    <p class="bc-back-text">MILLA PRO digests slower and releases energy steadily. Prevents afternoon blood sugar spikes, brain fog, and post-lunch lethargy.</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- Card 03 Clone -->
+          <div class="bc-card-outer is-shown" aria-hidden="true">
+            <div aria-hidden="true" class="bc-card-shadow"></div>
+            <button aria-label="All 9 Essential Amino Acids. Flip card for details." class="bc-card-btn" type="button" onclick="this.classList.toggle('is-flipped')">
+              <div class="bc-card-inner">
+                <div class="bc-face bc-face--front">
+                  <div class="bc-photo-wrap">
+                    <img alt="Defatted Non-GMO Soya Flour Fraction" class="bc-photo" loading="lazy" src="soya-fraction.jpeg"/>
+                    <div class="bc-photo-overlay" style="background:#d4942a;"></div>
+                    <div aria-hidden="true" class="bc-photo-fade"></div>
+                    <div class="bc-tag-badge" style="background:#d4942a;">03</div>
+                  </div>
+                  <div class="bc-front-body">
+                    <h3 class="bc-front-title">All 9 Essential</h3>
+                    <p class="bc-front-script" style="color:#b07a1f;">complete amino acid profile</p>
+                  </div>
+                </div>
+                <div class="bc-face bc-face--back">
+                  <div class="bc-back-inner">
+                    <div class="bc-back-top">
+                      <span class="bc-back-tag" style="color:#d4942a;">03</span>
+                    </div>
+                    <p class="bc-back-text">Combines whole wheat, non-GMO defatted soya and roasted peanut fractions to provide all 9 essential amino acids for complete muscle recovery.</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- Card 04 Clone -->
+          <div class="bc-card-outer is-shown" aria-hidden="true">
+            <div aria-hidden="true" class="bc-card-shadow"></div>
+            <button aria-label="100% Plant Based. Flip card for details." class="bc-card-btn" type="button" onclick="this.classList.toggle('is-flipped')">
+              <div class="bc-card-inner">
+                <div class="bc-face bc-face--front">
+                  <div class="bc-photo-wrap">
+                    <img alt="Roasted Saurashtra Peanut Flour Fraction" class="bc-photo" loading="lazy" src="peanut-fraction.jpeg"/>
+                    <div class="bc-photo-overlay" style="background:#b07a1f;"></div>
+                    <div aria-hidden="true" class="bc-photo-fade"></div>
+                    <div class="bc-tag-badge" style="background:#b07a1f;">04</div>
+                  </div>
+                  <div class="bc-front-body">
+                    <h3 class="bc-front-title">100% Plant Based</h3>
+                    <p class="bc-front-script" style="color:#b07a1f;">13.1g prebiotic fiber</p>
+                  </div>
+                </div>
+                <div class="bc-face bc-face--back">
+                  <div class="bc-back-inner">
+                    <div class="bc-back-top">
+                      <span class="bc-back-tag" style="color:#b07a1f;">04</span>
+                    </div>
+                    <p class="bc-back-text">Crafted purely from natural whole grains and legumes with 13.1g prebiotic dietary fiber per 100g. Zero dairy digestive bloat, zero stomach discomfort.</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. OFFICIAL NABL LAB REPORT SHOWCASE SECTION -->
+        <!-- 7. INDEPENDENTLY CERTIFIED NABL NUTRITION (lab-showcase-section) -->
+    <!-- Lab reports hidden behind official links; only verified nutrition details on site -->
+    <section class="lab-showcase-section" id="reports">
+      <div class="container lab-showcase-container">
+        
+        <div class="lab-showcase-header">
+          <div class="lab-badge-pill">
+            <span>🔬 OFFICIAL NABL ACCREDITED LABORATORY DATA</span>
+          </div>
+          <h2 class="lab-showcase-title">
+            Independently Certified <span class="accent">Nutrition.</span>
+          </h2>
+          <p class="lab-showcase-sub">
+            Every batch of MILLA PRO is tested by <strong>Envirocare Labs Private Limited</strong> (NABL Accredited Laboratory). Report No: <strong>01/ETHFD2609015</strong> &bull; ULR: <strong>TC0828426000063499F</strong>. 100% honest transparency.
+          </p>
+        </div>
+
+        <!-- 8 Verified Parameter Detail Cards -->
+        <div class="lab-details-grid">
+          <div class="lab-detail-card highlight">
+            <div class="lab-param-val">44.1g</div>
+            <div class="lab-param-name">Crude Protein (N×6.25)</div>
+            <div class="lab-param-method">EL/SOP/549 &bull; Per 100g</div>
+          </div>
+
+          <div class="lab-detail-card highlight">
+            <div class="lab-param-val">13.1g</div>
+            <div class="lab-param-name">Total Dietary Fibre</div>
+            <div class="lab-param-method">AOAC 985.29 &bull; Prebiotic</div>
+          </div>
+
+          <div class="lab-detail-card">
+            <div class="lab-param-val">43.1g</div>
+            <div class="lab-param-name">Available Carbs</div>
+            <div class="lab-param-method">IS 1656 &bull; Per 100g</div>
+          </div>
+
+          <div class="lab-detail-card">
+            <div class="lab-param-val">359.6</div>
+            <div class="lab-param-name">Calories / Energy</div>
+            <div class="lab-param-method">Calculation &bull; kcal/100g</div>
+          </div>
+
+          <div class="lab-detail-card">
+            <div class="lab-param-val">1.2g</div>
+            <div class="lab-param-name">Total Healthy Fat</div>
+            <div class="lab-param-method">AOAC 996.06 &bull; Low Fat</div>
+          </div>
+
+          <div class="lab-detail-card">
+            <div class="lab-param-val">0g</div>
+            <div class="lab-param-name">Trans Fat</div>
+            <div class="lab-param-method">AOAC 996.06 &bull; BLQ Zero</div>
+          </div>
+
+          <div class="lab-detail-card">
+            <div class="lab-param-val">0mg</div>
+            <div class="lab-param-name">Cholesterol</div>
+            <div class="lab-param-method">EL/SOP/520 &bull; 100% Plant</div>
+          </div>
+
+          <div class="lab-detail-card">
+            <div class="lab-param-val">15.1mg</div>
+            <div class="lab-param-name">Natural Sodium</div>
+            <div class="lab-param-method">ICP-OES &bull; Per 100g</div>
+          </div>
+        </div>
+
+        <!-- Official Certificate Links & Download Banner -->
+        <div class="lab-credentials-banner">
+          <div class="lab-cred-text">
+            <h3>NABL Government Certified Batch</h3>
+            <p>
+              Sample: <strong>High Protein Atta</strong> &bull; Client: <strong>A K FOODS, Chembur, Mumbai</strong><br>
+              Full chemical, nutritional, and microbial compliance certificates available for inspection.
+            </p>
+          </div>
+          <div class="lab-actions-row">
+            <a href="reports.html" class="lab-btn-link" title="View Full NABL Certificate">
+              <span>📄 View Official NABL Certificate (Scans & PDF)</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="lab report.pdf" class="lab-btn-pdf" target="_blank" download title="Download NABL Lab Report PDF">
+              <span>⬇️ Download Lab Report (PDF)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- 8. COST COMPARISON TABLE SECTION (ss-section) -->
+    <section class="ss-section">
+      <div class="ss-container">
+        <div class="ss-panel">
+          
+          <h3 class="ss-panel-heading-mobile">
+            India’s most <span class="ss-gold">affordable</span><br/>
+            protein <span class="ss-gold">upgrade.</span>
+          </h3>
+
+          <div class="ss-panel-inner">
+            <!-- LEFT: Real Food Visual Card -->
+            <div class="ss-model-col">
+              <div style="border:2px solid #121212; border-radius:20px; overflow:hidden; box-shadow:6px 6px 0 #121212; background:#FFF;">
+                <img alt="MILLA PRO soft high protein roti" class="ss-model-img" loading="lazy" src="roti-broken-down.jpeg" style="width:100%; height:auto; display:block;"/>
+                <div style="padding:1rem; background:#FFFBEF; font-size:0.85rem; font-weight:700; color:#121212; text-align:center;">
+                  Hot Phulkas &bull; 15g Protein / Roti &bull; Just ₹20 / Meal
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Cost Benchmark Cards & Table -->
+            <div class="ss-table-col">
+              <h3 class="ss-panel-heading-desktop">
+                India’s most <span class="ss-gold">affordable</span><br/>
+                protein <span class="ss-gold">upgrade.</span>
+              </h3>
+
+              <!-- Mobile Stacked Cards -->
+              <div class="ss-cards-mobile">
+                <div class="ss-mcard ss-mcard--best">
+                  <span aria-hidden="true" class="ss-mcard-stripe"></span>
+                  <div class="ss-mcard-grid">
+                    <div class="ss-mcard-art">
+                      <span style="font-size:1.75rem;">🫓</span>
+                    </div>
+                    <div class="ss-mcard-body">
+                      <div class="ss-mcard-label">MILLA PRO Atta</div>
+                      <div class="ss-mcard-meta"><span class="ss-mcard-protein">44.1g</span> protein in 3 Rotis (100g)</div>
+                      <span class="ss-best-badge">
+                        <svg fill="currentColor" height="10" viewBox="0 0 24 24" width="10"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 23.4 5.6 20.4 7.1 13.6 1.9 9l6.9-.7z"></path></svg>
+                        Best Value
+                      </span>
+                    </div>
+                    <div class="ss-mcard-cost"><span class="ss-cost ss-cost--best">₹20</span></div>
+                  </div>
+                </div>
+
+                <div class="ss-mcard">
+                  <div class="ss-mcard-grid">
+                    <div class="ss-mcard-art">
+                      <span style="font-size:1.75rem;">🥤</span>
+                    </div>
+                    <div class="ss-mcard-body">
+                      <div class="ss-mcard-label">Whey Protein Powder</div>
+                      <div class="ss-mcard-meta"><span class="ss-mcard-protein">44g</span> protein in 2 Scoops</div>
+                    </div>
+                    <div class="ss-mcard-cost"><span class="ss-cost">₹200</span></div>
+                  </div>
+                </div>
+
+                <div class="ss-mcard">
+                  <div class="ss-mcard-grid">
+                    <div class="ss-mcard-art">
+                      <span style="font-size:1.75rem;">🧀</span>
+                    </div>
+                    <div class="ss-mcard-body">
+                      <div class="ss-mcard-label">Fresh Paneer</div>
+                      <div class="ss-mcard-meta"><span class="ss-mcard-protein">44g</span> protein in 250g</div>
+                    </div>
+                    <div class="ss-mcard-cost"><span class="ss-cost">₹120</span></div>
+                  </div>
+                </div>
+
+                <div class="ss-mcard">
+                  <div class="ss-mcard-grid">
+                    <div class="ss-mcard-art">
+                      <span style="font-size:1.75rem;">🥚</span>
+                    </div>
+                    <div class="ss-mcard-body">
+                      <div class="ss-mcard-label">Farm Eggs</div>
+                      <div class="ss-mcard-meta"><span class="ss-mcard-protein">44g</span> protein in 8 Eggs</div>
+                    </div>
+                    <div class="ss-mcard-cost"><span class="ss-cost">₹80</span></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Stat Cards Strip -->
+        <div class="ss-stats-grid" style="margin-top:2rem;">
+          <div class="ss-stat-card ss-stat-card--tilt">
+            <div class="ss-stat-num">9/9</div>
+            <div class="ss-stat-label">Essential amino acids</div>
+          </div>
+          <div class="ss-stat-card ss-stat-card--tilt">
+            <div class="ss-stat-num">42</div>
+            <div class="ss-stat-label">Glycaemic Index (Low)</div>
+          </div>
+          <div class="ss-stat-card ss-stat-card--tilt">
+            <div class="ss-stat-num">0g</div>
+            <div class="ss-stat-label">Added chemical sugar</div>
+          </div>
+          <div class="ss-stat-card ss-stat-card--tilt">
+            <div class="ss-stat-num">13.1g</div>
+            <div class="ss-stat-label">Prebiotic fiber / 100g</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. REAL CUSTOMER REVIEWS (tm-section) -->
+    <section class="tm-section" id="reviews">
+      <div class="tm-container">
+        <div class="tm-header tm-header--visible">
+          <div>
+            <h2 class="tm-heading">
+              <span class="tm-heading-accent">30,000+</span> Homes<br/>
+              Made the switch!
+            </h2>
+          </div>
+          <div class="tm-rating-wrap">
+            <div class="tm-rating-desktop">
+              <div class="tm-rating-big">4.9</div>
+              <div class="tm-rating-right">
+                <div class="tm-stars-lg">★★★★★</div>
+                <div class="tm-review-count-lg">400+ verified reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Cards Row -->
+      <div class="tm-row tm-row--reviews">
+        <div class="tm-scroll tm-scroll--reviews" id="tm-reviews-template--23901876781272__testimonials_6TEXnH">
+          <!-- Track 1 (Set A) -->
+          <div class="tm-track">
+            
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Switched the whole family. My kids didn't even notice the change but my husband's blood sugar did. We're not going back.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Anjali R.</div>
+                  <div class="tm-review-city">Mumbai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I'm done with chalky protein shakes. Three rotis and my macros are sorted. Indian food finally caught up.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Rohan K.</div>
+                  <div class="tm-review-city">Bengaluru · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">My mother is 68 and gets her protein from her own kitchen now. No tablets, no powders. Just MILLA PRO.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Lakshmi P.</div>
+                  <div class="tm-review-city">Chennai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Real ingredients, honest packaging, and a price that doesn't punish you for eating well. Brand of the year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Faiza S.</div>
+                  <div class="tm-review-city">Delhi · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Two months in and my energy levels are through the roof. The whole family is hooked. Best decision this year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Arjun D.</div>
+                  <div class="tm-review-city">Hyderabad · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I was skeptical 44.1g protein sounded too good. Got the NABL lab report and verified it. It's 100% genuine. Respect.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Neha T.</div>
+                  <div class="tm-review-city">Jaipur · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <!-- Track 2: Identical duplicate for seamless continuous right-to-left marquee (Zero Blank Space) -->
+          <div class="tm-track" >
+            
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Switched the whole family. My kids didn't even notice the change but my husband's blood sugar did. We're not going back.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Anjali R.</div>
+                  <div class="tm-review-city">Mumbai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I'm done with chalky protein shakes. Three rotis and my macros are sorted. Indian food finally caught up.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Rohan K.</div>
+                  <div class="tm-review-city">Bengaluru · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">My mother is 68 and gets her protein from her own kitchen now. No tablets, no powders. Just MILLA PRO.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Lakshmi P.</div>
+                  <div class="tm-review-city">Chennai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Real ingredients, honest packaging, and a price that doesn't punish you for eating well. Brand of the year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Faiza S.</div>
+                  <div class="tm-review-city">Delhi · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Two months in and my energy levels are through the roof. The whole family is hooked. Best decision this year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Arjun D.</div>
+                  <div class="tm-review-city">Hyderabad · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I was skeptical 44.1g protein sounded too good. Got the NABL lab report and verified it. It's 100% genuine. Respect.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Neha T.</div>
+                  <div class="tm-review-city">Jaipur · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+        
+          <!-- Track 2 (Set A) -->
+          <div class="tm-track" aria-hidden="true">
+            
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Switched the whole family. My kids didn't even notice the change but my husband's blood sugar did. We're not going back.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Anjali R.</div>
+                  <div class="tm-review-city">Mumbai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I'm done with chalky protein shakes. Three rotis and my macros are sorted. Indian food finally caught up.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Rohan K.</div>
+                  <div class="tm-review-city">Bengaluru · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">My mother is 68 and gets her protein from her own kitchen now. No tablets, no powders. Just MILLA PRO.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Lakshmi P.</div>
+                  <div class="tm-review-city">Chennai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Real ingredients, honest packaging, and a price that doesn't punish you for eating well. Brand of the year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Faiza S.</div>
+                  <div class="tm-review-city">Delhi · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Two months in and my energy levels are through the roof. The whole family is hooked. Best decision this year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Arjun D.</div>
+                  <div class="tm-review-city">Hyderabad · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I was skeptical 44.1g protein sounded too good. Got the NABL lab report and verified it. It's 100% genuine. Respect.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Neha T.</div>
+                  <div class="tm-review-city">Jaipur · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <!-- Track 2: Identical duplicate for seamless continuous right-to-left marquee (Zero Blank Space) -->
+          <div class="tm-track" >
+            
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Switched the whole family. My kids didn't even notice the change but my husband's blood sugar did. We're not going back.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Anjali R.</div>
+                  <div class="tm-review-city">Mumbai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I'm done with chalky protein shakes. Three rotis and my macros are sorted. Indian food finally caught up.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Rohan K.</div>
+                  <div class="tm-review-city">Bengaluru · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">My mother is 68 and gets her protein from her own kitchen now. No tablets, no powders. Just MILLA PRO.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Lakshmi P.</div>
+                  <div class="tm-review-city">Chennai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Real ingredients, honest packaging, and a price that doesn't punish you for eating well. Brand of the year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Faiza S.</div>
+                  <div class="tm-review-city">Delhi · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Two months in and my energy levels are through the roof. The whole family is hooked. Best decision this year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Arjun D.</div>
+                  <div class="tm-review-city">Hyderabad · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I was skeptical 44.1g protein sounded too good. Got the NABL lab report and verified it. It's 100% genuine. Respect.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Neha T.</div>
+                  <div class="tm-review-city">Jaipur · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+        
+          <!-- Track 3 (Set B - Clone for Infinite 60fps GPU Marquee) -->
+          <div class="tm-track" aria-hidden="true">
+            
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Switched the whole family. My kids didn't even notice the change but my husband's blood sugar did. We're not going back.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Anjali R.</div>
+                  <div class="tm-review-city">Mumbai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I'm done with chalky protein shakes. Three rotis and my macros are sorted. Indian food finally caught up.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Rohan K.</div>
+                  <div class="tm-review-city">Bengaluru · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">My mother is 68 and gets her protein from her own kitchen now. No tablets, no powders. Just MILLA PRO.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Lakshmi P.</div>
+                  <div class="tm-review-city">Chennai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Real ingredients, honest packaging, and a price that doesn't punish you for eating well. Brand of the year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Faiza S.</div>
+                  <div class="tm-review-city">Delhi · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Two months in and my energy levels are through the roof. The whole family is hooked. Best decision this year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Arjun D.</div>
+                  <div class="tm-review-city">Hyderabad · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I was skeptical 44.1g protein sounded too good. Got the NABL lab report and verified it. It's 100% genuine. Respect.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Neha T.</div>
+                  <div class="tm-review-city">Jaipur · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <!-- Track 2: Identical duplicate for seamless continuous right-to-left marquee (Zero Blank Space) -->
+          <div class="tm-track" >
+            
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Switched the whole family. My kids didn't even notice the change but my husband's blood sugar did. We're not going back.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Anjali R.</div>
+                  <div class="tm-review-city">Mumbai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I'm done with chalky protein shakes. Three rotis and my macros are sorted. Indian food finally caught up.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Rohan K.</div>
+                  <div class="tm-review-city">Bengaluru · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">My mother is 68 and gets her protein from her own kitchen now. No tablets, no powders. Just MILLA PRO.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Lakshmi P.</div>
+                  <div class="tm-review-city">Chennai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Real ingredients, honest packaging, and a price that doesn't punish you for eating well. Brand of the year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Faiza S.</div>
+                  <div class="tm-review-city">Delhi · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Two months in and my energy levels are through the roof. The whole family is hooked. Best decision this year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Arjun D.</div>
+                  <div class="tm-review-city">Hyderabad · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I was skeptical 44.1g protein sounded too good. Got the NABL lab report and verified it. It's 100% genuine. Respect.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Neha T.</div>
+                  <div class="tm-review-city">Jaipur · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+        
+          <!-- Track 4 (Set B - Clone for Infinite 60fps GPU Marquee) -->
+          <div class="tm-track" aria-hidden="true">
+            
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Switched the whole family. My kids didn't even notice the change but my husband's blood sugar did. We're not going back.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Anjali R.</div>
+                  <div class="tm-review-city">Mumbai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I'm done with chalky protein shakes. Three rotis and my macros are sorted. Indian food finally caught up.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Rohan K.</div>
+                  <div class="tm-review-city">Bengaluru · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">My mother is 68 and gets her protein from her own kitchen now. No tablets, no powders. Just MILLA PRO.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Lakshmi P.</div>
+                  <div class="tm-review-city">Chennai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Real ingredients, honest packaging, and a price that doesn't punish you for eating well. Brand of the year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Faiza S.</div>
+                  <div class="tm-review-city">Delhi · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Two months in and my energy levels are through the roof. The whole family is hooked. Best decision this year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Arjun D.</div>
+                  <div class="tm-review-city">Hyderabad · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I was skeptical 44.1g protein sounded too good. Got the NABL lab report and verified it. It's 100% genuine. Respect.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Neha T.</div>
+                  <div class="tm-review-city">Jaipur · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <!-- Track 2: Identical duplicate for seamless continuous right-to-left marquee (Zero Blank Space) -->
+          <div class="tm-track" >
+            
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Switched the whole family. My kids didn't even notice the change but my husband's blood sugar did. We're not going back.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Anjali R.</div>
+                  <div class="tm-review-city">Mumbai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I'm done with chalky protein shakes. Three rotis and my macros are sorted. Indian food finally caught up.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Rohan K.</div>
+                  <div class="tm-review-city">Bengaluru · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">My mother is 68 and gets her protein from her own kitchen now. No tablets, no powders. Just MILLA PRO.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Lakshmi P.</div>
+                  <div class="tm-review-city">Chennai · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Real ingredients, honest packaging, and a price that doesn't punish you for eating well. Brand of the year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Faiza S.</div>
+                  <div class="tm-review-city">Delhi · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">Two months in and my energy levels are through the roof. The whole family is hooked. Best decision this year.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Arjun D.</div>
+                  <div class="tm-review-city">Hyderabad · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="tm-review" style="text-align:left;">
+              <div aria-label="5 out of 5 stars" class="tm-review-stars">★★★★★</div>
+              <blockquote class="tm-review-text" style="margin-left:0;padding-left:0;">I was skeptical 44.1g protein sounded too good. Got the NABL lab report and verified it. It's 100% genuine. Respect.</blockquote>
+              <figcaption class="tm-review-footer">
+                <div>
+                  <div class="tm-review-name">Neha T.</div>
+                  <div class="tm-review-city">Jaipur · Verified ✓</div>
+                </div>
+              </figcaption>
+            </figure>
+
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FREQUENTLY ASKED QUESTIONS (faq-section) -->
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <div class="faq-heading-wrap">
+          <h2 class="faq-heading">
+            Frequently&nbsp;<span class="faq-heading-accent">Asked</span>
+          </h2>
+        </div>
+
+        <div class="faq-list" id="faq-list-template--23901876781272__faq_dFVNJy">
+          
+          <div class="faq-item is-open">
+            <button aria-expanded="true" class="faq-btn" type="button" onclick="toggleFaq(this)">
+              <span class="faq-question">What is MILLA PRO High Protein Atta?</span>
+              <span aria-hidden="true" class="faq-icon">
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 14 14" width="14"><line x1="7" x2="7" y1="1" y2="13"></line><line x1="1" x2="13" y1="7" y2="7"></line></svg>
+              </span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-answer">It’s a 100% natural, clean high-protein wheat flour that delivers 44.1g of certified plant protein per 100g, crafted from fine chakki whole wheat (60%), non-GMO defatted soya (30%), and roasted peanut fractions (10%).</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-btn" type="button" onclick="toggleFaq(this)">
+              <span class="faq-question">How is MILLA PRO different from regular wheat atta?</span>
+              <span aria-hidden="true" class="faq-icon">
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 14 14" width="14"><line x1="7" x2="7" y1="1" y2="13"></line><line x1="1" x2="13" y1="7" y2="7"></line></svg>
+              </span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-answer">MILLA PRO delivers 4x more protein than regular wheat atta (15g per roti vs 3g) while offering identical home taste and softness. It has all 9 essential amino acids, 13.1g prebiotic dietary fiber, and a low Glycemic Index of 42.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-btn" type="button" onclick="toggleFaq(this)">
+              <span class="faq-question">How much protein will I get from one roti?</span>
+              <span aria-hidden="true" class="faq-icon">
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 14 14" width="14"><line x1="7" x2="7" y1="1" y2="13"></line><line x1="1" x2="13" y1="7" y2="7"></line></svg>
+              </span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-answer">One roti provides approximately 14.7g ~ 15g of protein, based on a serving of 3 rotis made from 100g of atta containing 44.1g of NABL-certified protein.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-btn" type="button" onclick="toggleFaq(this)">
+              <span class="faq-question">Is MILLA PRO safe for daily consumption for the whole family?</span>
+              <span aria-hidden="true" class="faq-icon">
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 14 14" width="14"><line x1="7" x2="7" y1="1" y2="13"></line><line x1="1" x2="13" y1="7" y2="7"></line></svg>
+              </span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-answer">Yes, MILLA PRO is designed as a daily dietary staple for kids, adults, athletes, and elders. It has zero chemical additives, zero preservatives, and zero artificial sweeteners.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-btn" type="button" onclick="toggleFaq(this)">
+              <span class="faq-question">Does it taste like regular atta or need special kneading?</span>
+              <span aria-hidden="true" class="faq-icon">
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 14 14" width="14"><line x1="7" x2="7" y1="1" y2="13"></line><line x1="1" x2="13" y1="7" y2="7"></line></svg>
+              </span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-answer">Yes, it rolls and puffs just like normal atta. Since natural plant protein absorbs slightly more hydration, add 10–15% more warm water while kneading and let dough rest for 10 minutes before rolling.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button aria-expanded="false" class="faq-btn" type="button" onclick="toggleFaq(this)">
+              <span class="faq-question">What is the delivery timeline across India?</span>
+              <span aria-hidden="true" class="faq-icon">
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 14 14" width="14"><line x1="7" x2="7" y1="1" y2="13"></line><line x1="1" x2="13" y1="7" y2="7"></line></svg>
+              </span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-answer">Orders are freshly packed and dispatched from Chembur, Mumbai. Pan-India tracked courier delivery takes 10–15 business days.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- 11. MASTER FOOTER (ft-footer) -->
+  <footer class="ft-footer">
+    <div class="ft-container">
+      <div class="ft-grid">
+        
+        <!-- Left: Brand + Info -->
+        <div class="ft-brand">
+          <div class="ft-logo">MILLA <span>PRO</span>™</div>
+          <p class="ft-brand-text">
+            India's trusted 100% natural high-protein chakki atta delivering 15g pure plant protein in every single roti without synthetic whey or chemical preservatives.
+          </p>
+          <div class="ft-fssai-box">
+            <strong>MFG &amp; PACKED BY:</strong> A K FOODS<br>
+            Gala No. 210, Daulat Udyog Bhavan, Wadhavali, CG Road, Chembur, Mumbai - 400074<br>
+            <strong>FSSAI Lic. No:</strong> 21526007002971 &bull; GST 5% Included
+          </div>
+          <p class="ft-cta-note">
+            ★ Loved by 30,000+ Indian families &amp; counting
+          </p>
+        </div>
+
+        <!-- Right: Nav Columns -->
+        <div class="ft-nav-grid">
+          <div class="ft-col">
+            <h4 class="ft-col-title">Shop</h4>
+            <ul class="ft-col-list">
+              <li><a class="ft-col-link" href="products.html">1 KG Trial Pouch (₹249)</a></li>
+              <li><a class="ft-col-link" href="products.html">5 KG Saver Pack (₹1,199)</a></li>
+              <li><a class="ft-col-link" href="products.html">Order Online</a></li>
+            </ul>
+          </div>
+          <div class="ft-col">
+            <h4 class="ft-col-title">Learn</h4>
+            <ul class="ft-col-list">
+              <li><a class="ft-col-link" href="our-science.html">Our Science &amp; Fractions</a></li>
+              <li><a class="ft-col-link" href="reports.html">Official NABL Reports</a></li>
+              <li><a class="ft-col-link" href="#whey-calculator">Whey Cost Calculator</a></li>
+            </ul>
+          </div>
+          <div class="ft-col">
+            <h4 class="ft-col-title">Brand</h4>
+            <ul class="ft-col-list">
+              <li><a class="ft-col-link" href="about.html">About Mission</a></li>
+              <li><a class="ft-col-link" href="#faq">FAQ &amp; Kneading Guide</a></li>
+              <li><a class="ft-col-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="ft-col">
+            <h4 class="ft-col-title">Help &amp; Legal</h4>
+            <ul class="ft-col-list">
+              <li><a class="ft-col-link" href="shipping-policy.html">Shipping (10–15 Days)</a></li>
+              <li><a class="ft-col-link" href="refund-policy.html">Refund Policy</a></li>
+              <li><a class="ft-col-link" href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a class="ft-col-link" href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="ft-bottom">
+        <div>&copy; 2026 MILLA PRO™ (A K FOODS). All rights reserved. Taxed @ 5% GST Included.</div>
+        <div>Chembur, Mumbai, Maharashtra 400074 &bull; Pan-India Express Delivery</div>
+      </div>
+    </div>
+  </footer>
+
+<!-- 12. SIMULATED RAZORPAY 2-STEP CHECKOUT MODAL -->
+  <div class="modal-overlay" id="razorpayModal" onclick="handleModalOverlayClick(event)">
+    <div class="razorpay-simulated-modal">
+      <div class="rp-header">
+        <div class="rp-header-left">
+          <div class="rp-brand-avatar">M</div>
+          <div>
+            <div class="rp-merchant-name">MILLA PRO™ (A K FOODS)</div>
+            <div class="rp-order-sub" id="modalOrderSubtitle">Order #MP-2026-8812 • 100% Prepaid Verification</div>
+          </div>
+        </div>
+        <button type="button" class="rp-close" onclick="closeRazorpayModal()">✕</button>
+      </div>
+
+      <div class="rp-stepper-bar">
+        <div class="rp-step-item active" id="stepperStep1">
+          <span class="rp-step-num">1</span>
+          <span>Delivery Details</span>
+        </div>
+        <div class="rp-step-item" id="stepperStep2">
+          <span class="rp-step-num">2</span>
+          <span>Payment Method</span>
+        </div>
+      </div>
+
+      <div class="rp-body">
+        <!-- Step 1 Form -->
+        <div id="checkoutStep1Form">
+          <div class="rp-form-group">
+            <label for="custName">Full Name *</label>
+            <input type="text" id="custName" class="rp-input" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div class="rp-form-group">
+            <label for="custPhone">Mobile Number (WhatsApp Updates) *</label>
+            <input type="tel" id="custPhone" class="rp-input" placeholder="e.g. 9876543210" maxlength="10" required>
+          </div>
+          <div class="rp-form-group">
+            <label for="custAddress">Street Address / House No. *</label>
+            <input type="text" id="custAddress" class="rp-input" placeholder="Flat, Building, Street" required>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+            <div class="rp-form-group">
+              <label for="custCity">City *</label>
+              <input type="text" id="custCity" class="rp-input" placeholder="City" required>
+            </div>
+            <div class="rp-form-group">
+              <label for="custPincode">Pincode *</label>
+              <input type="text" id="custPincode" class="rp-input" placeholder="6-digit PIN" maxlength="6" required>
+            </div>
+          </div>
+          <button type="button" class="rp-btn-primary" onclick="proceedToPaymentStep()">
+            Continue to Payment &rarr;
+          </button>
+        </div>
+
+        <!-- Step 2 Form -->
+        <div id="checkoutStep2Form" style="display:none;">
+          <div style="background:#F4F6F9; border-radius:8px; padding:0.85rem; margin-bottom:1rem; font-size:0.82rem;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+              <span>Deliver To:</span>
+              <strong id="summaryCustName">-</strong>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span>Total Payable:</span>
+              <strong id="summaryGrandTotal" style="color:var(--color-accent); font-size:1rem;">₹249</strong>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label style="font-size:0.78rem; font-weight:700; display:block; margin-bottom:6px;">Select Payment Option (Prepaid Only)</label>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <label style="display:flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid #CBD5E0; border-radius:8px; cursor:pointer; background:#FFF;">
+                <input type="radio" name="payMethod" value="upi" checked>
+                <span>⚡ UPI / QR / Google Pay / PhonePe / Paytm</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid #CBD5E0; border-radius:8px; cursor:pointer; background:#FFF;">
+                <input type="radio" name="payMethod" value="card">
+                <span>💳 Credit / Debit Cards / NetBanking</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:8px;">
+            <button type="button" style="flex:1; background:#EDF2F7; color:#2D3748; border:none; padding:0.85rem; border-radius:8px; font-weight:700; cursor:pointer;" onclick="backToAddressStep()">
+              &larr; Back
+            </button>
+            <button type="button" style="flex:2; background:#2E7D32; color:#FFF; border:none; padding:0.85rem; border-radius:8px; font-weight:800; cursor:pointer;" onclick="simulatePaymentSuccess()">
+              Pay Now &bull; <span id="payBtnAmount">₹249</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div id="checkoutSuccessScreen" style="display:none; text-align:center; padding:1.5rem 0.5rem;">
+          <div style="width:56px; height:56px; border-radius:50%; background:#E8F5E9; color:#2E7D32; font-size:2rem; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem;">
+            ✓
+          </div>
+          <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:#121212; margin:0 0 0.5rem;">Order Confirmed!</h3>
+          <p style="font-size:0.88rem; color:rgba(18,18,18,0.7); line-height:1.5; margin:0 0 1rem;">
+            Thank you for ordering MILLA PRO™. Your freshly milled batch is scheduled for dispatch. Tracking details will be sent via WhatsApp to <strong id="successPhone">-</strong>.
+          </p>
+          <div style="background:#FDF8EE; border:1px dashed #D4942A; border-radius:8px; padding:0.75rem; font-size:0.8rem; margin-bottom:1.5rem;">
+            Estimated Delivery: <strong>10–15 Business Days</strong> (Pan-India)
+          </div>
+          <button type="button" class="rp-btn-primary" onclick="finishOrderAndReset()">
+            Back to Home
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js?v=23.0"></script>
+</body>
+</html>

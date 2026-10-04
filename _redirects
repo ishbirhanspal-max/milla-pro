@@ -1,0 +1,14 @@
+# Netlify Clean URL Rewrite Rules
+/our-science       /our-science.html       200
+/science           /science.html           200
+/products          /products.html          200
+/about             /about.html             200
+/reports           /reports.html           200
+/faq               /faq.html               200
+/contact           /contact.html           200
+/login             /login.html             200
+/shipping-policy   /shipping-policy.html   200
+/refund-policy     /refund-policy.html     200
+/terms             /terms.html             200
+/privacy-policy    /privacy-policy.html    200
+/elementor-bundle  /elementor-bundle.html  200
