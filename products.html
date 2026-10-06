@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=23.0">
+  <link rel="stylesheet" href="style.css?v=24.0">
 </head>
 <body>
 
@@ -181,7 +181,7 @@
     </div>
 
     <div class="cart-items-container" id="cartItemsList">
-      <!-- Populated dynamically by script.js?v=23.0 updateCartDrawerUI() -->
+      <!-- Populated dynamically by script.js?v=24.0 updateCartDrawerUI() -->
     </div>
 
     <div class="cart-drawer-footer" id="cartDrawerFooter">
@@ -644,7 +644,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="script.js?v=23.0"></script>
+  <script src="script.js?v=24.0"></script>
   <script>
     var currentSelectedPack = '1kg';
     var currentPrice = 249;
@@ -666,7 +666,7 @@
       document.getElementById('shopMrpText').textContent = '₹' + mrp.toLocaleString('en-IN');
       document.getElementById('shopDiscountText').textContent = 'SAVE ' + discount;
 
-      // Update script.js?v=23.0 currentPackId if loaded
+      // Update script.js?v=24.0 currentPackId if loaded
       if (typeof selectPack === 'function') {
         selectPack(pack);
       }

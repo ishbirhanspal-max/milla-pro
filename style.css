@@ -6428,11 +6428,18 @@ button {
   padding: 0.25rem 0 !important;
 }
 
+.hero-full-marquee-inner .ms-track-scroller {
+  display: flex !important;
+  width: max-content !important;
+  animation: milldMarquee 28s linear infinite !important;
+}
+
 .hero-full-marquee-inner .ms-track {
   display: flex !important;
   align-items: center !important;
   white-space: nowrap !important;
-  animation: milldMarquee 20s linear infinite !important;
+  flex-shrink: 0 !important;
+  animation: none !important;
 }
 
 .hero-full-marquee-inner .ms-text {
@@ -7033,10 +7040,15 @@ button {
 
 .tm-scroll--reviews {
   display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   gap: 0 !important;
   width: max-content !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  margin: 0 !important;
   will-change: transform !important;
-  animation: reviewsMarqueeInfinite 42s linear infinite !important;
+  animation: reviewsMarqueeInfinite 48s linear infinite !important;
 }
 
 .tm-row--reviews:hover .tm-scroll--reviews,
@@ -7046,6 +7058,8 @@ button {
 
 .tm-track {
   display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   gap: 1.5rem !important;
   padding-right: 1.5rem !important;
   flex-shrink: 0 !important;
