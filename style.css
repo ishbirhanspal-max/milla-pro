@@ -606,12 +606,13 @@ button {
 .milld-hs .mh-h1 {
   font-family: var(--font-heading);
   text-transform: uppercase;
-  line-height: 1.04;
-  letter-spacing: -0.01em;
-  margin: 0 0 1.25rem;
-  color: #121212;
-  font-weight: 400;
-  font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 auto 1.25rem !important;
+  text-align: center !important;
+  color: #0A0A0C;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5.2vw, 4.4rem);
 }
 
 .milld-hs .mh-brush {
@@ -2494,20 +2495,16 @@ button {
   /* ── H1 — spa: text-[13vw] mobile ── */
 
   .milld-hs .mh-h1 {
-
     font-size: clamp(1.45rem, 5.5vw, 1.85rem);
-
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-
-
   /* ── Tablet 640px+ ── */
-
   @media (min-width: 640px) {
-
     /* H1: sm:text-[3rem] */
-
-    .milld-hs .mh-h1      { font-size: 3rem !important; }
+    .milld-hs .mh-h1      { font-size: 3rem !important; text-align: center !important; margin: 0 auto 1.25rem !important; }
 
     /* Stats number: sm:text-3xl */
 
@@ -7705,23 +7702,30 @@ html, body {
   margin: 0 auto !important;
   text-align: center !important;
   box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
 }
 
-.mh-h1 {
+.mh-h1, .milld-hs .mh-h1 {
   font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif !important;
   font-weight: 700 !important;
   letter-spacing: -0.025em !important;
   color: #0A0A0C !important;
-  font-size: clamp(2.5rem, 5.2vw, 4.4rem) !important;
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem) !important;
   line-height: 1.08 !important;
   max-width: 860px !important;
   margin: 0 auto 1.25rem !important;
   text-align: center !important;
   word-break: normal !important;
   overflow-wrap: break-word !important;
+  width: 100% !important;
+  display: block !important;
 }
 
-.mh-sub {
+.mh-sub, .milld-hs .mh-sub {
   color: rgba(10, 10, 12, 0.68) !important;
   font-weight: 400 !important;
   font-size: clamp(0.95rem, 1.4vw, 1.15rem) !important;
@@ -7729,6 +7733,8 @@ html, body {
   max-width: 620px !important;
   margin: 0 auto 2.25rem !important;
   text-align: center !important;
+  width: 100% !important;
+  display: block !important;
 }
 
 .mh-ctas {
@@ -8136,36 +8142,6 @@ html, body {
     overflow: hidden !important;
     width: 100% !important;
     max-width: 100vw !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .mh-h1 {
-    font-size: 1.45rem !important;
-    line-height: 1.22 !important;
-    letter-spacing: -0.015em !important;
-    max-width: 320px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    word-break: normal !important;
-    white-space: normal !important;
-  }
-  .mh-sub {
-    font-size: 0.88rem !important;
-    line-height: 1.6 !important;
-    max-width: 300px !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .mh-h1 {
-    font-size: 1.32rem !important;
-    line-height: 1.25 !important;
-    max-width: 290px !important;
-  }
-  .mh-badge {
-    font-size: 0.6rem !important;
-    padding: 0.28rem 0.65rem !important;
   }
 }
 

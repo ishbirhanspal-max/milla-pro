@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=26.0">
+  <link rel="stylesheet" href="style.css?v=27.0">
 </head>
 <body>
 
@@ -244,14 +244,19 @@
           </span>
         </div>
 
-        <!-- H1 Space Grotesk Headline -->
-        <h1 class="mh-h1">
-          The Future<br/>
-          <span style="color:#d35400;">Of Daily Nutrition.</span>
-        </h1>
+        <!-- H1 Space Grotesk Headline with Radiant Luxury Aura -->
+        <div style="position:relative; width:100%; display:flex; justify-content:center; margin-bottom:1.25rem;">
+          <!-- Ambient Terracotta Radiant Halo Behind Text -->
+          <div aria-hidden="true" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:340px; height:180px; background:radial-gradient(ellipse at center, rgba(211,84,0,0.18) 0%, rgba(211,84,0,0) 70%); filter:blur(28px); pointer-events:none; z-index:0;"></div>
+
+          <h1 class="mh-h1" style="position:relative; z-index:1; text-align:center !important; margin:0 auto !important; display:block !important; width:100% !important;">
+            The Future<br/>
+            <span class="mh-h1-gradient" style="background:linear-gradient(135deg, #d35400 0%, #e67e22 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Of Daily Nutrition.</span>
+          </h1>
+        </div>
 
         <!-- Editorial Clean Subheading -->
-        <p class="mh-sub">
+        <p class="mh-sub" style="text-align:center !important; margin-left:auto !important; margin-right:auto !important; display:block !important; width:100% !important;">
           <strong style="color:#d35400; font-weight:700;">44.1g Bio-Active Protein</strong> per 100g.<br/>
           Pure whole wheat matrix &bull; 15g protein in every roti &bull; 0% whey bloat.
         </p>
