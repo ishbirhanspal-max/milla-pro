@@ -912,23 +912,37 @@ function handlePinKey(event) {
 // FAQ Accordion
 // ==========================================
 function toggleFaq(btn) {
-  const item = btn.parentElement;
+  if (!btn) return;
+  var item = btn.closest('.faq-item') || btn.parentElement;
   if (!item) return;
 
-  const isActive = item.classList.contains('active');
+  var isOpen = item.classList.contains('is-open') || item.classList.contains('active');
+  var parent = item.parentElement;
   
-  // Close other open accordions in the same list
-  document.querySelectorAll('.faq-item').forEach(el => {
-    if (el !== item) el.classList.remove('active');
-    const icon = el.querySelector('.icon');
-    if (icon) icon.innerText = '+';
-  });
-
-  item.classList.toggle('active', !isActive);
-  const icon = btn.querySelector('.icon');
-  if (icon) {
-    icon.innerText = !isActive ? '−' : '+';
+  if (parent) {
+    parent.querySelectorAll('.faq-item').forEach(function (el) {
+      if (el !== item) {
+        el.classList.remove('is-open', 'active');
+        var b = el.querySelector('.faq-btn, .faq-question');
+        if (b) b.setAttribute('aria-expanded', 'false');
+        var ic = el.querySelector('.icon');
+        if (ic) ic.innerText = '+';
+      }
+    });
   }
+
+  if (isOpen) {
+    item.classList.remove('is-open', 'active');
+    btn.setAttribute('aria-expanded', 'false');
+    var icon = btn.querySelector('.icon');
+    if (icon) icon.innerText = '+';
+  } else {
+    item.classList.add('is-open', 'active');
+    btn.setAttribute('aria-expanded', 'true');
+    var icon = btn.querySelector('.icon');
+    if (icon) icon.innerText = '−';
+  }
+  if (typeof playMicroSound === 'function') playMicroSound('tick');
 }
 
 // ==========================================
@@ -1597,26 +1611,8 @@ function initMillDReviews() {
   }, { passive: true });
 }
 
-function toggleFaq(btn) {
-  if (!btn) return;
-  var item = btn.closest('.faq-item');
-  if (!item) return;
+// Master toggleFaq is defined at line 914
 
-  var isOpen = item.classList.contains('is-open');
-  var parent = item.parentElement;
-  if (parent) {
-    parent.querySelectorAll('.faq-item.is-open').forEach(function (el) {
-      el.classList.remove('is-open');
-      var b = el.querySelector('.faq-btn');
-      if (b) b.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  if (!isOpen) {
-    item.classList.add('is-open');
-    btn.setAttribute('aria-expanded', 'true');
-  }
-}
 
 document.addEventListener('DOMContentLoaded', function () {
   initMillDRotiReveal();
@@ -1798,4 +1794,213 @@ if (document.readyState === 'loading') {
 } else {
   initPouchTilt();
 }
+
+// ==========================================================================
+// V29.0 LUXURY ARCHITECTURAL UPGRADES JAVASCRIPT CONTROLLERS
+// ==========================================================================
+
+// 1. Ambient Audio Micro-Feedback Synthesizer (Feature 4.3)
+var audioCtx = null;
+var soundEnabled = localStorage.getItem('milla_sound_enabled') === 'true';
+
+function playMicroSound(type) {
+  if (!soundEnabled) return;
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    var osc = audioCtx.createOscillator();
+    var gain = audioCtx.createGain();
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    var now = audioCtx.currentTime;
+
+    if (type === 'tick') {
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(800, now);
+      osc.frequency.exponentialRampToValueAtTime(350, now + 0.035);
+      gain.gain.setValueAtTime(0.04, now);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.035);
+      osc.start(now);
+      osc.stop(now + 0.035);
+    } else {
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(1050, now);
+      osc.frequency.exponentialRampToValueAtTime(650, now + 0.06);
+      gain.gain.setValueAtTime(0.06, now);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.06);
+      osc.start(now);
+      osc.stop(now + 0.06);
+    }
+  } catch(e) {}
+}
+
+function toggleAudioFeedback() {
+  soundEnabled = !soundEnabled;
+  localStorage.setItem('milla_sound_enabled', soundEnabled);
+  updateAudioFeedbackUI();
+  if (soundEnabled) playMicroSound('chime');
+}
+
+function updateAudioFeedbackUI() {
+  document.querySelectorAll('.sound-toggle-btn').forEach(function(btn) {
+    btn.classList.toggle('active', soundEnabled);
+    btn.innerHTML = soundEnabled ? '🔊 Sound: ON' : '🔈 Sound: OFF';
+  });
+}
+
+// 2. X-Ray Molecular Inspection Lens (Feature 1.1 / 1.2)
+function toggleXrayView(mode) {
+  var overlay = document.getElementById('xrayOverlayHud');
+  var btnPouch = document.getElementById('xrayBtnPouch');
+  var btnXray = document.getElementById('xrayBtnXray');
+  var mainImg = document.getElementById('mainShopImg');
+
+  if (mode === 'xray') {
+    if (overlay) overlay.classList.add('active');
+    if (btnPouch) btnPouch.classList.remove('active');
+    if (btnXray) btnXray.classList.add('active');
+    if (mainImg) mainImg.style.transform = 'scale(0.92) filter(contrast(1.15))';
+    playMicroSound('chime');
+  } else {
+    if (overlay) overlay.classList.remove('active');
+    if (btnPouch) btnPouch.classList.add('active');
+    if (btnXray) btnXray.classList.remove('active');
+    if (mainImg) mainImg.style.transform = 'scale(1)';
+    playMicroSound('tick');
+  }
+}
+
+// 3. Household Macro Architect Dial (Feature 2.1)
+var currentFamilyPeople = 4;
+function setHouseholdFamilySize(people) {
+  currentFamilyPeople = parseInt(people, 10) || 4;
+  playMicroSound('tick');
+
+  document.querySelectorAll('.family-pill-btn').forEach(function(btn) {
+    btn.classList.toggle('active', parseInt(btn.getAttribute('data-people'), 10) === currentFamilyPeople);
+  });
+
+  // Calculate Family Requirement (avg 55g/adult/day)
+  var familyTarget = currentFamilyPeople * 55;
+  var rotisPerPerson = 3;
+  var totalFamilyRotis = currentFamilyPeople * rotisPerPerson;
+  var regularProtein = Math.round(totalFamilyRotis * 3);
+  var millaProtein = Math.round(totalFamilyRotis * 15);
+  var closedGap = millaProtein - regularProtein;
+
+  var targetEl = document.getElementById('archFamilyTarget');
+  var rotisEl = document.getElementById('archFamilyRotis');
+  var regEl = document.getElementById('archRegularProtein');
+  var millaEl = document.getElementById('archMillaProtein');
+  var closedEl = document.getElementById('archClosedGap');
+  var percentEl = document.getElementById('archPercentMet');
+
+  if (targetEl) targetEl.textContent = familyTarget + 'g';
+  if (rotisEl) rotisEl.textContent = totalFamilyRotis + ' rotis';
+  if (regEl) regEl.textContent = regularProtein + 'g';
+  if (millaEl) millaEl.textContent = millaProtein + 'g';
+  if (closedEl) closedEl.textContent = '+' + closedGap + 'g';
+  if (percentEl) {
+    var pct = Math.min(100, Math.round((millaProtein / familyTarget) * 100));
+    percentEl.textContent = pct + '%';
+  }
+}
+
+// 4. Compare Against Any Atta Matrix (Feature 3.2)
+var attaData = {
+  'aashirvaad': {
+    name: 'Aashirvaad Superior MP Atta',
+    protein: '10.5g',
+    carbs: '73.2g',
+    fiber: '11.0g',
+    gi: 'High GI (65)',
+    bloat: 'Low (Wheat)',
+    costPer10g: '₹4.8'
+  },
+  'pillsbury': {
+    name: 'Pillsbury Chakki Fresh',
+    protein: '10.8g',
+    carbs: '72.0g',
+    fiber: '10.5g',
+    gi: 'High GI (64)',
+    bloat: 'Low (Wheat)',
+    costPer10g: '₹4.9'
+  },
+  'multigrain': {
+    name: 'Commercial Multigrain Atta',
+    protein: '13.5g',
+    carbs: '68.0g',
+    fiber: '12.0g',
+    gi: 'Medium GI (58)',
+    bloat: 'Moderate (Channa/Barley)',
+    costPer10g: '₹6.2'
+  },
+  'besan': {
+    name: 'Pure Besan / Gram Flour',
+    protein: '21.0g',
+    carbs: '57.8g',
+    fiber: '10.8g',
+    gi: 'Low GI (35)',
+    bloat: 'High Gas / Hard to Puff',
+    costPer10g: '₹7.5'
+  }
+};
+
+function switchCompareAtta(brandKey) {
+  var data = attaData[brandKey];
+  if (!data) return;
+  playMicroSound('tick');
+
+  document.querySelectorAll('.compare-tab-pill').forEach(function(pill) {
+    pill.classList.toggle('active', pill.getAttribute('data-brand') === brandKey);
+  });
+
+  var brandNameEl = document.getElementById('cmpBrandName');
+  var brandProteinEl = document.getElementById('cmpBrandProtein');
+  var brandCarbsEl = document.getElementById('cmpBrandCarbs');
+  var brandFiberEl = document.getElementById('cmpBrandFiber');
+  var brandGiEl = document.getElementById('cmpBrandGi');
+  var brandBloatEl = document.getElementById('cmpBrandBloat');
+  var brandCostEl = document.getElementById('cmpBrandCost');
+
+  if (brandNameEl) brandNameEl.textContent = data.name;
+  if (brandProteinEl) brandProteinEl.textContent = data.protein;
+  if (brandCarbsEl) brandCarbsEl.textContent = data.carbs;
+  if (brandFiberEl) brandFiberEl.textContent = data.fiber;
+  if (brandGiEl) brandGiEl.textContent = data.gi;
+  if (brandBloatEl) brandBloatEl.textContent = data.bloat;
+  if (brandCostEl) brandCostEl.textContent = data.costPer10g;
+}
+
+// 5. Dynamic Glassmorphic Floating Island Sticky Nav (Feature 5.1)
+function initFloatingIsland() {
+  var island = document.getElementById('floatingIsland');
+  if (!island) return;
+
+  var lastScrollY = window.scrollY;
+  window.addEventListener('scroll', function() {
+    var currentY = window.scrollY;
+    // Show after scrolling past 350px
+    if (currentY > 350) {
+      island.classList.add('visible');
+    } else {
+      island.classList.remove('visible');
+    }
+    lastScrollY = currentY;
+  }, { passive: true });
+}
+
+// Auto-init on page load
+document.addEventListener('DOMContentLoaded', function() {
+  updateAudioFeedbackUI();
+  initFloatingIsland();
+  if (document.getElementById('archFamilyTarget')) {
+    setHouseholdFamilySize(4);
+  }
+});
+
 

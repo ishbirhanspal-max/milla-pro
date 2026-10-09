@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
-<link href="style.css?v=28.0" rel="stylesheet"/>
+<link href="style.css?v=29.0" rel="stylesheet"/>
 <link href="https://milla-pro-store.netlify.app/reports.html" rel="canonical"/></head>
 <body>
 <!-- 1. Top Ultra-Thin Moving Marquee Ticker -->
@@ -58,6 +58,9 @@
 <a href="contact.html">Contact</a>
 </nav>
 <div class="header-actions">
+<button type="button" class="sound-toggle-btn" onclick="toggleAudioFeedback()" title="Ambient Audio Feedback Toggle" aria-label="Toggle Sound Feedback">
+  🔈 Sound: OFF
+</button>
 <a aria-label="Account" class="icon-btn" href="login.html" title="Account">
 <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
 </a>
@@ -453,27 +456,31 @@
   </div>
 </div>
 </div>
-<!-- Scanned Certificate Pages -->
-<h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.6rem; text-transform:uppercase; text-align:center; margin-bottom:2rem; font-weight:700; color:#0A0A0C;">Original NABL Certificate Scans</h3>
-<div class="reports-scans-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.75rem; margin-bottom:3.5rem;">
-<div class="legal-content-card" style="padding:1.25rem;">
-<div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:0.9rem; text-transform:uppercase; margin-bottom:0.75rem; display:flex; justify-content:space-between; align-items:center;">
-<span>Page 1 of 2</span>
-<span style="color:#2E7D32; font-family:'JetBrains Mono',monospace; font-size:0.8rem;">✓ NABL Accredited</span>
-</div>
-<a href="envirocare-lab-report-p1.png" target="_blank" title="Click to view full size">
-<img alt="Envirocare Labs NABL Report Page 1" loading="lazy" decoding="async" src="envirocare-lab-report-p1.png" style="width:100%; border:1px solid rgba(10,10,12,0.08); border-radius:10px; display:block;"/>
-</a>
-</div>
-<div class="legal-content-card" style="padding:1.25rem;">
-<div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:0.9rem; text-transform:uppercase; margin-bottom:0.75rem; display:flex; justify-content:space-between; align-items:center;">
-<span>Page 2 of 2</span>
-<span style="color:#2E7D32; font-family:'JetBrains Mono',monospace; font-size:0.8rem;">✓ Certified Signatures</span>
-</div>
-<a href="envirocare-lab-report-p2.png" target="_blank" title="Click to view full size">
-<img alt="Envirocare Labs NABL Report Page 2" loading="lazy" decoding="async" src="envirocare-lab-report-p2.png" style="width:100%; border:1px solid rgba(10,10,12,0.08); border-radius:10px; display:block;"/>
-</a>
-</div>
+<!-- Official Verification Certificate Vault (Hidden Under Clean URL) -->
+<div class="certificate-url-vault-card" style="max-width: 760px; margin: 3.5rem auto 3rem; background: #FFFFFF; border: 1.5px solid rgba(211,84,0,0.25); border-radius: 28px; padding: 2.75rem 2rem; text-align: center; box-shadow: 0 20px 50px rgba(10,10,12,0.04);">
+  <div style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.4rem 1.15rem; border-radius:9999px; background:rgba(46,125,50,0.08); color:#2E7D32; font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; text-transform:uppercase; margin-bottom:1.25rem;">
+    ✓ NABL ACCREDITED LAB RECORD TC0828426000063499F
+  </div>
+  <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.75rem; font-weight:700; color:#0A0A0C; margin:0 0 0.75rem; text-transform:uppercase;">Official Envirocare Analytical Certificate</h3>
+  <p style="font-size:0.95rem; color:rgba(10,10,12,0.65); max-width:580px; margin:0 auto 2.25rem; line-height:1.65;">
+    To maintain maximum clarity and speed, full multi-page laboratory dossiers, chemical chromatograms, and certified officer sign-offs are archived under direct verification URLs below.
+  </p>
+  
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-bottom:1.75rem;">
+    <a href="lab report.pdf" target="_blank" rel="noopener" class="submit-btn" style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.85rem 1.85rem; text-decoration:none; font-size:0.9rem;">
+      <span>📄 View Official NABL Certificate (PDF ↗)</span>
+    </a>
+    <a href="envirocare-lab-report-p1.png" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.85rem 1.5rem; border-radius:9999px; background:rgba(10,10,12,0.04); border:1px solid rgba(10,10,12,0.12); color:#0A0A0C; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.85rem; transition:all 0.2s;">
+      <span>🔍 Open Analytical Scan URL (Page 1 ↗)</span>
+    </a>
+    <a href="envirocare-lab-report-p2.png" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.85rem 1.5rem; border-radius:9999px; background:rgba(10,10,12,0.04); border:1px solid rgba(10,10,12,0.12); color:#0A0A0C; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.85rem; transition:all 0.2s;">
+      <span>🔍 Open Sign-Off Scan URL (Page 2 ↗)</span>
+    </a>
+  </div>
+  
+  <div style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:rgba(10,10,12,0.5); letter-spacing:0.04em;">
+    Report Reference: 01/ETHFD2609015 &bull; Tested via Method EL/SOP/549 &bull; Independent 3rd-Party Verification
+  </div>
 </div>
 <div style="text-align:center;">
 <a class="submit-btn" href="products.html" style="display:inline-flex; align-items:center; gap:0.75rem; padding:0.95rem 2.25rem; text-decoration:none;">
@@ -546,6 +553,7 @@
 </div>
 </div>
 </footer>
-<script src="script.js?v=28.0"></script>
+<script src="script.js?v=29.0"></script>
 </body>
 </html>
+

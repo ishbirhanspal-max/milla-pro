@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=28.0">
+  <link rel="stylesheet" href="style.css?v=29.0">
 </head>
 <body>
 
@@ -65,6 +65,9 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="sound-toggle-btn" onclick="toggleAudioFeedback()" title="Ambient Audio Feedback Toggle" aria-label="Toggle Sound Feedback">
+          🔈 Sound: OFF
+        </button>
         <a href="login.html" class="icon-btn" title="Account / Login" aria-label="Account">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
@@ -183,7 +186,7 @@
     </div>
 
     <div class="cart-items-container" id="cartItemsList">
-      <!-- Populated dynamically by script.js?v=28.0 -->
+      <!-- Populated dynamically by script.js?v=29.0 -->
     </div>
 
     <div class="cart-drawer-footer" id="cartDrawerFooter">
@@ -281,29 +284,16 @@
           </div>
         </div>
 
-        <!-- Feature 1: Interactive 3D / Floating Holographic Pouch Stage -->
-        <div class="hero-3d-stage">
-          <div class="hero-3d-glow"></div>
-          <div class="hero-3d-card" id="hero3dCard" onclick="window.location.href='products.html'" title="Click to view packaging and ingredients">
-            <img src="milla-pouch-front.jpeg" alt="MILLA PRO ~45g Protein Atta Pouch Standup Pack" class="hero-pouch-img" loading="eager"/>
-            <div class="hero-3d-badge-bar">
-              <span style="color:#d35400;">● BATCH 08</span>
-              <span>~45G BIO-MATRIX</span>
-              <span style="color:#2E7D32;">✓ NABL CERTIFIED</span>
-            </div>
-          </div>
-        </div>
-
         <!-- Minimalist Luxury CTA Buttons -->
-        <div class="mh-ctas" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1rem; margin-bottom:2.75rem;">
+        <div class="mh-ctas" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1rem; margin-top:2rem; margin-bottom:2.75rem;">
           <a class="mh-btn-shop" href="products.html" style="display:inline-flex; align-items:center; gap:0.75rem; border-radius:9999px; background:#d35400; padding:0.85rem 1.65rem 0.85rem 2.25rem; color:#FFFFFF; text-decoration:none; box-shadow:0 12px 28px -6px rgba(211,84,0,0.4); font-family:'Space Grotesk',sans-serif; font-size:0.88rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; transition:all 0.25s ease;">
             <span>Shop Formulation</span>
             <span class="mh-btn-icon" style="display:grid; place-items:center; width:2.2rem; height:2.2rem; border-radius:50%; background:#FFFFFF; color:#d35400; flex-shrink:0;">
               <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
             </span>
           </a>
-          <a class="mh-btn-learn" href="#roti-transformer" style="display:inline-flex; align-items:center; padding:0.85rem 1.75rem; border-radius:9999px; background:rgba(10,10,12,0.04); border:1px solid rgba(10,10,12,0.1); color:#0A0A0C; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; transition:all 0.2s ease;">
-            Interactive Macro HUD &rarr;
+          <a class="mh-btn-learn" href="#macro-architect" style="display:inline-flex; align-items:center; padding:0.85rem 1.75rem; border-radius:9999px; background:rgba(10,10,12,0.04); border:1px solid rgba(10,10,12,0.1); color:#0A0A0C; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; transition:all 0.2s ease;">
+            Family Macro Diagnostic &rarr;
           </a>
         </div>
 
@@ -365,51 +355,6 @@
           </div>
         </div>
 
-        <!-- Feature 3: Real-Time "Roti Macro Transformer" Interactive HUD -->
-        <div class="macro-transformer-card" id="roti-transformer">
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
-            <div style="text-align:left;">
-              <span class="mh-badge" style="display:inline-block; font-size:0.65rem; padding:0.25rem 0.65rem; margin-bottom:0.35rem;">// INTERACTIVE MACRO TRANSFORMER HUD</span>
-              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.25rem; font-weight:700; color:#0A0A0C; margin:0;">Slide to Upgrade Your Daily Rotis</h3>
-            </div>
-            <div style="text-align:right;">
-              <span id="mtRotiCount" style="font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:800; color:#d35400;">3 Rotis</span>
-            </div>
-          </div>
-
-          <div class="mt-slider-track">
-            <input type="range" min="1" max="6" value="3" step="1" class="mt-range-input" id="mtRangeSlider" oninput="updateMacroTransformer(this.value)" aria-label="Roti Count Selector"/>
-            <div style="display:flex; justify-content:space-between; margin-top:0.4rem; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:rgba(10,10,12,0.5);">
-              <span>1 Roti</span>
-              <span>2 Rotis</span>
-              <span style="color:#d35400; font-weight:700;">3 Rotis (Standard Meal)</span>
-              <span>4 Rotis</span>
-              <span>5 Rotis</span>
-              <span>6 Rotis</span>
-            </div>
-          </div>
-
-          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:0.75rem; text-align:center; margin-top:1.5rem;">
-            <div style="background:#F9F9FB; border:1px solid rgba(10,10,12,0.07); border-radius:14px; padding:0.85rem 0.5rem;">
-              <div style="font-size:0.75rem; color:rgba(10,10,12,0.55); text-transform:uppercase;">Standard Atta</div>
-              <div id="mtRegProtein" style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:700; color:rgba(10,10,12,0.7); margin-top:0.2rem;">9g</div>
-              <div style="font-size:0.7rem; color:rgba(10,10,12,0.45);">protein</div>
-            </div>
-
-            <div style="background:rgba(211,84,0,0.06); border:1.5px solid rgba(211,84,0,0.3); border-radius:14px; padding:0.85rem 0.5rem;">
-              <div style="font-size:0.75rem; color:#d35400; font-weight:700; text-transform:uppercase;">MILLA PRO (~45g)</div>
-              <div id="mtMillaProtein" style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:800; color:#d35400; margin-top:0.2rem;">45g</div>
-              <div style="font-size:0.7rem; color:#d35400; font-weight:600;">pure plant protein</div>
-            </div>
-
-            <div style="background:#F1F8E9; border:1px solid rgba(46,125,50,0.25); border-radius:14px; padding:0.85rem 0.5rem;">
-              <div style="font-size:0.75rem; color:#2E7D32; font-weight:700; text-transform:uppercase;">Net Protein Gain</div>
-              <div id="mtProteinGain" style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:800; color:#2E7D32; margin-top:0.2rem;">+36g</div>
-              <div style="font-size:0.7rem; color:#2E7D32; font-weight:600;">effortless boost</div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
     <!-- FULL-SCREEN EDGE-TO-EDGE TILTED MARQUEE STRIP -->
@@ -448,144 +393,244 @@
       </div>
     </div>
 
-    <!-- 4. PROTEIN GAP & CALCULATOR SECTION (pg-section) WITH WHEY CALCULATOR -->
-    <section class="pg-section" id="whey-calculator">
-      <div class="pg-container">
+    <!-- 4. UNIFIED MASTER MACRO ARCHITECT & WHEY CALCULATOR SUITE -->
+    <section class="macro-architect-section" id="macro-architect">
+      <div class="container" style="max-width:1120px;">
         
-        <!-- Top Row: Heading + Wavy Note Card -->
-        <div class="pg-top-grid">
-          <div class="pg-heading-col">
-            <h2 class="pg-heading">
-              Your atta needs A<br class="pg-br-mobile"/>
-              <span class="pg-heading-accent">protein upgrade</span>
-            </h2>
+        <!-- Section Header with Generous White Space -->
+        <div style="text-align:center; max-width:760px; margin:0 auto 3.5rem;">
+          <div style="margin-bottom:1rem;">
+            <span class="tech-badge">
+              <span class="tech-beacon"></span>
+              // CLINICAL MACRO INTELLIGENCE &bull; FAMILY GAP DIAGNOSTIC
+            </span>
           </div>
-          <div class="pg-note-col">
-            <div class="pg-note-wrap">
-              <div aria-hidden="true" class="pg-qmark">
-                <svg fill="none" height="56" viewBox="0 0 48 48" width="56">
-                  <path d="M17 14c0-6 4-9 9-9s9 4 9 9c0 5-4 7-7 9s-3 4-3 7" stroke="#d35400" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
-                  <circle cx="25" cy="39" fill="#d35400" r="3"></circle>
-                </svg>
-              </div>
-              <p class="pg-note-text">
-                Regular wheat atta gives you just 10g–12g protein per 100g. Most Indians need around 50–60g daily.
-                <strong>The math never really worked, until now.</strong>
-              </p>
-            </div>
-          </div>
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem, 4.5vw, 3rem); font-weight:700; color:#0A0A0C; letter-spacing:-0.02em; line-height:1.15; margin:0 0 1rem;">
+            Close India's 80% Protein Gap.<br/>
+            <span style="color:#d35400;">Right At The Dining Table.</span>
+          </h2>
+          <p style="font-size:1.05rem; color:rgba(10,10,12,0.65); line-height:1.65; margin:0;">
+            ICMR guidelines state the average Indian needs 55g–65g protein daily, yet regular chakki flour yields barely 9g per meal. Run the clinical diagnostic below to see how MILLA PRO solves your family's protein deficit.
+          </p>
         </div>
 
-        <!-- Protein Calculator & The MILLA PRO Math -->
-        <div class="pg-calc-wrap">
-          <div class="pg-calc" id="pg-calc-template--23901876781272__protein_gap_fnpWcK" style="background:#FFFFFF; border:1px solid rgba(10,10,12,0.08); border-radius:24px; padding:2rem; box-shadow:0 16px 40px rgba(10,10,12,0.04);">
-            <div class="pg-calc-inner" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; align-items:center;">
-              
-              <!-- LEFT: Controls & Telemetry Dial -->
-              <div class="pg-calc-left">
-                <div class="pg-calc-title" style="font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:700; color:#0A0A0C; margin-bottom:0.5rem;">
-                  Daily Protein Telemetry HUD
-                </div>
-                <p style="font-size:0.88rem; color:rgba(10,10,12,0.6); margin-bottom:1.5rem;">
-                  Select your daily roti consumption to inspect bio-active protein density vs standard flour.
-                </p>
+        <!-- Master Diagnostic Container -->
+        <div class="architect-master-card" id="whey-calculator">
+          
+          <!-- PART 1: Feature 2.1 - Household Macro Architect Dial -->
+          <div style="text-align:center; border-bottom:1px solid rgba(10,10,12,0.08); padding-bottom:2.5rem; margin-bottom:2.5rem;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#d35400; letter-spacing:0.06em;">
+              STEP 1: SELECT HOUSEHOLD FAMILY MEMBERS
+            </span>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:700; color:#0A0A0C; margin:0.4rem 0 1rem;">
+              How many people eat daily home meals?
+            </h3>
 
-                <!-- Quick Buttons for Rotis -->
-                <div class="hud-roti-btn-group" style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.25rem;">
-                  <button type="button" onclick="setRotiDirect(1)" class="hud-roti-btn" id="btnRoti1" style="flex:1; padding:0.5rem 0.4rem; border-radius:10px; border:1px solid rgba(10,10,12,0.12); background:#FFFFFF; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.2s;">1 Roti</button>
-                  <button type="button" onclick="setRotiDirect(2)" class="hud-roti-btn" id="btnRoti2" style="flex:1; padding:0.5rem 0.4rem; border-radius:10px; border:1px solid rgba(10,10,12,0.12); background:#FFFFFF; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.2s;">2 Rotis</button>
-                  <button type="button" onclick="setRotiDirect(3)" class="hud-roti-btn active" id="btnRoti3" style="flex:1; padding:0.5rem 0.4rem; border-radius:10px; border:1px solid #d35400; background:rgba(211,84,0,0.08); color:#d35400; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:0.85rem; cursor:pointer; transition:all 0.2s;">3 Rotis</button>
-                  <button type="button" onclick="setRotiDirect(4)" class="hud-roti-btn" id="btnRoti4" style="flex:1; padding:0.5rem 0.4rem; border-radius:10px; border:1px solid rgba(10,10,12,0.12); background:#FFFFFF; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.2s;">4 Rotis</button>
-                </div>
+            <div class="architect-family-pills">
+              <button type="button" class="family-pill-btn" data-people="1" onclick="setHouseholdFamilySize(1)">1 Person (Individual)</button>
+              <button type="button" class="family-pill-btn" data-people="2" onclick="setHouseholdFamilySize(2)">2 People (Couple)</button>
+              <button type="button" class="family-pill-btn" data-people="3" onclick="setHouseholdFamilySize(3)">3 People</button>
+              <button type="button" class="family-pill-btn active" data-people="4" onclick="setHouseholdFamilySize(4)">4 People (Standard Family)</button>
+              <button type="button" class="family-pill-btn" data-people="5" onclick="setHouseholdFamilySize(5)">5+ People</button>
+            </div>
 
-                <div class="pg-slider-box" style="margin-bottom:0.5rem;">
-                  <div class="pg-slider-row" style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
-                    <span class="pg-slider-label" style="font-size:0.85rem; font-weight:600; color:rgba(10,10,12,0.7);">Custom Slider Count:</span>
-                    <span class="pg-slider-count">
-                      <strong class="pg-roti-count" id="pgRotiCount" style="font-family:'Space Grotesk',sans-serif; font-size:1.15rem; color:#d35400;">3</strong>
-                      <span class="pg-slider-unit" id="pgRotiUnit" style="font-size:0.85rem; color:rgba(10,10,12,0.6);">rotis / day</span>
-                    </span>
-                  </div>
-                  <div class="pg-slider-track">
-                    <input aria-label="Number of rotis per day" class="roti-slider pg-roti-slider" id="pgRotiSlider" max="10" min="1" type="range" value="3" oninput="handleRotiSliderInput(this.value)" style="width:100%; accent-color:#d35400;"/>
-                  </div>
+            <!-- Household Telemetry Stats Grid -->
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; margin-top:1.5rem;">
+              <div style="background:#F9F9FB; border:1px solid rgba(10,10,12,0.07); border-radius:18px; padding:1.25rem 1rem; text-align:center;">
+                <div style="font-size:0.75rem; color:rgba(10,10,12,0.55); text-transform:uppercase; font-weight:600;">Daily Family Target</div>
+                <div id="archFamilyTarget" style="font-family:'Space Grotesk',sans-serif; font-size:1.85rem; font-weight:800; color:#0A0A0C; margin-top:0.3rem;">220g</div>
+                <div style="font-size:0.7rem; color:rgba(10,10,12,0.45); margin-top:2px;">ICMR RDA Standard</div>
+              </div>
+
+              <div style="background:#F9F9FB; border:1px solid rgba(10,10,12,0.07); border-radius:18px; padding:1.25rem 1rem; text-align:center;">
+                <div style="font-size:0.75rem; color:rgba(10,10,12,0.55); text-transform:uppercase; font-weight:600;">Standard Atta Protein</div>
+                <div id="archRegularProtein" style="font-family:'Space Grotesk',sans-serif; font-size:1.85rem; font-weight:700; color:rgba(10,10,12,0.65); margin-top:0.3rem;">36g</div>
+                <div style="font-size:0.7rem; color:#C62828; font-weight:600; margin-top:2px;">Severe 184g Deficit</div>
+              </div>
+
+              <div style="background:rgba(211,84,0,0.06); border:1.5px solid rgba(211,84,0,0.3); border-radius:18px; padding:1.25rem 1rem; text-align:center;">
+                <div style="font-size:0.75rem; color:#d35400; text-transform:uppercase; font-weight:700;">With MILLA PRO Atta</div>
+                <div id="archMillaProtein" style="font-family:'Space Grotesk',sans-serif; font-size:1.85rem; font-weight:800; color:#d35400; margin-top:0.3rem;">180g</div>
+                <div id="archClosedGap" style="font-size:0.7rem; color:#2E7D32; font-weight:700; margin-top:2px;">+144g Bio-Protein Boost</div>
+              </div>
+
+              <div style="background:#F4FAF5; border:1px solid rgba(46,125,50,0.25); border-radius:18px; padding:1.25rem 1rem; text-align:center;">
+                <div style="font-size:0.75rem; color:#2E7D32; text-transform:uppercase; font-weight:700;">Family Goal Met</div>
+                <div id="archPercentMet" style="font-family:'Space Grotesk',sans-serif; font-size:1.85rem; font-weight:800; color:#2E7D32; margin-top:0.3rem;">82%</div>
+                <div style="font-size:0.7rem; color:#2E7D32; font-weight:600; margin-top:2px;">Zero Powder &bull; Real Food</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PART 2: Single Master Precision Roti Slider & Telemetry HUD Ring -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2.5rem; align-items:center; border-bottom:1px solid rgba(10,10,12,0.08); padding-bottom:2.5rem; margin-bottom:2.5rem;">
+            
+            <!-- Slider Controls -->
+            <div>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#d35400; letter-spacing:0.06em;">
+                STEP 2: INDIVIDUAL ROTI CONSUMPTION
+              </span>
+              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:700; color:#0A0A0C; margin:0.35rem 0 0.75rem;">
+                How many rotis do you eat in a day?
+              </h3>
+              <p style="font-size:0.88rem; color:rgba(10,10,12,0.6); margin-bottom:1.5rem;">
+                Adjust the precision slider to calculate your individual personal protein intake:
+              </p>
+
+              <!-- Quick Selector Buttons -->
+              <div class="hud-roti-btn-group" style="display:flex; gap:0.5rem; margin-bottom:1.25rem;">
+                <button type="button" onclick="setRotiDirect(1)" class="hud-roti-btn" id="btnRoti1" style="flex:1; padding:0.6rem 0.4rem; border-radius:12px; border:1px solid rgba(10,10,12,0.12); background:#FFFFFF; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.85rem; cursor:pointer;">1 Roti</button>
+                <button type="button" onclick="setRotiDirect(2)" class="hud-roti-btn" id="btnRoti2" style="flex:1; padding:0.6rem 0.4rem; border-radius:12px; border:1px solid rgba(10,10,12,0.12); background:#FFFFFF; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.85rem; cursor:pointer;">2 Rotis</button>
+                <button type="button" onclick="setRotiDirect(3)" class="hud-roti-btn active" id="btnRoti3" style="flex:1; padding:0.6rem 0.4rem; border-radius:12px; border:1.5px solid #d35400; background:rgba(211,84,0,0.08); color:#d35400; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:0.85rem; cursor:pointer;">3 Rotis</button>
+                <button type="button" onclick="setRotiDirect(4)" class="hud-roti-btn" id="btnRoti4" style="flex:1; padding:0.6rem 0.4rem; border-radius:12px; border:1px solid rgba(10,10,12,0.12); background:#FFFFFF; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:0.85rem; cursor:pointer;">4 Rotis</button>
+              </div>
+
+              <!-- Continuous Slider -->
+              <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+                  <span style="font-size:0.85rem; font-weight:600; color:rgba(10,10,12,0.7);">Continuous Slider:</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:800; color:#d35400;">
+                    <span id="pgRotiCount">3</span> <span style="font-size:0.82rem; color:rgba(10,10,12,0.6); font-weight:600;">rotis / day</span>
+                  </span>
+                </div>
+                <input aria-label="Number of rotis per day" class="roti-slider pg-roti-slider" id="pgRotiSlider" max="10" min="1" type="range" value="3" oninput="handleRotiSliderInput(this.value)" style="width:100%; accent-color:#d35400; cursor:pointer;"/>
+              </div>
+            </div>
+
+            <!-- Precision Circular HUD Ring -->
+            <div style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+              <div style="position:relative; width:160px; height:160px; display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem;">
+                <svg width="160" height="160" viewBox="0 0 140 140" style="transform: rotate(-90deg);">
+                  <circle cx="70" cy="70" r="56" fill="none" stroke="rgba(10,10,12,0.06)" stroke-width="10"></circle>
+                  <circle id="hudCircleProgress" cx="70" cy="70" r="56" fill="none" stroke="#d35400" stroke-width="10" stroke-linecap="round" stroke-dasharray="351.86" stroke-dashoffset="88" style="transition: stroke-dashoffset 0.4s ease;"></circle>
+                </svg>
+                <div style="position:absolute; text-align:center;">
+                  <div id="pgMillaVal" class="pg-milld-val" style="font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; color:#d35400; line-height:1;">~45g</div>
+                  <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; text-transform:uppercase; color:rgba(10,10,12,0.55); letter-spacing:0.08em; margin-top:2px;">Bio Protein</div>
                 </div>
               </div>
 
-              <!-- RIGHT: High-Tech Telemetry Circle & Output -->
-              <div class="pg-calc-right" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; width:100%; max-width:320px;">
+                <div style="background:#F9F9FB; border:1px solid rgba(10,10,12,0.08); border-radius:14px; padding:0.75rem; text-align:center;">
+                  <div style="font-size:0.75rem; color:rgba(10,10,12,0.55); text-transform:uppercase;">Standard Atta</div>
+                  <div id="pgRegularVal" style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:700; color:rgba(10,10,12,0.7);">9g</div>
+                  <div style="font-size:0.7rem; color:rgba(10,10,12,0.5);">protein</div>
+                </div>
+                <div style="background:rgba(211,84,0,0.06); border:1.5px solid rgba(211,84,0,0.25); border-radius:14px; padding:0.75rem; text-align:center;">
+                  <div style="font-size:0.75rem; color:#d35400; text-transform:uppercase; font-weight:700;">MILLA PRO</div>
+                  <div id="hudGainDiff" style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:700; color:#d35400;">+36g</div>
+                  <div style="font-size:0.7rem; color:#d35400; font-weight:600;">extra protein</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PART 3: Feature 2.2 - Live Gut Biome Visualizer ("Whey Powder Bloat vs. Whole Wheat Peace") -->
+          <div style="border-bottom:1px solid rgba(10,10,12,0.08); padding-bottom:2.5rem; margin-bottom:2.5rem;">
+            <div style="text-align:center; margin-bottom:1.5rem;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#d35400; letter-spacing:0.06em;">
+                STEP 3: LIVE GUT BIOME & DIGESTIBILITY TELEMETRY
+              </span>
+              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:700; color:#0A0A0C; margin:0.35rem 0;">
+                Whey Powder Bloat vs. Whole Wheat Peace
+              </h3>
+              <p style="font-size:0.9rem; color:rgba(10,10,12,0.6); max-width:600px; margin:0 auto;">
+                72% of Indians experience digestive gas, bloating, or stomach heaviness from synthetic whey powder. See the clinical digestive difference:
+              </p>
+            </div>
+
+            <div class="gut-biome-grid">
+              <!-- Whey Powder Card -->
+              <div class="gut-card gut-card-whey">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="font-family:'Space Grotesk',sans-serif; font-size:1rem; color:#C62828;">Synthetic Whey Shake</strong>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#C62828; font-weight:700;">High Bloat Risk</span>
+                </div>
                 
-                <!-- Circular Precision Ring Gauge -->
-                <div style="position:relative; width:160px; height:160px; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem;">
-                  <svg width="160" height="160" viewBox="0 0 140 140" style="transform: rotate(-90deg);">
-                    <!-- Background Track -->
-                    <circle cx="70" cy="70" r="56" fill="none" stroke="rgba(10,10,12,0.06)" stroke-width="10"></circle>
-                    <!-- Animated Terracotta Progress -->
-                    <circle id="hudCircleProgress" cx="70" cy="70" r="56" fill="none" stroke="#d35400" stroke-width="10" stroke-linecap="round" stroke-dasharray="351.86" stroke-dashoffset="88" style="transition: stroke-dashoffset 0.4s ease;"></circle>
-                  </svg>
-                  <div style="position:absolute; text-align:center;">
-                    <div id="pgMillaVal" class="pg-milld-val" style="font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; color:#d35400; line-height:1;">~45g</div>
-                    <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; text-transform:uppercase; color:rgba(10,10,12,0.55); letter-spacing:0.08em; margin-top:2px;">Bio Protein</div>
+                <div style="margin-top:1rem;">
+                  <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:rgba(10,10,12,0.7);">
+                    <span>Digestive Comfort Score</span>
+                    <strong style="color:#C62828;">38%</strong>
+                  </div>
+                  <div class="gut-meter-bar">
+                    <div class="gut-meter-fill" style="width:38%; background:#E74C3C;"></div>
                   </div>
                 </div>
 
-                <!-- Comparison Cards -->
-                <div class="pg-compare-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; width:100%; max-width:320px;">
-                  <div class="pg-compare-box pg-compare-regular" style="background:#F9F9FB; border:1px solid rgba(10,10,12,0.08); border-radius:12px; padding:0.75rem; text-align:center;">
-                    <div class="pg-compare-label" style="font-size:0.75rem; color:rgba(10,10,12,0.55); text-transform:uppercase;">Standard Atta</div>
-                    <div class="pg-compare-value pg-regular-val" id="pgRegularVal" style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:700; color:rgba(10,10,12,0.7);">9g</div>
-                    <div class="pg-compare-sub" style="font-size:0.7rem; color:rgba(10,10,12,0.5);">protein</div>
-                  </div>
-                  <div class="pg-compare-box pg-compare-milld" style="background:rgba(211,84,0,0.06); border:1px solid rgba(211,84,0,0.25); border-radius:12px; padding:0.75rem; text-align:center;">
-                    <div class="pg-compare-label" style="font-size:0.75rem; color:#d35400; text-transform:uppercase; font-weight:700;">MILLA PRO</div>
-                    <div class="pg-compare-value" id="hudGainDiff" style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:700; color:#d35400;">+36g</div>
-                    <div class="pg-compare-sub" style="font-size:0.7rem; color:#d35400; font-weight:600;">extra protein</div>
-                  </div>
-                </div>
-
-                <div class="pg-result-box" style="margin-top:1rem; text-align:center;">
-                  <p class="pg-result-text" style="font-size:0.88rem; color:rgba(10,10,12,0.7); margin:0;">
-                    Net Gain: <strong class="pg-result-num pg-gain-val" id="pgGainVal" style="color:#d35400; font-weight:700;">36g</strong> more protein every single day!
-                  </p>
-                </div>
-
+                <ul style="list-style:none; padding:0; margin:0; font-size:0.82rem; color:rgba(10,10,12,0.7); line-height:1.7;">
+                  <li>❌ Artificial sucralose &amp; chemical emulsifiers</li>
+                  <li>❌ Dairy lactose causes gas, acidity &amp; stomach cramping</li>
+                  <li>❌ Zero prebiotic fiber (0g natural fiber)</li>
+                  <li>❌ Unnatural synthetic powder feeling</li>
+                </ul>
               </div>
 
+              <!-- MILLA PRO Card -->
+              <div class="gut-card gut-card-milla">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="font-family:'Space Grotesk',sans-serif; font-size:1rem; color:#2E7D32;">MILLA PRO Whole Wheat Atta</strong>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#2E7D32; font-weight:700;">✓ 0% Bloat Peace</span>
+                </div>
+
+                <div style="margin-top:1rem;">
+                  <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:rgba(10,10,12,0.7);">
+                    <span>Digestive Comfort Score</span>
+                    <strong style="color:#2E7D32;">99%</strong>
+                  </div>
+                  <div class="gut-meter-bar">
+                    <div class="gut-meter-fill" style="width:99%; background:#2E7D32;"></div>
+                  </div>
+                </div>
+
+                <ul style="list-style:none; padding:0; margin:0; font-size:0.82rem; color:rgba(10,10,12,0.7); line-height:1.7;">
+                  <li>✓ 100% Clean Plant Fractions (No chemicals or sweeteners)</li>
+                  <li>✓ 13.1g NABL Certified Prebiotic Fiber for gut microbiome</li>
+                  <li>✓ 0% Lactose &bull; Zero digestive distress or gas</li>
+                  <li>✓ Authentic hot, fluffy chakki phulkas made with love</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </div><!-- WORKING WHEY PROTEIN COST CALCULATOR (₹3,500/kg Average Price Benchmark) -->
-        <div class="pg-whey-card">
-          <div class="pg-whey-header">
-            <span class="pg-whey-kicker">★ REAL FOOD VS SYNTHETIC POWDER</span>
-            <h3 class="pg-whey-title">Whey Protein Cost Calculator</h3>
-            <p class="pg-whey-sub">
-              Average branded Whey Protein in India costs <strong>₹3,500 / kg</strong>. MILLA PRO delivers ~45g pure protein per 100g for only <strong>₹20</strong>. See how much money you save every month!
-            </p>
           </div>
 
-          <div class="pg-whey-grid">
-            <div class="pg-whey-box">
-              <div class="pg-whey-box-title">Whey Protein Powder (@ ₹3,500/kg)</div>
-              <div class="pg-whey-box-price" id="wheyMonthlyCostVal">₹6,440</div>
-              <div class="pg-whey-box-sub">Cost per month &bull; Causes whey bloat &amp; digestive gas</div>
+          <!-- PART 4: Real-Food Whey Price Benchmark Calculator -->
+          <div>
+            <div style="text-align:center; margin-bottom:1.5rem;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#d35400; letter-spacing:0.06em;">
+                STEP 4: FINANCIAL COST COMPARISON (@ ₹3,500/KG BENCHMARK)
+              </span>
+              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:700; color:#0A0A0C; margin:0.35rem 0;">
+                How Much Money Do You Save Every Month?
+              </h3>
+              <p style="font-size:0.9rem; color:rgba(10,10,12,0.6); max-width:600px; margin:0 auto;">
+                Average branded Whey Protein powder in India costs <strong>₹3,500 / kg</strong>. MILLA PRO delivers ~45g pure protein per 100g for only <strong>₹20</strong>.
+              </p>
             </div>
 
-            <div class="pg-whey-box winner">
-              <span class="pg-whey-box-badge">Real Food Winner</span>
-              <div class="pg-whey-box-title">With MILLA PRO Atta (15g/Roti)</div>
-              <div class="pg-whey-box-price" id="millaMonthlyCostVal">₹600</div>
-              <div class="pg-whey-box-sub">Cost per month &bull; Hot phulkas &bull; 0% bloat</div>
+            <div class="pg-whey-grid">
+              <div class="pg-whey-box">
+                <div class="pg-whey-box-title">Whey Protein Powder (@ ₹3,500/kg)</div>
+                <div class="pg-whey-box-price" id="wheyMonthlyCostVal">₹6,440</div>
+                <div class="pg-whey-box-sub">Cost per month &bull; Causes whey bloat &amp; digestive gas</div>
+              </div>
+
+              <div class="pg-whey-box winner">
+                <span class="pg-whey-box-badge">Real Food Winner</span>
+                <div class="pg-whey-box-title">With MILLA PRO Atta (15g/Roti)</div>
+                <div class="pg-whey-box-price" id="millaMonthlyCostVal">₹600</div>
+                <div class="pg-whey-box-sub">Cost per month &bull; Hot phulkas &bull; 0% bloat</div>
+              </div>
+            </div>
+
+            <div class="pg-savings-banner" style="margin-top:1.5rem;">
+              <div class="pg-savings-text">
+                🎉 You save <strong id="wheySavingsMonthlyVal">₹5,840</strong> every month (<strong id="wheySavingsYearlyVal">₹70,080</strong> / year) while enjoying authentic home food!
+              </div>
+              <a href="products.html" class="pg-savings-btn">
+                <span>Claim Your Savings &rarr;</span>
+              </a>
             </div>
           </div>
 
-          <div class="pg-savings-banner">
-            <div class="pg-savings-text">
-              🎉 You save <strong id="wheySavingsMonthlyVal">₹5,840</strong> every month (<strong id="wheySavingsYearlyVal">₹70,080</strong> / year) while enjoying authentic home food!
-            </div>
-            <a href="products.html" class="pg-savings-btn">
-              <span>Claim Your Savings &rarr;</span>
-            </a>
-          </div>
         </div>
 
       </div>
@@ -680,6 +725,92 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 3.2: Interactive "Compare Against Any Atta" Matrix -->
+    <section class="compare-matrix-section" id="compare-matrix">
+      <div class="container" style="max-width:1080px;">
+        <div style="text-align:center; max-width:680px; margin:0 auto 2.5rem;">
+          <div style="margin-bottom:0.75rem;">
+            <span class="tech-badge">
+              <span class="tech-beacon"></span>
+              // CLINICAL NUTRITIONAL AUDIT &bull; 1-ON-1 FORMULATION BENCHMARK
+            </span>
+          </div>
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(1.85rem, 4vw, 2.75rem); font-weight:700; color:#0A0A0C; letter-spacing:-0.02em; line-height:1.2; margin:0 0 0.75rem;">
+            Compare MILLA PRO <span style="color:#d35400;">Against Any Atta</span>
+          </h2>
+          <p style="font-size:0.95rem; color:rgba(10,10,12,0.65); line-height:1.6; margin:0;">
+            Select any leading household atta brand below to see verified macro, glycemic, and digestive metrics side-by-side:
+          </p>
+        </div>
+
+        <!-- Interactive Brand Selector Pills -->
+        <div class="compare-tabs-bar">
+          <button type="button" class="compare-tab-pill active" data-brand="aashirvaad" onclick="switchCompareAtta('aashirvaad')">
+            🌾 vs Aashirvaad Superior MP
+          </button>
+          <button type="button" class="compare-tab-pill" data-brand="pillsbury" onclick="switchCompareAtta('pillsbury')">
+            🥣 vs Pillsbury Chakki Fresh
+          </button>
+          <button type="button" class="compare-tab-pill" data-brand="multigrain" onclick="switchCompareAtta('multigrain')">
+            🌱 vs Commercial Multigrain
+          </button>
+          <button type="button" class="compare-tab-pill" data-brand="besan" onclick="switchCompareAtta('besan')">
+            🥜 vs Pure Besan Flour
+          </button>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="compare-matrix-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Nutritional Metric</th>
+                <th style="color:#d35400; font-weight:800;">MILLA PRO™ High-Protein Atta</th>
+                <th id="cmpBrandName" style="color:#0A0A0C;">Aashirvaad Superior MP Atta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Bio-Active Protein (per 100g)</strong></td>
+                <td class="milla-col"><strong>~45g (44.1g Certified)</strong> ⚡ 4x Higher</td>
+                <td id="cmpBrandProtein">10.5g</td>
+              </tr>
+              <tr>
+                <td><strong>Net Available Carbohydrates</strong></td>
+                <td class="milla-col"><strong>43.1g</strong> (Low-carb balance)</td>
+                <td id="cmpBrandCarbs">73.2g (High starch load)</td>
+              </tr>
+              <tr>
+                <td><strong>Natural Dietary Fiber</strong></td>
+                <td class="milla-col"><strong>13.1g Prebiotic Fiber</strong></td>
+                <td id="cmpBrandFiber">11.0g</td>
+              </tr>
+              <tr>
+                <td><strong>Glycemic Index (GI)</strong></td>
+                <td class="milla-col"><strong>Low GI 42</strong> (Diabetic Safe)</td>
+                <td id="cmpBrandGi">High GI (65)</td>
+              </tr>
+              <tr>
+                <td><strong>Bloating &amp; Gut Heaviness</strong></td>
+                <td class="milla-col"><strong>0% Bloat</strong> (Clean Whole Wheat Peace)</td>
+                <td id="cmpBrandBloat">Low (Wheat)</td>
+              </tr>
+              <tr>
+                <td><strong>Cost per 10g Pure Protein</strong></td>
+                <td class="milla-col"><strong>₹4.4</strong> (India's Most Affordable)</td>
+                <td id="cmpBrandCost">₹4.8</td>
+              </tr>
+              <tr>
+                <td><strong>Roti Softness &amp; Rolling Ease</strong></td>
+                <td class="milla-col"><strong>100% Puffed, Stays Soft 8+ Hours</strong></td>
+                <td>Standard Chakki Softness</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -1694,8 +1825,20 @@
     </div>
   </div>
 
+  <!-- Feature 5.1: Dynamic Glassmorphic Floating Island Sticky Nav -->
+  <aside class="floating-island-bar" id="floatingIsland" aria-label="Quick Order Capsule">
+    <div class="island-info-wrap">
+      <span class="island-title">MILLA PRO™ Atta</span>
+      <span class="island-badge">~45g Protein</span>
+      <span class="island-price">₹249</span>
+    </div>
+    <button type="button" class="island-btn" onclick="window.location.href='products.html'">
+      <span>Quick Add +</span>
+    </button>
+  </aside>
+
   <!-- JavaScript -->
-  <script src="script.js?v=28.0"></script>
+  <script src="script.js?v=29.0"></script>
 <script>
     function updateHudCircle(val) {
       var rotis = parseInt(val, 10) || 3;
@@ -1752,3 +1895,4 @@
   </script>
 </body>
 </html>
+

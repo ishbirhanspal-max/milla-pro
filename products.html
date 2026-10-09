@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=28.0">
+  <link rel="stylesheet" href="style.css?v=29.0">
 </head>
 <body>
 
@@ -60,6 +60,9 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="sound-toggle-btn" onclick="toggleAudioFeedback()" title="Ambient Audio Feedback Toggle" aria-label="Toggle Sound Feedback">
+          🔈 Sound: OFF
+        </button>
         <a href="login.html" class="icon-btn" title="Account / Google Login" aria-label="Account">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
@@ -181,7 +184,7 @@
     </div>
 
     <div class="cart-items-container" id="cartItemsList">
-      <!-- Populated dynamically by script.js?v=28.0 updateCartDrawerUI() -->
+      <!-- Populated dynamically by script.js?v=29.0 updateCartDrawerUI() -->
     </div>
 
     <div class="cart-drawer-footer" id="cartDrawerFooter">
@@ -229,19 +232,69 @@
   <section class="shop-hero-section">
     <div class="container shop-grid">
       
-      <!-- Left: Clean Gallery (Using our authentic local images) -->
+      <!-- Left: Clean Gallery (Spacious Luxury Presentation) -->
       <div class="shop-gallery-wrap">
-        <div class="shop-main-img-card">
+        
+        <!-- Feature 1.1 / 1.2: Inspection Mode Switcher -->
+        <div class="xray-lens-toggle-bar">
+          <button type="button" class="xray-toggle-btn active" id="xrayBtnPouch" onclick="toggleXrayView('pouch')">
+            <span>📦 Packaging View</span>
+          </button>
+          <button type="button" class="xray-toggle-btn" id="xrayBtnXray" onclick="toggleXrayView('xray')">
+            <span>🔬 X-Ray Molecular Matrix</span>
+          </button>
+        </div>
+
+        <div class="shop-main-img-card" id="shopMainImgCard">
           <img src="milla-pouch-front.jpeg" id="mainShopImg" alt="MILLA PRO 100% Natural High-Protein Atta Packaging">
+
+          <!-- X-Ray Molecular Overlay HUD -->
+          <div class="xray-overlay-hud" id="xrayOverlayHud">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:1.15rem; font-weight:700; color:#FFFFFF; margin-bottom:0.25rem;">🔬 Molecular Fraction Breakdown</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#d35400; margin-bottom:1.25rem;">NABL Assayed ~45g Protein Matrix</div>
+            <div class="xray-fraction-grid">
+              <div class="xray-fraction-card">
+                <div class="xray-card-title">Whole Wheat Matrix</div>
+                <div class="xray-card-metric">60% Base</div>
+                <div class="xray-card-desc">Authentic chakki aroma, natural bran fiber, 0% bloat.</div>
+              </div>
+              <div class="xray-fraction-card">
+                <div class="xray-card-title">Defatted Soya</div>
+                <div class="xray-card-metric">22g Protein</div>
+                <div class="xray-card-desc">De-odourized micro-milling, zero beany aftertaste.</div>
+              </div>
+              <div class="xray-fraction-card">
+                <div class="xray-card-title">Low-Fat Peanut</div>
+                <div class="xray-card-metric">10.1g Protein</div>
+                <div class="xray-card-desc">Roasted nutty warmth, rich amino acid profile.</div>
+              </div>
+              <div class="xray-fraction-card">
+                <div class="xray-card-title">Vital Wheat Gluten</div>
+                <div class="xray-card-metric">100% Puffing</div>
+                <div class="xray-card-desc">Pure plant elasticity ensures rotis puff and stay soft.</div>
+              </div>
+            </div>
+            <button type="button" onclick="toggleXrayView('pouch')" style="margin-top:1.25rem; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.25); color:#FFFFFF; border-radius:999px; padding:0.4rem 1rem; font-size:0.75rem; cursor:pointer;">&larr; Back to Packaging View</button>
+          </div>
         </div>
 
+        <!-- Thumbnails: Spacious Visual Preview Cards with Miniature Images (No Overlap) -->
         <div class="shop-thumbs-row">
-          <button type="button" class="thumb-btn active" onclick="switchShopThumb('milla-pouch-front.jpeg', this)">Front View</button>
-          <button type="button" class="thumb-btn" onclick="switchShopThumb('milla-pouch-back.jpeg', this)">Nutritional Facts</button>
-          <button type="button" class="thumb-btn" onclick="switchShopThumb('milla-pouch-cover.jpeg', this)">Full Spread</button>
+          <div class="thumb-preview-card active" onclick="switchShopThumb('milla-pouch-front.jpeg', this)" role="button" tabindex="0" title="Front Packaging View">
+            <img src="milla-pouch-front.jpeg" alt="Front Standup Pouch View">
+            <span class="thumb-label">Front</span>
+          </div>
+          <div class="thumb-preview-card" onclick="switchShopThumb('milla-pouch-back.jpeg', this)" role="button" tabindex="0" title="Nutrition Facts Back View">
+            <img src="milla-pouch-back.jpeg" alt="Nutrition Facts Back View">
+            <span class="thumb-label">Nutrition</span>
+          </div>
+          <div class="thumb-preview-card" onclick="switchShopThumb('milla-pouch-cover.jpeg', this)" role="button" tabindex="0" title="Full Packaging Spread View">
+            <img src="milla-pouch-cover.jpeg" alt="Full Packaging Spread View">
+            <span class="thumb-label">Spread</span>
+          </div>
         </div>
 
-        <div class="shop-trust-points" style="margin-top:24px;">
+        <div class="shop-trust-points" style="margin-top:1.5rem; text-align:center;">
           <span>🌱 100% Plant-Based</span>
           <span>•</span>
           <span>⚡ 15g Protein / Roti</span>
@@ -646,16 +699,29 @@
     </div>
   </div>
 
+  <!-- Feature 5.1: Dynamic Glassmorphic Floating Island Sticky Nav -->
+  <aside class="floating-island-bar" id="floatingIsland" aria-label="Quick Order Capsule">
+    <div class="island-info-wrap">
+      <span class="island-title">MILLA PRO™ Atta</span>
+      <span class="island-badge">~45g Protein</span>
+      <span class="island-price" id="islandPriceText">₹249</span>
+    </div>
+    <button type="button" class="island-btn" onclick="quickAddShopPack(currentSelectedPack, currentPrice)">
+      <span>Quick Add +</span>
+    </button>
+  </aside>
+
   <!-- Scripts -->
-  <script src="script.js?v=28.0"></script>
+  <script src="script.js?v=29.0"></script>
   <script>
     var currentSelectedPack = '1kg';
     var currentPrice = 249;
 
     function switchShopThumb(imgSrc, btn) {
       document.getElementById('mainShopImg').src = imgSrc;
-      document.querySelectorAll('.thumb-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.thumb-preview-card, .thumb-btn').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
+      if (typeof playMicroSound === 'function') playMicroSound('tick');
     }
 
     function selectShopPack(pack, price, mrp, discount) {
@@ -668,11 +734,23 @@
       document.getElementById('shopPriceText').textContent = '₹' + price.toLocaleString('en-IN');
       document.getElementById('shopMrpText').textContent = '₹' + mrp.toLocaleString('en-IN');
       document.getElementById('shopDiscountText').textContent = 'SAVE ' + discount;
+      var islPrice = document.getElementById('islandPriceText');
+      if (islPrice) islPrice.textContent = '₹' + price.toLocaleString('en-IN');
 
-      // Update script.js?v=28.0 currentPackId if loaded
+      if (typeof playMicroSound === 'function') playMicroSound('tick');
+
+      // Update script.js currentPackId if loaded
       if (typeof selectPack === 'function') {
         selectPack(pack);
       }
+    }
+
+    function quickAddShopPack(pack, price) {
+      if (typeof addToCart === 'function') {
+        addToCart(pack, 1);
+        if (typeof openCartDrawer === 'function') openCartDrawer();
+      }
+      if (typeof playMicroSound === 'function') playMicroSound('chime');
     }
 
     function stepQty(delta) {
@@ -683,6 +761,7 @@
       if (typeof currentQty !== 'undefined') {
         currentQty = val;
       }
+      if (typeof playMicroSound === 'function') playMicroSound('tick');
     }
 
     function addShopToCart() {
@@ -693,6 +772,7 @@
       } else {
         alert('Added ' + qty + ' × ' + currentSelectedPack.toUpperCase() + ' to cart!');
       }
+      if (typeof playMicroSound === 'function') playMicroSound('chime');
     }
 
     function triggerShopCheckout() {
@@ -703,6 +783,7 @@
       } else {
         window.location.href = 'login.html';
       }
+      if (typeof playMicroSound === 'function') playMicroSound('chime');
     }
 
     function checkPin() {
@@ -728,7 +809,9 @@
         content.classList.add('open');
         btn.querySelector('span:last-child').textContent = '−';
       }
+      if (typeof playMicroSound === 'function') playMicroSound('tick');
     }
   </script>
 </body>
 </html>
+
