@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=27.0">
+  <link rel="stylesheet" href="style.css?v=28.0">
 </head>
 <body>
 
@@ -183,7 +183,7 @@
     </div>
 
     <div class="cart-items-container" id="cartItemsList">
-      <!-- Populated dynamically by script.js?v=24.0 -->
+      <!-- Populated dynamically by script.js?v=28.0 -->
     </div>
 
     <div class="cart-drawer-footer" id="cartDrawerFooter">
@@ -228,19 +228,19 @@
   <main>
 
     <!-- 3. HERO SECTION (milld-hs) - NO PACKAGING IMAGE ON HOMEPAGE -->
-    <!-- 3. HERO SECTION: AMBIENT TERRACOTTA BIOTECH MONOLITH -->
-    <section class="milld-hs" style="position:relative; background: radial-gradient(circle at 50% 28%, rgba(211,84,0,0.07) 0%, rgba(255,255,255,0) 65%), #FFFFFF; color:#0A0A0C; padding: 4.75rem 1.25rem 3.75rem; text-align:center; overflow:hidden;">
+    <!-- 3. HERO SECTION: AMBIENT TERRACOTTA BIOTECH MONOLITH (With Kinetic Mesh Gradient) -->
+    <section class="milld-hs milld-hs-mesh" style="position:relative; color:#0A0A0C; padding: 4.75rem 1.25rem 3.75rem; text-align:center; overflow:hidden;">
       
       <!-- Subtle Tech Grid Lines Overlay -->
       <div aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; z-index:0; background: radial-gradient(circle at 50% 25%, rgba(211,84,0,0.05) 0%, rgba(255,255,255,0) 65%);"></div>
 
-      <div class="container hero-inner-container" style="position:relative; z-index:1; max-width:880px; margin:0 auto; padding:0 1rem; box-sizing:border-box;">
+      <div class="container hero-inner-container" style="position:relative; z-index:1; max-width:920px; margin:0 auto; padding:0 1rem; box-sizing:border-box;">
         
         <!-- Tech Spec Monospace Badge -->
         <div style="margin-bottom: 1.5rem; display:flex; justify-content:center;">
           <span class="mh-badge" style="display:inline-flex; align-items:center; gap:0.45rem; border-radius:9999px; background:rgba(211,84,0,0.08); border:1px solid rgba(211,84,0,0.25); padding:0.4rem 1rem; font-family:'JetBrains Mono',monospace; font-size:0.68rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:#d35400; box-sizing:border-box;">
             <span class="tech-beacon" style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#d35400; box-shadow:0 0 6px #d35400; flex-shrink:0;"></span>
-            // 100% PLANT MATRIX &bull; NABL CERTIFIED
+            // 100% PLANT MATRIX &bull; NABL CERTIFIED (~45G)
           </span>
         </div>
 
@@ -257,9 +257,42 @@
 
         <!-- Editorial Clean Subheading -->
         <p class="mh-sub" style="text-align:center !important; margin-left:auto !important; margin-right:auto !important; display:block !important; width:100% !important;">
-          <strong style="color:#d35400; font-weight:700;">44.1g Bio-Active Protein</strong> per 100g.<br/>
+          <strong style="color:#d35400; font-weight:700;">~45g Bio-Active Protein</strong> per 100g.<br/>
           Pure whole wheat matrix &bull; 15g protein in every roti &bull; 0% whey bloat.
         </p>
+
+        <!-- Feature 2: Live Floating Frosted Macro Telemetry Capsules -->
+        <div class="macro-capsules-wrap">
+          <div class="macro-capsule">
+            <span>⚡</span>
+            <span><span class="macro-capsule-accent">15G</span> PROTEIN / ROTI</span>
+          </div>
+          <div class="macro-capsule">
+            <span>🌱</span>
+            <span><span class="macro-capsule-accent">100%</span> PLANT MATRIX</span>
+          </div>
+          <div class="macro-capsule">
+            <span>🩺</span>
+            <span><span class="macro-capsule-accent">LOW GI 42</span> &bull; SUGAR SAFE</span>
+          </div>
+          <div class="macro-capsule">
+            <span>🛡️</span>
+            <span><span class="macro-capsule-accent">0%</span> DAIRY BLOAT</span>
+          </div>
+        </div>
+
+        <!-- Feature 1: Interactive 3D / Floating Holographic Pouch Stage -->
+        <div class="hero-3d-stage">
+          <div class="hero-3d-glow"></div>
+          <div class="hero-3d-card" id="hero3dCard" onclick="window.location.href='products.html'" title="Click to view packaging and ingredients">
+            <img src="milla-pouch-front.jpeg" alt="MILLA PRO ~45g Protein Atta Pouch Standup Pack" class="hero-pouch-img" loading="eager"/>
+            <div class="hero-3d-badge-bar">
+              <span style="color:#d35400;">● BATCH 08</span>
+              <span>~45G BIO-MATRIX</span>
+              <span style="color:#2E7D32;">✓ NABL CERTIFIED</span>
+            </div>
+          </div>
+        </div>
 
         <!-- Minimalist Luxury CTA Buttons -->
         <div class="mh-ctas" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1rem; margin-bottom:2.75rem;">
@@ -269,15 +302,15 @@
               <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
             </span>
           </a>
-          <a class="mh-btn-learn" href="#whey-calculator" style="display:inline-flex; align-items:center; padding:0.85rem 1.75rem; border-radius:9999px; background:rgba(10,10,12,0.04); border:1px solid rgba(10,10,12,0.1); color:#0A0A0C; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; transition:all 0.2s ease;">
-            Calculate Protein HUD &rarr;
+          <a class="mh-btn-learn" href="#roti-transformer" style="display:inline-flex; align-items:center; padding:0.85rem 1.75rem; border-radius:9999px; background:rgba(10,10,12,0.04); border:1px solid rgba(10,10,12,0.1); color:#0A0A0C; text-decoration:none; font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; transition:all 0.2s ease;">
+            Interactive Macro HUD &rarr;
           </a>
         </div>
 
         <!-- 3 Tech Telemetry Pillars -->
         <div class="mh-stats">
           <div class="mh-stat-col" style="text-align:center; border-right:1px solid rgba(10,10,12,0.08); padding:0 0.5rem;">
-            <div class="mh-stat-n" style="font-family:'Space Grotesk',sans-serif; font-weight:700; line-height:1; color:#d35400;">44.1g</div>
+            <div class="mh-stat-n" style="font-family:'Space Grotesk',sans-serif; font-weight:700; line-height:1; color:#d35400;">~45g</div>
             <div class="mh-stat-lbl" style="margin-top:0.35rem; font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:rgba(10,10,12,0.55);">Protein / 100g</div>
           </div>
           <div class="mh-stat-col" style="text-align:center; border-right:1px solid rgba(10,10,12,0.08); padding:0 0.5rem;">
@@ -289,6 +322,94 @@
             <div class="mh-stat-lbl" style="margin-top:0.35rem; font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:rgba(10,10,12,0.55);">Diabetic Friendly</div>
           </div>
         </div>
+
+        <!-- Feature 5: Apple-Style Minimalist Segmented Pill Switcher Spotlight Console -->
+        <div style="margin-top:3rem; width:100%; text-align:center;">
+          <div class="apple-tab-bar">
+            <button type="button" class="apple-tab-btn active" data-tab="science" onclick="switchAppleTab('science')">🔬 The Science</button>
+            <button type="button" class="apple-tab-btn" data-tab="nabl" onclick="switchAppleTab('nabl')">📊 NABL Tested (~45g)</button>
+            <button type="button" class="apple-tab-btn" data-tab="fractions" onclick="switchAppleTab('fractions')">🌾 Clean Fractions</button>
+            <button type="button" class="apple-tab-btn" data-tab="math" onclick="switchAppleTab('math')">⚡ Macro Math</button>
+          </div>
+
+          <!-- Tab 1: The Science -->
+          <div class="apple-tab-panel active" id="tab-panel-science">
+            <div style="background:#FFFFFF; border:1px solid rgba(10,10,12,0.08); border-radius:20px; padding:1.25rem 1.5rem; max-width:620px; margin:0 auto; box-shadow:0 12px 30px rgba(10,10,12,0.03); text-align:center;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#0A0A0C; margin-bottom:0.35rem;">Clean Cold-Milled Plant Protein Matrix</div>
+              <p style="font-size:0.88rem; color:rgba(10,10,12,0.68); line-height:1.55; margin:0;">~45g pure bio-available protein per 100g. Complete 9/9 essential amino acid score engineered specifically for Indian home cooking.</p>
+            </div>
+          </div>
+
+          <!-- Tab 2: NABL Tested -->
+          <div class="apple-tab-panel" id="tab-panel-nabl">
+            <div style="background:#FFFFFF; border:1px solid rgba(10,10,12,0.08); border-radius:20px; padding:1.25rem 1.5rem; max-width:620px; margin:0 auto; box-shadow:0 12px 30px rgba(10,10,12,0.03); text-align:center;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#d35400; margin-bottom:0.35rem;">Independently Verified by Envirocare Labs</div>
+              <p style="font-size:0.88rem; color:rgba(10,10,12,0.68); line-height:1.55; margin:0;">Certified 44.1g crude protein (Method EL/SOP/549) and 13.1g dietary fiber (AOAC 985.29). Report No: 01/ETHFD2609015.</p>
+            </div>
+          </div>
+
+          <!-- Tab 3: Clean Fractions -->
+          <div class="apple-tab-panel" id="tab-panel-fractions">
+            <div style="background:#FFFFFF; border:1px solid rgba(10,10,12,0.08); border-radius:20px; padding:1.25rem 1.5rem; max-width:620px; margin:0 auto; box-shadow:0 12px 30px rgba(10,10,12,0.03); text-align:center;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#0A0A0C; margin-bottom:0.35rem;">60% Whole Wheat &bull; 30% Soya &bull; 10% Peanut</div>
+              <p style="font-size:0.88rem; color:rgba(10,10,12,0.68); line-height:1.55; margin:0;">Zero maida, zero chemical binders, zero preservatives. Naturally soft chakki rotis that puff and stay soft for 8+ hours.</p>
+            </div>
+          </div>
+
+          <!-- Tab 4: Macro Math -->
+          <div class="apple-tab-panel" id="tab-panel-math">
+            <div style="background:#FFFFFF; border:1px solid rgba(10,10,12,0.08); border-radius:20px; padding:1.25rem 1.5rem; max-width:620px; margin:0 auto; box-shadow:0 12px 30px rgba(10,10,12,0.03); text-align:center;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:1.1rem; font-weight:700; color:#2E7D32; margin-bottom:0.35rem;">3 Rotis = ~45g Protein = ₹25 Total Cost</div>
+              <p style="font-size:0.88rem; color:rgba(10,10,12,0.68); line-height:1.55; margin:0;">Saves up to ₹3,000 every single month compared to imported whey protein powder, paneer, and poultry.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3: Real-Time "Roti Macro Transformer" Interactive HUD -->
+        <div class="macro-transformer-card" id="roti-transformer">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+            <div style="text-align:left;">
+              <span class="mh-badge" style="display:inline-block; font-size:0.65rem; padding:0.25rem 0.65rem; margin-bottom:0.35rem;">// INTERACTIVE MACRO TRANSFORMER HUD</span>
+              <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1.25rem; font-weight:700; color:#0A0A0C; margin:0;">Slide to Upgrade Your Daily Rotis</h3>
+            </div>
+            <div style="text-align:right;">
+              <span id="mtRotiCount" style="font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:800; color:#d35400;">3 Rotis</span>
+            </div>
+          </div>
+
+          <div class="mt-slider-track">
+            <input type="range" min="1" max="6" value="3" step="1" class="mt-range-input" id="mtRangeSlider" oninput="updateMacroTransformer(this.value)" aria-label="Roti Count Selector"/>
+            <div style="display:flex; justify-content:space-between; margin-top:0.4rem; font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:rgba(10,10,12,0.5);">
+              <span>1 Roti</span>
+              <span>2 Rotis</span>
+              <span style="color:#d35400; font-weight:700;">3 Rotis (Standard Meal)</span>
+              <span>4 Rotis</span>
+              <span>5 Rotis</span>
+              <span>6 Rotis</span>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:0.75rem; text-align:center; margin-top:1.5rem;">
+            <div style="background:#F9F9FB; border:1px solid rgba(10,10,12,0.07); border-radius:14px; padding:0.85rem 0.5rem;">
+              <div style="font-size:0.75rem; color:rgba(10,10,12,0.55); text-transform:uppercase;">Standard Atta</div>
+              <div id="mtRegProtein" style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:700; color:rgba(10,10,12,0.7); margin-top:0.2rem;">9g</div>
+              <div style="font-size:0.7rem; color:rgba(10,10,12,0.45);">protein</div>
+            </div>
+
+            <div style="background:rgba(211,84,0,0.06); border:1.5px solid rgba(211,84,0,0.3); border-radius:14px; padding:0.85rem 0.5rem;">
+              <div style="font-size:0.75rem; color:#d35400; font-weight:700; text-transform:uppercase;">MILLA PRO (~45g)</div>
+              <div id="mtMillaProtein" style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:800; color:#d35400; margin-top:0.2rem;">45g</div>
+              <div style="font-size:0.7rem; color:#d35400; font-weight:600;">pure plant protein</div>
+            </div>
+
+            <div style="background:#F1F8E9; border:1px solid rgba(46,125,50,0.25); border-radius:14px; padding:0.85rem 0.5rem;">
+              <div style="font-size:0.75rem; color:#2E7D32; font-weight:700; text-transform:uppercase;">Net Protein Gain</div>
+              <div id="mtProteinGain" style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:800; color:#2E7D32; margin-top:0.2rem;">+36g</div>
+              <div style="font-size:0.7rem; color:#2E7D32; font-weight:600;">effortless boost</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
     <!-- FULL-SCREEN EDGE-TO-EDGE TILTED MARQUEE STRIP -->
@@ -302,7 +423,7 @@
             <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d35400"></path></svg></span>
             <span class="ms-text">ZERO Preservatives</span>
             <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d35400"></path></svg></span>
-            <span class="ms-text">NABL LAB Tested (44.1g Protein)</span>
+            <span class="ms-text">NABL LAB Tested (~45g Protein)</span>
             <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d35400"></path></svg></span>
             <span class="ms-text">Low GI 42 (Diabetic Friendly)</span>
             <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d35400"></path></svg></span>
@@ -316,7 +437,7 @@
             <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d35400"></path></svg></span>
             <span class="ms-text">ZERO Preservatives</span>
             <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d35400"></path></svg></span>
-            <span class="ms-text">NABL LAB Tested (44.1g Protein)</span>
+            <span class="ms-text">NABL LAB Tested (~45g Protein)</span>
             <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d35400"></path></svg></span>
             <span class="ms-text">Low GI 42 (Diabetic Friendly)</span>
             <span class="ms-icon"><svg viewBox="0 0 28 28" class="milld-marquee-icon"><path d="M14 2.2c5.8.2 11.6 4.4 11.8 11.6.2 6.4-5.4 12-12 12-6.4 0-12-5.4-11.8-12C2.2 7.4 7.6 2 14 2.2z" fill="#d35400"></path></svg></span>
@@ -403,7 +524,7 @@
                     <circle id="hudCircleProgress" cx="70" cy="70" r="56" fill="none" stroke="#d35400" stroke-width="10" stroke-linecap="round" stroke-dasharray="351.86" stroke-dashoffset="88" style="transition: stroke-dashoffset 0.4s ease;"></circle>
                   </svg>
                   <div style="position:absolute; text-align:center;">
-                    <div id="pgMillaVal" class="pg-milld-val" style="font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; color:#d35400; line-height:1;">44.1g</div>
+                    <div id="pgMillaVal" class="pg-milld-val" style="font-family:'Space Grotesk',sans-serif; font-size:2rem; font-weight:700; color:#d35400; line-height:1;">~45g</div>
                     <div style="font-family:'JetBrains Mono',monospace; font-size:9.5px; text-transform:uppercase; color:rgba(10,10,12,0.55); letter-spacing:0.08em; margin-top:2px;">Bio Protein</div>
                   </div>
                 </div>
@@ -417,14 +538,14 @@
                   </div>
                   <div class="pg-compare-box pg-compare-milld" style="background:rgba(211,84,0,0.06); border:1px solid rgba(211,84,0,0.25); border-radius:12px; padding:0.75rem; text-align:center;">
                     <div class="pg-compare-label" style="font-size:0.75rem; color:#d35400; text-transform:uppercase; font-weight:700;">MILLA PRO</div>
-                    <div class="pg-compare-value" id="hudGainDiff" style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:700; color:#d35400;">+35.1g</div>
+                    <div class="pg-compare-value" id="hudGainDiff" style="font-family:'Space Grotesk',sans-serif; font-size:1.35rem; font-weight:700; color:#d35400;">+36g</div>
                     <div class="pg-compare-sub" style="font-size:0.7rem; color:#d35400; font-weight:600;">extra protein</div>
                   </div>
                 </div>
 
                 <div class="pg-result-box" style="margin-top:1rem; text-align:center;">
                   <p class="pg-result-text" style="font-size:0.88rem; color:rgba(10,10,12,0.7); margin:0;">
-                    Net Gain: <strong class="pg-result-num pg-gain-val" id="pgGainVal" style="color:#d35400; font-weight:700;">35.1g</strong> more protein every single day!
+                    Net Gain: <strong class="pg-result-num pg-gain-val" id="pgGainVal" style="color:#d35400; font-weight:700;">36g</strong> more protein every single day!
                   </p>
                 </div>
 
@@ -438,7 +559,7 @@
             <span class="pg-whey-kicker">★ REAL FOOD VS SYNTHETIC POWDER</span>
             <h3 class="pg-whey-title">Whey Protein Cost Calculator</h3>
             <p class="pg-whey-sub">
-              Average branded Whey Protein in India costs <strong>₹3,500 / kg</strong>. MILLA PRO delivers 44.1g pure protein per 100g for only <strong>₹20</strong>. See how much money you save every month!
+              Average branded Whey Protein in India costs <strong>₹3,500 / kg</strong>. MILLA PRO delivers ~45g pure protein per 100g for only <strong>₹20</strong>. See how much money you save every month!
             </p>
           </div>
 
@@ -493,7 +614,7 @@
             <div style="position:relative; border-radius:20px; overflow:hidden; border:1px solid rgba(10,10,12,0.08); box-shadow:0 16px 36px rgba(10,10,12,0.05);">
               <img alt="MILLA PRO high protein roti broken in half showing authentic soft texture and steam" class="rr-photo" height="675" loading="lazy" src="roti-broken-down.jpeg" width="900" style="display:block; width:100%; height:auto;"/>
               <div class="rr-badge" style="position:absolute; bottom:16px; left:16px; background:rgba(10,10,12,0.85); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:0.6rem 1rem;">
-                <div class="rr-badge-protein" style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:700; color:#d35400; line-height:1;">44.1g</div>
+                <div class="rr-badge-protein" style="font-family:'Space Grotesk',sans-serif; font-size:1.45rem; font-weight:700; color:#d35400; line-height:1;">~45g</div>
                 <div class="rr-badge-label" style="font-family:'JetBrains Mono',monospace; font-size:10px; color:rgba(255,255,255,0.7); text-transform:uppercase;">Protein / 100g Matrix</div>
               </div>
             </div>
@@ -1574,7 +1695,7 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="script.js?v=24.0"></script>
+  <script src="script.js?v=28.0"></script>
 <script>
     function updateHudCircle(val) {
       var rotis = parseInt(val, 10) || 3;

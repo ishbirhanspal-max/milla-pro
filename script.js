@@ -1738,3 +1738,64 @@ function stepQty(delta) {
   val = Math.max(1, Math.min(10, val + delta));
   input.value = val;
 }
+
+// =========================================================================
+// 5 HIGH-END FUTURISTIC LUXURY INTERACTIVE CONTROLLERS
+// 1. Apple-Style Segmented Pill Switcher
+// 2. Interactive 3D Holographic Pouch Tilt Engine
+// 3. Roti Macro Transformer Interactive HUD
+// =========================================================================
+
+function switchAppleTab(tabId) {
+  var btns = document.querySelectorAll('.apple-tab-btn');
+  btns.forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-tab') === tabId);
+  });
+  
+  var panels = document.querySelectorAll('.apple-tab-panel');
+  panels.forEach(function(p) {
+    p.classList.toggle('active', p.id === 'tab-panel-' + tabId);
+  });
+}
+
+function initPouchTilt() {
+  var card = document.getElementById('hero3dCard');
+  if (!card) return;
+  card.addEventListener('mousemove', function(e) {
+    var rect = card.getBoundingClientRect();
+    var x = e.clientX - rect.left - rect.width / 2;
+    var y = e.clientY - rect.top - rect.height / 2;
+    var rotateX = -(y / rect.height) * 14;
+    var rotateY = (x / rect.width) * 14;
+    card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) translateY(-6px)';
+  });
+  card.addEventListener('mouseleave', function() {
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+  });
+}
+
+function updateMacroTransformer(val) {
+  var rotis = parseInt(val, 10) || 3;
+  var rotiCountEl = document.getElementById('mtRotiCount');
+  var millaProteinEl = document.getElementById('mtMillaProtein');
+  var regProteinEl = document.getElementById('mtRegProtein');
+  var proteinGainEl = document.getElementById('mtProteinGain');
+  var dialFill = document.getElementById('mtDialFill');
+  
+  if (rotiCountEl) rotiCountEl.textContent = rotis + ' ' + (rotis === 1 ? 'Roti' : 'Rotis');
+  var millaGrams = Math.round(rotis * 15);
+  var regGrams = Math.round(rotis * 3);
+  var netGain = millaGrams - regGrams;
+  
+  if (millaProteinEl) millaProteinEl.textContent = millaGrams + 'g';
+  if (regProteinEl) regProteinEl.textContent = regGrams + 'g';
+  if (proteinGainEl) proteinGainEl.textContent = '+' + netGain + 'g';
+  if (dialFill) dialFill.style.width = Math.min(100, Math.round((millaGrams / 60) * 100)) + '%';
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPouchTilt);
+} else {
+  initPouchTilt();
+}
+

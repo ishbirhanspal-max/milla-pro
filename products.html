@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=27.0">
+  <link rel="stylesheet" href="style.css?v=28.0">
 </head>
 <body>
 
@@ -181,7 +181,7 @@
     </div>
 
     <div class="cart-items-container" id="cartItemsList">
-      <!-- Populated dynamically by script.js?v=24.0 updateCartDrawerUI() -->
+      <!-- Populated dynamically by script.js?v=28.0 updateCartDrawerUI() -->
     </div>
 
     <div class="cart-drawer-footer" id="cartDrawerFooter">
@@ -255,7 +255,7 @@
         
         <div class="shop-title-area">
           <div style="margin-bottom:0.75rem;">
-            <span class="tech-badge"><span class="tech-beacon"></span> // BATCH_MILLING_08 &bull; 44.1G PROTEIN MATRIX &bull; INCL. 5% GST</span>
+            <span class="tech-badge"><span class="tech-beacon"></span> // BATCH_MILLING_08 &bull; ~45G PROTEIN MATRIX &bull; INCL. 5% GST</span>
           </div>
           <div class="stars-line" style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
             <span style="color:#d35400; font-size:0.95rem;">★★★★★</span>
@@ -647,7 +647,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="script.js?v=24.0"></script>
+  <script src="script.js?v=28.0"></script>
   <script>
     var currentSelectedPack = '1kg';
     var currentPrice = 249;
@@ -669,7 +669,7 @@
       document.getElementById('shopMrpText').textContent = '₹' + mrp.toLocaleString('en-IN');
       document.getElementById('shopDiscountText').textContent = 'SAVE ' + discount;
 
-      // Update script.js?v=24.0 currentPackId if loaded
+      // Update script.js?v=28.0 currentPackId if loaded
       if (typeof selectPack === 'function') {
         selectPack(pack);
       }
