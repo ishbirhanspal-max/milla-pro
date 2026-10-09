@@ -6413,30 +6413,29 @@ button {
   }
 }
 
-/* 3. FULL-SCREEN EDGE-TO-EDGE TILTED MARQUEE STRIP */
+/* 3. FULL-SCREEN EDGE-TO-EDGE MARQUEE STRIP */
 .hero-full-marquee-wrap {
-  width: 100vw !important;
+  width: 100% !important;
+  max-width: 100% !important;
   position: relative !important;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
   overflow: hidden !important;
   padding: 1.5rem 0 !important;
   z-index: 25 !important;
+  box-sizing: border-box !important;
 }
 
 .hero-full-marquee-inner {
-  width: 110% !important;
-  margin-left: -5% !important;
-  transform: rotate(-1.85deg) !important;
-  transform-origin: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
   overflow: hidden !important;
-  border-top: 2px solid #121212 !important;
-  border-bottom: 2px solid #121212 !important;
-  background: #d35400 !important;
-  box-shadow: 0 10px 30px -4px rgba(18, 18, 18, 0.2) !important;
-  padding: 0.25rem 0 !important;
+  box-sizing: border-box !important;
+  border-top: 1px solid rgba(10, 10, 12, 0.08) !important;
+  border-bottom: 1px solid rgba(10, 10, 12, 0.08) !important;
+  background: #F9F9FB !important;
+  padding: 0.5rem 0 !important;
 }
 
 .hero-full-marquee-inner .ms-track-scroller {
@@ -7693,16 +7692,93 @@ html, body {
   overflow: hidden !important;
 }
 
+/* Universal Hero Section Geometry & Alignment */
+.milld-hs {
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.hero-inner-container {
+  max-width: 920px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
 .mh-h1 {
   font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif !important;
   font-weight: 700 !important;
   letter-spacing: -0.025em !important;
   color: #0A0A0C !important;
+  font-size: clamp(2.5rem, 5.2vw, 4.4rem) !important;
+  line-height: 1.08 !important;
+  max-width: 860px !important;
+  margin: 0 auto 1.25rem !important;
+  text-align: center !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
 }
 
 .mh-sub {
   color: rgba(10, 10, 12, 0.68) !important;
   font-weight: 400 !important;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem) !important;
+  line-height: 1.65 !important;
+  max-width: 620px !important;
+  margin: 0 auto 2.25rem !important;
+  text-align: center !important;
+}
+
+.mh-ctas {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin: 0 auto 2.75rem !important;
+  width: 100% !important;
+}
+
+.mh-stats {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0.75rem !important;
+  max-width: 560px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 1.1rem 1.5rem !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(10, 10, 12, 0.08) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 10px 30px rgba(10, 10, 12, 0.04) !important;
+  box-sizing: border-box !important;
+  align-items: center !important;
+}
+
+.mh-stat-col {
+  text-align: center !important;
+  padding: 0 0.5rem !important;
+  box-sizing: border-box !important;
+}
+
+.mh-stat-n {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+.mh-stat-lbl {
+  margin-top: 0.35rem !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 9.5px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(10, 10, 12, 0.55) !important;
 }
 
 /* Tech Spec Pill Badge */
@@ -8190,17 +8266,18 @@ html, body {
 
   /* Refined, non-oversized mobile headings */
   h1, .mh-h1 {
-    font-size: 1.55rem !important;
-    line-height: 1.16 !important;
+    font-size: clamp(1.6rem, 7.2vw, 1.95rem) !important;
+    line-height: 1.18 !important;
     letter-spacing: -0.02em !important;
-    max-width: 310px !important;
+    max-width: 340px !important;
     margin: 0 auto 0.85rem !important;
+    text-align: center !important;
     word-break: normal !important;
     overflow-wrap: break-word !important;
   }
 
   h2, .pg-heading, .rr-heading, .bc-heading, .lab-showcase-title, .tm-heading, .faq-heading, .ss-heading {
-    font-size: 1.4rem !important;
+    font-size: 1.45rem !important;
     line-height: 1.22 !important;
     letter-spacing: -0.015em !important;
     margin-bottom: 0.5rem !important;
@@ -8216,28 +8293,29 @@ html, body {
   }
 
   .mh-sub {
-    font-size: 0.86rem !important;
+    font-size: 0.9rem !important;
     line-height: 1.55 !important;
-    max-width: 300px !important;
-    margin: 0 auto 1.5rem !important;
+    max-width: 330px !important;
+    margin: 0 auto 1.65rem !important;
+    text-align: center !important;
   }
 
   .mh-badge {
-    font-size: 0.62rem !important;
-    padding: 0.3rem 0.65rem !important;
+    font-size: 0.64rem !important;
+    padding: 0.32rem 0.75rem !important;
     max-width: 90% !important;
     line-height: 1.3 !important;
-    margin: 0 auto 1rem !important;
+    margin: 0 auto 1.15rem !important;
   }
 
   /* Telemetry 3-pillar stats - perfect 3-column fit on 393px */
   .mh-stats {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 0.2rem !important;
-    max-width: 345px !important;
+    gap: 0.25rem !important;
+    max-width: 350px !important;
     width: 100% !important;
-    padding: 0.65rem 0.25rem !important;
+    padding: 0.75rem 0.35rem !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
   }
