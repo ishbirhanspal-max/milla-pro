@@ -1999,13 +1999,66 @@ function initFloatingIsland() {
   }, { passive: true });
 }
 
+// =========================================================================
+// FEATURE 6: OBSIDIAN DARK MODE / SURGICAL LIGHT THEME ENGINE
+// =========================================================================
+function getStoredTheme() {
+  try {
+    var stored = localStorage.getItem('milla_theme');
+    if (stored === 'dark' || stored === 'light') return stored;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+  } catch (e) {}
+  return 'light';
+}
+
+function updateThemeToggleButtons(theme) {
+  var isDark = theme === 'dark';
+  document.querySelectorAll('.theme-toggle-btn').forEach(function(btn) {
+    btn.setAttribute('aria-label', isDark ? 'Switch to Surgical Light Mode' : 'Switch to Obsidian Dark Mode');
+    btn.setAttribute('title', isDark ? 'Switch to Surgical Light Mode (☀️)' : 'Switch to Obsidian Dark Mode (🌙)');
+  });
+
+  document.querySelectorAll('.sidebar-theme-indicator').forEach(function(el) {
+    el.textContent = isDark ? '☀️ Light' : '🌙 Dark';
+  });
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (document.body) {
+    document.body.setAttribute('data-theme', theme);
+  }
+  updateThemeToggleButtons(theme);
+  try {
+    localStorage.setItem('milla_theme', theme);
+  } catch (e) {}
+}
+
+function toggleThemeMode() {
+  var current = document.documentElement.getAttribute('data-theme') || getStoredTheme();
+  var next = current === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  if (typeof playMicroSound === 'function') {
+    playMicroSound('pop');
+  }
+}
+
+function initThemeMode() {
+  var theme = getStoredTheme();
+  applyTheme(theme);
+}
+
 // Auto-init on page load
 document.addEventListener('DOMContentLoaded', function() {
+  initThemeMode();
   updateAudioFeedbackUI();
   initFloatingIsland();
   if (document.getElementById('archFamilyTarget')) {
     setHouseholdFamilySize(4);
   }
 });
+
 
 

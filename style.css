@@ -9548,32 +9548,513 @@ html, body {
   transform: translateY(-1px);
 }
 
-/* Feature 4.3: Ambient Audio Feedback Toggle */
-.sound-toggle-btn {
+/* ==========================================================================
+   FEATURE 6: OBSIDIAN DARK MODE / SURGICAL LIGHT THEME SYSTEM
+   ========================================================================== */
+
+/* Universal Smooth Theme Transition */
+html, body, .master-header, .milld-hs, .compare-matrix-section, 
+.compare-matrix-table-wrap, .cart-drawer, .mobile-sidebar, 
+.white-card, .macro-capsule, .card, .product-card, .faq-item,
+.compare-tab-pill, .icon-btn, .theme-toggle-btn {
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease !important;
+}
+
+/* Theme Toggle Button Component */
+.theme-toggle-btn {
   background: rgba(10, 10, 12, 0.04);
-  border: 1px solid rgba(10, 10, 12, 0.1);
+  border: 1.5px solid var(--border-light);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-foreground);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(211, 84, 0, 0.08);
+  transform: scale(1.05);
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+.theme-icon-moon {
+  display: block;
+  color: #0A0A0C;
+}
+
+/* Dark Mode Icon Toggle */
+html[data-theme="dark"] .theme-icon-sun {
+  display: block;
+  color: #FF944D;
+}
+
+html[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #FF944D;
+}
+
+html[data-theme="dark"] .theme-toggle-btn:hover {
+  background: rgba(230, 92, 0, 0.2);
+  border-color: #E65C00;
+  box-shadow: 0 0 14px rgba(230, 92, 0, 0.4);
+}
+
+/* Mobile Sidebar Theme Row */
+.sidebar-theme-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  background: rgba(10, 10, 12, 0.03);
+  border-radius: 12px;
+  margin: 0.75rem 1.25rem;
+  border: 1px solid rgba(10, 10, 12, 0.08);
+}
+
+html[data-theme="dark"] .sidebar-theme-item {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-theme-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+}
+
+.sidebar-theme-pill-btn {
+  background: #0A0A0C;
+  color: #FFFFFF;
+  border: none;
   border-radius: 9999px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.4rem 0.85rem;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: rgba(10, 10, 12, 0.7);
+  font-size: 0.72rem;
+  font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.4rem;
   transition: all 0.2s ease;
 }
 
-.sound-toggle-btn:hover {
-  background: rgba(211, 84, 0, 0.08);
-  color: #d35400;
-  border-color: rgba(211, 84, 0, 0.3);
+html[data-theme="dark"] .sidebar-theme-pill-btn {
+  background: #E65C00;
+  color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(230, 92, 0, 0.4);
 }
 
-.sound-toggle-btn.active {
-  background: rgba(211, 84, 0, 0.12);
-  color: #d35400;
-  border-color: #d35400;
+/* ==========================================================================
+   OBSIDIAN DEEP CARBON THEME OVERRIDES (html[data-theme="dark"])
+   ========================================================================== */
+html[data-theme="dark"] {
+  --color-background: #07070A;
+  --color-foreground: #F2F2F6;
+  --color-terracotta: #E65C00;
+  --color-terracotta-hover: #FF7A1A;
+  --color-terracotta-light: rgba(230, 92, 0, 0.16);
+  --color-terracotta-glow: rgba(230, 92, 0, 0.35);
+  --color-accent: #E65C00;
+  --color-yellow: #FF944D;
+  --primary: #E65C00;
+  --primary-hover: #FF7A1A;
+  --primary-light: #18110D;
+  --dark: #FFFFFF;
+  --bg-cream: #07070A;
+  --bg-warm: #0D0D12;
+  --bg-light: #111117;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-dark: rgba(255, 255, 255, 0.2);
+  --text-dark: #FFFFFF;
+  --text-muted: rgba(242, 242, 246, 0.65);
+  background-color: #07070A !important;
+  color: #F2F2F6 !important;
 }
+
+html[data-theme="dark"] body {
+  background-color: #07070A !important;
+  color: #F2F2F6 !important;
+}
+
+html[data-theme="dark"] h1, 
+html[data-theme="dark"] h2, 
+html[data-theme="dark"] h3, 
+html[data-theme="dark"] h4, 
+html[data-theme="dark"] h5, 
+html[data-theme="dark"] h6 {
+  color: #FFFFFF !important;
+}
+
+/* 1. Header & Navigation */
+html[data-theme="dark"] .master-header {
+  background: rgba(8, 8, 12, 0.94) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .top-delivery-ticker,
+html[data-theme="dark"] .top-marquee-ticker,
+html[data-theme="dark"] .top-bar-ticker,
+html[data-theme="dark"] .marquee-ticker {
+  background: #030305 !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+html[data-theme="dark"] .brand-logo .logo-main {
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .brand-logo .logo-sub {
+  color: rgba(255, 255, 255, 0.48) !important;
+}
+
+html[data-theme="dark"] .desktop-nav a {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+html[data-theme="dark"] .desktop-nav a:hover,
+html[data-theme="dark"] .desktop-nav a.active {
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .desktop-nav .shop-pill-nav {
+  background: #E65C00 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(230, 92, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .icon-btn {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #F2F2F6 !important;
+}
+
+html[data-theme="dark"] .icon-btn:hover {
+  border-color: #E65C00 !important;
+  color: #E65C00 !important;
+  background: rgba(230, 92, 0, 0.12) !important;
+}
+
+/* 2. Hero Section */
+html[data-theme="dark"] .milld-hs {
+  background-color: #07070A !important;
+  color: #F2F2F6 !important;
+}
+
+html[data-theme="dark"] .milld-hs h1,
+html[data-theme="dark"] .milld-hs .mh-h1 {
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .milld-hs p,
+html[data-theme="dark"] .milld-hs .mh-sub {
+  color: rgba(255, 255, 255, 0.76) !important;
+}
+
+html[data-theme="dark"] .mh-badge {
+  background: rgba(230, 92, 0, 0.14) !important;
+  border-color: rgba(230, 92, 0, 0.35) !important;
+  color: #FF8C33 !important;
+}
+
+html[data-theme="dark"] .macro-capsules-wrap .macro-capsule {
+  background: rgba(18, 18, 24, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #EEEEF2 !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme="dark"] .macro-capsule-accent {
+  color: #FF8C33 !important;
+}
+
+/* 3. Goal Profiler / Lifestyle Switcher */
+html[data-theme="dark"] .goal-switcher-section,
+html[data-theme="dark"] .goal-profiler-section {
+  background: #09090D !important;
+}
+
+html[data-theme="dark"] .goal-tab-btn {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #C8C8D4 !important;
+}
+
+html[data-theme="dark"] .goal-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .goal-tab-btn.active {
+  background: #E65C00 !important;
+  border-color: #E65C00 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(230, 92, 0, 0.35) !important;
+}
+
+html[data-theme="dark"] .goal-card,
+html[data-theme="dark"] .profile-card {
+  background: #0E0E14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 4. Compare Against Any Atta Matrix */
+html[data-theme="dark"] .compare-matrix-section {
+  background: #07070A !important;
+}
+
+html[data-theme="dark"] .compare-tab-pill {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #D4D4E0 !important;
+}
+
+html[data-theme="dark"] .compare-tab-pill:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .compare-tab-pill.active {
+  background: #E65C00 !important;
+  border-color: #E65C00 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(230, 92, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .compare-matrix-table-wrap {
+  background: #0D0D12 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .compare-table th {
+  background: #111117 !important;
+  color: #FFFFFF !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .compare-table td {
+  color: #D4D4E0 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html[data-theme="dark"] .compare-table td.milla-col,
+html[data-theme="dark"] .compare-table th.milla-col {
+  background: rgba(230, 92, 0, 0.12) !important;
+  color: #FF944D !important;
+}
+
+html[data-theme="dark"] .cmp-metric-td {
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .cmp-val-main {
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .cmp-val-sub {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media (max-width: 768px) {
+  html[data-theme="dark"] .compare-table tr {
+    background: #0E0E14 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  html[data-theme="dark"] .compare-table tr td.cmp-brand-col {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+}
+
+/* 5. Roti HUD Calculator & Interactive Simulations */
+html[data-theme="dark"] .roti-hud-calc,
+html[data-theme="dark"] .hud-card,
+html[data-theme="dark"] .hud-calculator-wrap,
+html[data-theme="dark"] .roti-calculator-container,
+html[data-theme="dark"] .calculator-card,
+html[data-theme="dark"] .roti-sim-wrap {
+  background: #0E0E14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #F2F2F6 !important;
+}
+
+html[data-theme="dark"] .macro-box,
+html[data-theme="dark"] .hud-metric-box,
+html[data-theme="dark"] .macro-item-box {
+  background: #13131A !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .hud-circle-wrap circle.bg-circle {
+  stroke: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 6. General Cards, Science, Reviews, FAQs */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .feature-card,
+html[data-theme="dark"] .review-card,
+html[data-theme="dark"] .cert-card,
+html[data-theme="dark"] .science-card,
+html[data-theme="dark"] .trust-card,
+html[data-theme="dark"] .report-card,
+html[data-theme="dark"] .white-card {
+  background: #0E0E14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #E6E6EE !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+html[data-theme="dark"] .faq-item,
+html[data-theme="dark"] .faq-accordion-item,
+html[data-theme="dark"] .accordion-card {
+  background: #0E0E14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .faq-question,
+html[data-theme="dark"] .faq-trigger {
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .faq-answer {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* 7. Products Page (products.html) */
+html[data-theme="dark"] .product-card,
+html[data-theme="dark"] .product-detail-wrap,
+html[data-theme="dark"] .spec-table-wrap {
+  background: #0E0E14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .pack-size-btn,
+html[data-theme="dark"] .size-btn {
+  background: #14141C !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #E2E2E8 !important;
+}
+
+html[data-theme="dark"] .pack-size-btn.active,
+html[data-theme="dark"] .size-btn.active {
+  background: #E65C00 !important;
+  border-color: #E65C00 !important;
+  color: #FFFFFF !important;
+}
+
+/* 8. Reports Page (reports.html) */
+html[data-theme="dark"] .nabl-hub-card,
+html[data-theme="dark"] .cert-badge-box,
+html[data-theme="dark"] .pdf-modal-container {
+  background: #0E0E14 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+}
+
+/* 9. Cart Drawer & Mobile Sidebar */
+html[data-theme="dark"] .cart-drawer,
+html[data-theme="dark"] .mobile-sidebar {
+  background: #08080C !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] .cart-drawer-header,
+html[data-theme="dark"] .sidebar-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .cart-drawer-footer {
+  background: #08080C !important;
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .cart-item,
+html[data-theme="dark"] .cart-item-card {
+  background: #111117 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .bill-row {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+html[data-theme="dark"] .bill-row.total-row {
+  color: #FFFFFF !important;
+  border-top-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html[data-theme="dark"] .mobile-nav-links a {
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html[data-theme="dark"] .sidebar-trust-footer {
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* 10. Master Footer */
+html[data-theme="dark"] .master-footer,
+html[data-theme="dark"] footer {
+  background: #030305 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+html[data-theme="dark"] .footer-links a,
+html[data-theme="dark"] .footer-col a {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+html[data-theme="dark"] .footer-links a:hover,
+html[data-theme="dark"] .footer-col a:hover {
+  color: #FFFFFF !important;
+}
+
+/* 11. Inputs and Form Elements */
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background: #111117 !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* 12. Floating Island Sticky Nav */
+html[data-theme="dark"] .floating-island-bar {
+  background: rgba(12, 12, 16, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html[data-theme="dark"] .island-title,
+html[data-theme="dark"] .island-price {
+  color: #FFFFFF !important;
+}
+
 
