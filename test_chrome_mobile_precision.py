@@ -4,9 +4,13 @@ chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 port = 9334
 
 async def run_tests():
+    import tempfile
+    user_data = tempfile.mkdtemp()
     proc = subprocess.Popen([
         chrome_path,
         f"--remote-debugging-port={port}",
+        "--remote-allow-origins=*",
+        f"--user-data-dir={user_data}",
         "--headless=new",
         "--window-size=393,852",
         "--disable-gpu",
@@ -16,9 +20,9 @@ async def run_tests():
     await asyncio.sleep(1.5)
 
     try:
-        resp = urllib.request.urlopen(f"http://localhost:{port}/json")
+        resp = urllib.request.urlopen(f"http://127.0.0.1:{port}/json")
         pages = json.loads(resp.read().decode())
-        ws_url = pages[0]["webSocketDebuggerUrl"]
+        ws_url = pages[0]["webSocketDebuggerUrl"].replace("localhost", "127.0.0.1")
 
         async with websockets.connect(ws_url, max_size=20*1024*1024) as ws:
             # Enable Page and Network
