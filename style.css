@@ -9260,22 +9260,69 @@ html, body {
   box-shadow: 0 4px 14px rgba(10, 10, 12, 0.18);
 }
 
+/* Feature 3.2: Compare Against Any Atta Matrix - 100% RESPONSIVE ZERO HORIZONTAL SCROLL */
+.compare-matrix-section {
+  padding: 6rem 0;
+  background: #FFFFFF;
+  overflow-x: hidden !important;
+}
+
+.compare-tabs-bar {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.25rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.compare-tab-pill {
+  padding: 0.55rem 1.15rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(10, 10, 12, 0.12);
+  background: rgba(10, 10, 12, 0.02);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0A0A0C;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: normal;
+  text-align: center;
+}
+
+.compare-tab-pill.active {
+  background: #0A0A0C;
+  color: #FFFFFF;
+  border-color: #0A0A0C;
+  box-shadow: 0 4px 14px rgba(10, 10, 12, 0.18);
+}
+
 .compare-matrix-table-wrap {
-  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
   border: 1px solid rgba(10, 10, 12, 0.08);
   border-radius: 24px;
   box-shadow: 0 16px 40px rgba(10, 10, 12, 0.04);
+  background: #FFFFFF;
+  box-sizing: border-box;
 }
 
 .compare-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  table-layout: fixed;
+  box-sizing: border-box;
 }
 
 .compare-table th, .compare-table td {
   padding: 1.15rem 1.5rem;
   border-bottom: 1px solid rgba(10, 10, 12, 0.06);
+  word-break: break-word;
+  vertical-align: middle;
 }
 
 .compare-table th {
@@ -9297,6 +9344,123 @@ html, body {
   background: rgba(211, 84, 0, 0.03);
   font-weight: 700;
   color: #d35400;
+}
+
+.cmp-mobile-lbl {
+  display: none;
+}
+
+.cmp-val-main {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.cmp-val-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #d35400;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.cmp-val-sub {
+  font-size: 0.75rem;
+  color: rgba(10, 10, 12, 0.5);
+  margin-top: 2px;
+}
+
+/* MOBILE RESPONSIVE DISPLAY: ZERO HORIZONTAL SCROLL */
+@media (max-width: 768px) {
+  .compare-matrix-section {
+    padding: 3.5rem 0 !important;
+  }
+
+  .compare-matrix-table-wrap {
+    border-radius: 18px !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow-x: hidden !important;
+  }
+
+  .compare-table, 
+  .compare-table thead, 
+  .compare-table tbody, 
+  .compare-table tr, 
+  .compare-table th, 
+  .compare-table td {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .compare-table thead {
+    display: none !important;
+  }
+
+  .compare-table tr {
+    margin-bottom: 1.25rem !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(10, 10, 12, 0.08) !important;
+    border-radius: 18px !important;
+    padding: 1.25rem 1rem !important;
+    box-shadow: 0 8px 24px rgba(10, 10, 12, 0.03) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+  }
+
+  .compare-table td {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .cmp-metric-td {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #0A0A0C !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0.25rem !important;
+    padding-bottom: 0.5rem !important;
+    border-bottom: 1px solid rgba(10, 10, 12, 0.06) !important;
+  }
+
+  .compare-table tr td.milla-col,
+  .compare-table tr td.cmp-brand-col {
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 12px !important;
+    padding: 0.75rem !important;
+  }
+
+  .compare-table tr td.milla-col {
+    background: rgba(211, 84, 0, 0.06) !important;
+    border: 1.5px solid rgba(211, 84, 0, 0.3) !important;
+  }
+
+  .compare-table tr td.cmp-brand-col {
+    background: #F9F9FB !important;
+    border: 1px solid rgba(10, 10, 12, 0.08) !important;
+  }
+
+  .cmp-mobile-lbl {
+    display: block !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 0.25rem !important;
+    color: rgba(10, 10, 12, 0.5) !important;
+  }
+
+  .milla-col .cmp-mobile-lbl {
+    color: #d35400 !important;
+  }
 }
 
 /* Feature 5.1: Dynamic Glassmorphic Floating Island Sticky Nav */

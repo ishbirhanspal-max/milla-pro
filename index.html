@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=29.0">
+  <link rel="stylesheet" href="style.css?v=29.1">
 </head>
 <body>
 
@@ -65,9 +65,6 @@
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="sound-toggle-btn" onclick="toggleAudioFeedback()" title="Ambient Audio Feedback Toggle" aria-label="Toggle Sound Feedback">
-          🔈 Sound: OFF
-        </button>
         <a href="login.html" class="icon-btn" title="Account / Login" aria-label="Account">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </a>
@@ -186,7 +183,7 @@
     </div>
 
     <div class="cart-items-container" id="cartItemsList">
-      <!-- Populated dynamically by script.js?v=29.0 -->
+      <!-- Populated dynamically by script.js?v=29.1 -->
     </div>
 
     <div class="cart-drawer-footer" id="cartDrawerFooter">
@@ -763,51 +760,128 @@
           </button>
         </div>
 
-        <!-- Comparison Table -->
+        <!-- Comparison Table (Zero Horizontal Scroll on all devices) -->
         <div class="compare-matrix-table-wrap">
           <table class="compare-table">
             <thead>
               <tr>
-                <th>Nutritional Metric</th>
-                <th style="color:#d35400; font-weight:800;">MILLA PRO™ High-Protein Atta</th>
-                <th id="cmpBrandName" style="color:#0A0A0C;">Aashirvaad Superior MP Atta</th>
+                <th style="width:32%;">Nutritional Metric</th>
+                <th style="width:38%; color:#d35400; font-weight:800;">MILLA PRO™ High-Protein Atta</th>
+                <th style="width:30%; color:#0A0A0C;" id="cmpBrandName">Aashirvaad Superior MP Atta</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Bio-Active Protein (per 100g)</strong></td>
-                <td class="milla-col"><strong>~45g (44.1g Certified)</strong> ⚡ 4x Higher</td>
-                <td id="cmpBrandProtein">10.5g</td>
+                <td class="cmp-metric-td">
+                  <span>⚡</span>
+                  <strong>Bio-Active Protein (per 100g)</strong>
+                </td>
+                <td class="milla-col">
+                  <span class="cmp-mobile-lbl">MILLA PRO Formulation</span>
+                  <div class="cmp-val-main">~45g (44.1g Certified)</div>
+                  <div class="cmp-val-tag">⚡ 4x Higher Protein</div>
+                </td>
+                <td class="cmp-brand-col">
+                  <span class="cmp-mobile-lbl" id="cmpMobileBrandLbl1">Aashirvaad Superior MP</span>
+                  <div class="cmp-val-main" id="cmpBrandProtein">10.5g</div>
+                  <div class="cmp-val-sub">Standard Grain Level</div>
+                </td>
               </tr>
               <tr>
-                <td><strong>Net Available Carbohydrates</strong></td>
-                <td class="milla-col"><strong>43.1g</strong> (Low-carb balance)</td>
-                <td id="cmpBrandCarbs">73.2g (High starch load)</td>
+                <td class="cmp-metric-td">
+                  <span>🌾</span>
+                  <strong>Available Carbohydrates</strong>
+                </td>
+                <td class="milla-col">
+                  <span class="cmp-mobile-lbl">MILLA PRO Formulation</span>
+                  <div class="cmp-val-main">43.1g</div>
+                  <div class="cmp-val-tag">Low-Carb Balance</div>
+                </td>
+                <td class="cmp-brand-col">
+                  <span class="cmp-mobile-lbl" id="cmpMobileBrandLbl2">Aashirvaad Superior MP</span>
+                  <div class="cmp-val-main" id="cmpBrandCarbs">73.2g</div>
+                  <div class="cmp-val-sub">High Starch Load</div>
+                </td>
               </tr>
               <tr>
-                <td><strong>Natural Dietary Fiber</strong></td>
-                <td class="milla-col"><strong>13.1g Prebiotic Fiber</strong></td>
-                <td id="cmpBrandFiber">11.0g</td>
+                <td class="cmp-metric-td">
+                  <span>🌿</span>
+                  <strong>Natural Dietary Fiber</strong>
+                </td>
+                <td class="milla-col">
+                  <span class="cmp-mobile-lbl">MILLA PRO Formulation</span>
+                  <div class="cmp-val-main">13.1g Prebiotic Fiber</div>
+                  <div class="cmp-val-tag">NABL Lab Assayed</div>
+                </td>
+                <td class="cmp-brand-col">
+                  <span class="cmp-mobile-lbl" id="cmpMobileBrandLbl3">Aashirvaad Superior MP</span>
+                  <div class="cmp-val-main" id="cmpBrandFiber">11.0g</div>
+                  <div class="cmp-val-sub">Standard Insoluble Fiber</div>
+                </td>
               </tr>
               <tr>
-                <td><strong>Glycemic Index (GI)</strong></td>
-                <td class="milla-col"><strong>Low GI 42</strong> (Diabetic Safe)</td>
-                <td id="cmpBrandGi">High GI (65)</td>
+                <td class="cmp-metric-td">
+                  <span>🩺</span>
+                  <strong>Glycemic Index (GI)</strong>
+                </td>
+                <td class="milla-col">
+                  <span class="cmp-mobile-lbl">MILLA PRO Formulation</span>
+                  <div class="cmp-val-main">Low GI 42</div>
+                  <div class="cmp-val-tag">Diabetic Friendly</div>
+                </td>
+                <td class="cmp-brand-col">
+                  <span class="cmp-mobile-lbl" id="cmpMobileBrandLbl4">Aashirvaad Superior MP</span>
+                  <div class="cmp-val-main" id="cmpBrandGi">High GI (65)</div>
+                  <div class="cmp-val-sub">Rapid Blood Sugar Spike</div>
+                </td>
               </tr>
               <tr>
-                <td><strong>Bloating &amp; Gut Heaviness</strong></td>
-                <td class="milla-col"><strong>0% Bloat</strong> (Clean Whole Wheat Peace)</td>
-                <td id="cmpBrandBloat">Low (Wheat)</td>
+                <td class="cmp-metric-td">
+                  <span>🛡️</span>
+                  <strong>Bloating &amp; Gut Heaviness</strong>
+                </td>
+                <td class="milla-col">
+                  <span class="cmp-mobile-lbl">MILLA PRO Formulation</span>
+                  <div class="cmp-val-main">0% Bloat Peace</div>
+                  <div class="cmp-val-tag">100% Whole Wheat Peace</div>
+                </td>
+                <td class="cmp-brand-col">
+                  <span class="cmp-mobile-lbl" id="cmpMobileBrandLbl5">Aashirvaad Superior MP</span>
+                  <div class="cmp-val-main" id="cmpBrandBloat">Low (Wheat)</div>
+                  <div class="cmp-val-sub">Moderate Heaviness</div>
+                </td>
               </tr>
               <tr>
-                <td><strong>Cost per 10g Pure Protein</strong></td>
-                <td class="milla-col"><strong>₹4.4</strong> (India's Most Affordable)</td>
-                <td id="cmpBrandCost">₹4.8</td>
+                <td class="cmp-metric-td">
+                  <span>💰</span>
+                  <strong>Cost per 10g Pure Protein</strong>
+                </td>
+                <td class="milla-col">
+                  <span class="cmp-mobile-lbl">MILLA PRO Formulation</span>
+                  <div class="cmp-val-main">₹4.4</div>
+                  <div class="cmp-val-tag">Most Cost-Effective</div>
+                </td>
+                <td class="cmp-brand-col">
+                  <span class="cmp-mobile-lbl" id="cmpMobileBrandLbl6">Aashirvaad Superior MP</span>
+                  <div class="cmp-val-main" id="cmpBrandCost">₹4.8</div>
+                  <div class="cmp-val-sub">High Cost for Low Protein</div>
+                </td>
               </tr>
               <tr>
-                <td><strong>Roti Softness &amp; Rolling Ease</strong></td>
-                <td class="milla-col"><strong>100% Puffed, Stays Soft 8+ Hours</strong></td>
-                <td>Standard Chakki Softness</td>
+                <td class="cmp-metric-td">
+                  <span>🫓</span>
+                  <strong>Roti Softness &amp; Rolling Ease</strong>
+                </td>
+                <td class="milla-col">
+                  <span class="cmp-mobile-lbl">MILLA PRO Formulation</span>
+                  <div class="cmp-val-main">100% Puffed Phulkas</div>
+                  <div class="cmp-val-tag">Soft for 8+ Hours</div>
+                </td>
+                <td class="cmp-brand-col">
+                  <span class="cmp-mobile-lbl" id="cmpMobileBrandLbl7">Aashirvaad Superior MP</span>
+                  <div class="cmp-val-main">Standard Chakki Softness</div>
+                  <div class="cmp-val-sub">Hardens after cooling</div>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -1838,7 +1912,7 @@
   </aside>
 
   <!-- JavaScript -->
-  <script src="script.js?v=29.0"></script>
+  <script src="script.js?v=29.1"></script>
 <script>
     function updateHudCircle(val) {
       var rotis = parseInt(val, 10) || 3;
@@ -1895,4 +1969,5 @@
   </script>
 </body>
 </html>
+
 

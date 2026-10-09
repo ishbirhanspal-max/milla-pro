@@ -1974,6 +1974,11 @@ function switchCompareAtta(brandKey) {
   if (brandGiEl) brandGiEl.textContent = data.gi;
   if (brandBloatEl) brandBloatEl.textContent = data.bloat;
   if (brandCostEl) brandCostEl.textContent = data.costPer10g;
+
+  for (var i = 1; i <= 7; i++) {
+    var mobEl = document.getElementById('cmpMobileBrandLbl' + i);
+    if (mobEl) mobEl.textContent = data.name;
+  }
 }
 
 // 5. Dynamic Glassmorphic Floating Island Sticky Nav (Feature 5.1)
