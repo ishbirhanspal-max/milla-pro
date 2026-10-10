@@ -28,36 +28,38 @@
 
   <!-- 2. MASTER HEADER -->
   <header class="master-header">
-        <div class="mh-container">
-      <div class="mh-left-group">
+    <div class="mh-container">
+      <a href="index.html" class="mh-logo">
+        MILLA <span>PRO</span>™
+      </a>
+
+      <nav class="mh-nav">
+        <a href="index.html" class="mh-nav-link">Home</a>
+        <a href="products.html" class="mh-nav-link">Shop Atta</a>
+        <a href="#ingredients" class="mh-nav-link">Ingredients</a>
+        <a href="#cost-comparison" class="mh-nav-link">Cost Comparison</a>
+        <a href="#family-calculator" class="mh-nav-link">Calculator</a>
+        <a href="#cooking-steps" class="mh-nav-link">How to Cook</a>
+        <a href="reports.html" class="mh-nav-link">Lab Reports</a>
+        <a href="#faq-trust" class="mh-nav-link">FAQ</a>
+      </nav>
+
+      <div class="mh-actions">
+        <a href="https://wa.me/919876543210?text=Hi%20MILLA%20PRO%2C%20I%20have%20a%20query%20about%20High-Protein%20Atta" target="_blank" rel="noopener noreferrer" class="mh-whatsapp-btn" title="WhatsApp Support">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c.969.54 1.761.735 2.806.735 3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.767-5.768-5.767zm7.429 5.766c0 4.104-3.341 7.445-7.445 7.445-1.258 0-2.434-.316-3.468-.867l-3.847 1.009 1.026-3.742c-.66-1.113-1.042-2.416-1.042-3.845 0-4.104 3.341-7.445 7.445-7.445 4.104 0 7.445 3.341 7.445 7.445z"/></svg>
+          <span class="mh-whatsapp-text">WhatsApp</span>
+        </a>
+
+        <button type="button" class="mh-cart-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span>Cart</span>
+          <span class="mh-cart-badge" id="navCartCount">0</span>
+        </button>
+
         <button type="button" class="mh-menu-btn" onclick="openSidebar()" aria-label="Open Navigation Menu">
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
-        </button>
-
-        <a href="index.html" class="mh-logo">
-          MILLA <span>PRO</span>™
-        </a>
-      </div>
-
-      <nav class="mh-nav">
-        <a href="index.html#hero-buy" class="mh-nav-link">Shop Atta</a>
-        <a href="index.html#ingredients" class="mh-nav-link">Ingredients</a>
-        <a href="index.html#cost-comparison" class="mh-nav-link">Cost Comparison</a>
-        <a href="index.html#family-calculator" class="mh-nav-link">Calculator</a>
-        <a href="index.html#cooking-steps" class="mh-nav-link">How to Cook</a>
-        <a href="index.html#faq-trust" class="mh-nav-link">Lab Tests &amp; FAQ</a>
-      </nav>
-
-      <div class="mh-actions">
-        <a href="https://wa.me/919876543210?text=Hi%20MILLA%20PRO%2C%20I%20have%20a%20query%20about%20High-Protein%20Atta" target="_blank" rel="noopener noreferrer" class="mh-whatsapp-btn">
-          <span>💬</span> WhatsApp
-        </a>
-
-        <button type="button" class="mh-cart-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart">
-          <span>🛒</span> Cart
-          <span class="mh-cart-badge" id="navCartCount">0</span>
         </button>
       </div>
     </div>
@@ -208,102 +210,114 @@
   <main>
 
     <!-- 3. HERO SECTION (2-COLUMN PRODUCT LAYOUT) -->
-    <section class="hero-product-section" id="hero-buy">
-      <div class="hero-product-container">
-        <div class="hero-product-grid">
+    <!-- FLAGSHIP BRAND HERO (Spacious, Futuristic, Luxurious) -->
+    <section class="flagship-hero-section" id="hero-flagship">
+      <div class="flagship-container">
+        
+        <div class="flagship-hero-header">
+          <div class="flagship-kicker">
+            <span>✨ 100% PURE GRAIN MATRIX • ZERO CHEMICALS • LOW GI 42</span>
+          </div>
 
-          <!-- Left Side: Product Gallery -->
-          <div class="hero-gallery-wrap">
-            <div class="hero-main-card">
-              <img id="mainProductImg" src="milla-pouch-front.jpeg" alt="MILLA PRO Orange Stand-up Zipper Pouch" class="hero-main-img">
+          <h1 class="flagship-title">
+            Close India's 80% Protein Gap.<br>
+            <span class="flagship-title-gradient">Right At The Dining Table.</span>
+          </h1>
+
+          <p class="flagship-subtitle">
+            Experience India’s first cold-milled, 45g high-protein flour formulated from 60% Sharbati wheat, 30% defatted soya, and 10% roasted peanuts. Delicious, soft rotis with 3× regular protein — zero whey bloat, zero preservatives.
+          </p>
+
+          <div class="flagship-metric-capsule">
+            <div class="f-metric">
+              <strong>45g</strong>
+              <span>Protein / 100g</span>
             </div>
-
-            <div class="hero-thumb-strip">
-              <button type="button" class="hero-thumb-btn active" onclick="switchProductImage('milla-pouch-front.jpeg', this)">
-                <img src="milla-pouch-front.jpeg" alt="Front Pouch Thumbnail">
-                <span>Front Pouch</span>
-              </button>
-              <button type="button" class="hero-thumb-btn" onclick="switchProductImage('milla-pouch-back.jpeg', this)">
-                <img src="milla-pouch-back.jpeg" alt="Back Pouch Thumbnail">
-                <span>Back Pouch</span>
-              </button>
-              <button type="button" class="hero-thumb-btn" onclick="switchProductImage('nutrition-table-closeup.jpg', this)">
-                <img src="nutrition-table-closeup.jpg" alt="Nutrition Table Thumbnail">
-                <span>Nutrition Table</span>
-              </button>
-              <button type="button" class="hero-thumb-btn" onclick="switchProductImage('roti-broken-down.jpeg', this)">
-                <img src="roti-broken-down.jpeg" alt="Soft Roti Thumbnail">
-                <span>Soft Roti Close-up</span>
-              </button>
+            <div class="f-metric-sep"></div>
+            <div class="f-metric">
+              <strong>15g</strong>
+              <span>Per 2 Rotis</span>
+            </div>
+            <div class="f-metric-sep"></div>
+            <div class="f-metric">
+              <strong>Low GI 42</strong>
+              <span>Diabetic Friendly</span>
+            </div>
+            <div class="f-metric-sep"></div>
+            <div class="f-metric">
+              <strong>NABL Tested</strong>
+              <span>Certified 45.2%</span>
             </div>
           </div>
 
-          <!-- Right Side: Buy Box -->
-          <div class="hero-buy-box">
-            <div class="buybox-sub-badge">
-              🌾 45g Protein per 100g • 15g Protein per Roti
-            </div>
-
-            <h1 class="buybox-title">
-              MILLA PRO™ High-Protein Wheat Atta
-            </h1>
-
-            <div class="buybox-social-proof">
-              <span class="buybox-stars">★★★★★</span>
-              <span class="buybox-proof-text">4.9/5 (Envirocare NABL Lab Tested)</span>
-            </div>
-
-            <div class="buybox-price-wrap">
-              <span id="heroPrice" class="buybox-price">₹249</span>
-              <span id="heroMrp" class="buybox-mrp">₹299</span>
-              <span id="heroSave" class="buybox-save-tag">Save ₹50</span>
-              <div class="buybox-tax-note">Incl. 5% GST • Pan-India Delivery in 3–5 Days</div>
-            </div>
-
-            <!-- Pack Selector Buttons -->
-            <div class="pack-selector-label">Select Pack Size:</div>
-            <div class="pack-selector-grid">
-              <button type="button" class="pack-select-btn active" data-pack="1kg" onclick="selectPack('1kg')">
-                <span class="pack-badge-savings">Save ₹50</span>
-                <span class="pack-select-title">1 Kg Pouch</span>
-                <span class="pack-select-price">₹249</span>
-              </button>
-              <button type="button" class="pack-select-btn" data-pack="5kg" onclick="selectPack('5kg')">
-                <span class="pack-badge-savings">Save ₹300</span>
-                <span class="pack-select-title">5 Kg Saver Pack</span>
-                <span class="pack-select-price">₹1,199</span>
-              </button>
-            </div>
-
-            <!-- Full-Width Orange CTA -->
-            <button type="button" class="hero-cta-btn" onclick="buyNowCurrentPack()">
-              <span>ADD TO CART / BUY NOW</span>
-              <span>&rarr;</span>
-            </button>
-
-            <!-- 4 Clean Trust Bullets -->
-            <div class="hero-trust-bullets">
-              <div class="trust-bullet-row">
-                <span class="trust-bullet-icon">🌾</span>
-                <span>60% Wheat &amp; Wheat Protein • 30% Soya • 10% Peanut</span>
-              </div>
-              <div class="trust-bullet-row">
-                <span class="trust-bullet-icon">🫓</span>
-                <span>Puffs on Tawa &amp; Stays Soft for 8+ Hours</span>
-              </div>
-              <div class="trust-bullet-row">
-                <span class="trust-bullet-icon">🛡️</span>
-                <span>Zero Added Preservatives • Zero Whey Bloat</span>
-              </div>
-              <div class="trust-bullet-row">
-                <span class="trust-bullet-icon">🚚</span>
-                <span>Pan-India Delivery in 3–5 Days</span>
-              </div>
-            </div>
-
+          <div class="flagship-cta-group">
+            <a href="products.html" class="flagship-btn-primary">
+              <span>Shop Atta — From ₹249</span>
+              <span class="f-arrow">→</span>
+            </a>
+            <a href="#family-calculator" class="flagship-btn-secondary">
+              <span>Calculate Family Deficit</span>
+              <span class="f-arrow">↓</span>
+            </a>
           </div>
-
         </div>
+
+        <!-- Visual Stage Showcase -->
+        <div class="flagship-showcase-wrap">
+          <div class="flagship-visual-stage">
+            <img src="milla-pouch-front.jpeg" alt="MILLA PRO Orange Stand-up Zipper Pouch" class="flagship-pouch-img">
+            <div class="flagship-floating-pill pill-left">
+              <span class="pill-dot"></span>
+              <span>45.2g Certified Protein</span>
+            </div>
+            <div class="flagship-floating-pill pill-right">
+              <span class="pill-check">✓</span>
+              <span>Puffs Soft &amp; Golden</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clean 2-Pack Selector Snapshot -->
+        <div class="flagship-pack-snapshot">
+          <div class="pack-snap-card">
+            <div class="pack-snap-top">
+              <span class="pack-snap-tag">TRIAL PACK</span>
+              <span class="pack-snap-save">Save ₹50</span>
+            </div>
+            <div class="pack-snap-title">1 Kg Stand-up Pouch</div>
+            <div class="pack-snap-sub">~450g Total Protein &bull; Ideal for 1-week family trial &bull; ₹20 per 45g protein</div>
+            <div class="pack-snap-price-row">
+              <span class="pack-snap-price">₹249</span>
+              <span class="pack-snap-mrp">₹299</span>
+            </div>
+            <div class="pack-snap-actions">
+              <button type="button" class="pack-snap-add-btn" onclick="quickAddToCart('pack-1kg')">
+                <span>+ Add to Cart</span>
+              </button>
+              <a href="products.html" class="pack-snap-view-link">Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="pack-snap-card featured">
+            <div class="pack-snap-top">
+              <span class="pack-snap-tag featured">FAMILY SAVER</span>
+              <span class="pack-snap-save featured">Save ₹300 (20% OFF)</span>
+            </div>
+            <div class="pack-snap-title">5 Kg Value Saver Pack</div>
+            <div class="pack-snap-sub">~2,250g Total Protein &bull; 30-Day Household Nutrition &bull; Maximum Value</div>
+            <div class="pack-snap-price-row">
+              <span class="pack-snap-price">₹1,199</span>
+              <span class="pack-snap-mrp">₹1,499</span>
+            </div>
+            <div class="pack-snap-actions">
+              <button type="button" class="pack-snap-add-btn featured" onclick="quickAddToCart('pack-5kg')">
+                <span>+ Add to Cart</span>
+              </button>
+              <a href="products.html" class="pack-snap-view-link">Details &rarr;</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -636,75 +650,7 @@
   </main>
 
   <!-- MOBILE STICKY BUY BAR -->
-  <div id="mobileStickyBar" class="mobile-sticky-buy-bar">
-    <div class="mobile-sticky-info">
-      <span id="mobileStickyText" class="mobile-sticky-title">MILLA PRO 1Kg - ₹249</span>
-      <span class="mobile-sticky-price">₹249</span>
-    </div>
-    <button type="button" class="mobile-sticky-btn" onclick="buyNowCurrentPack()">
-      BUY NOW
-    </button>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="ft-footer">
-    <div class="ft-container">
-      <div class="ft-grid">
-        
-        <!-- Left: Brand + Info -->
-        <div class="ft-brand">
-          <div class="ft-logo">MILLA <span>PRO</span>™</div>
-          <p class="ft-brand-text">
-            India's trusted 100% natural high-protein chakki atta delivering 15g pure whole grain protein in every single roti without synthetic whey or chemical preservatives.
-          </p>
-          <div class="ft-fssai-box">
-            <strong>MFG &amp; PACKED BY:</strong> A K FOODS<br>
-            Gala No. 210, Daulat Udyog Bhavan, Wadhavali, CG Road, Chembur, Mumbai - 400074<br>
-            <strong>FSSAI Lic. No:</strong> 21526007002971 &bull; GST 5% Included
-          </div>
-          <p class="ft-cta-note">
-            ★ Loved by 30,000+ Indian families &amp; counting
-          </p>
-        </div>
-
-        <!-- Right: Nav Columns -->
-        <div class="ft-nav-grid">
-          <div class="ft-col">
-            <h4 class="ft-col-title">Shop</h4>
-            <ul class="ft-col-list">
-              <li><a class="ft-col-link" href="#hero-buy" onclick="selectPack('1kg')">1 KG Pouch (₹249)</a></li>
-              <li><a class="ft-col-link" href="#hero-buy" onclick="selectPack('5kg')">5 KG Saver Pack (₹1,199)</a></li>
-              <li><a class="ft-col-link" href="products.html">All Products</a></li>
-            </ul>
-          </div>
-          <div class="ft-col">
-            <h4 class="ft-col-title">Learn</h4>
-            <ul class="ft-col-list">
-              <li><a class="ft-col-link" href="#ingredients">Ingredients &amp; Fractions</a></li>
-              <li><a class="ft-col-link" href="reports.html">Official NABL Reports</a></li>
-              <li><a class="ft-col-link" href="#family-calculator">Family Macro Calculator</a></li>
-            </ul>
-          </div>
-          <div class="ft-col">
-            <h4 class="ft-col-title">Brand</h4>
-            <ul class="ft-col-list">
-              <li><a class="ft-col-link" href="about.html">Our Mission</a></li>
-              <li><a class="ft-col-link" href="#cooking-steps">How to Cook Soft Rotis</a></li>
-              <li><a class="ft-col-link" href="contact.html">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="ft-col">
-            <h4 class="ft-col-title">Help &amp; Legal</h4>
-            <ul class="ft-col-list">
-              <li><a class="ft-col-link" href="shipping-policy.html">Pan-India Delivery (3–5 Days)</a></li>
-              <li><a class="ft-col-link" href="refund-policy.html">Refund Policy</a></li>
-              <li><a class="ft-col-link" href="privacy-policy.html">Privacy Policy</a></li>
-              <li><a class="ft-col-link" href="terms.html">Terms of Service</a></li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
+  
 
       <div class="ft-bottom">
         <div>&copy; 2026 MILLA PRO™ (A K FOODS). All rights reserved. Taxed @ 5% GST Included.</div>
@@ -830,17 +776,7 @@
     </div>
   </div>
 
-  <!-- Feature 5.1: Dynamic Glassmorphic Floating Island Sticky Nav -->
-  <aside class="floating-island-bar" id="floatingIsland" aria-label="Quick Order Capsule">
-    <div class="island-info-wrap">
-      <span class="island-title">MILLA PRO™ Atta</span>
-      <span class="island-badge">~45g Protein</span>
-      <span class="island-price">₹249</span>
-    </div>
-    <button type="button" class="island-btn" onclick="window.location.href='products.html'">
-      <span>Quick Add +</span>
-    </button>
-  </aside>
+  
 
   <!-- JavaScript -->
   

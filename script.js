@@ -2005,19 +2005,7 @@ function switchCompareAtta(brandKey) {
 // 5. Dynamic Glassmorphic Floating Island Sticky Nav (Feature 5.1)
 function initFloatingIsland() {
   var island = document.getElementById('floatingIsland');
-  if (!island) return;
-
-  var lastScrollY = window.scrollY;
-  window.addEventListener('scroll', function() {
-    var currentY = window.scrollY;
-    // Show after scrolling past 350px
-    if (currentY > 350) {
-      island.classList.add('visible');
-    } else {
-      island.classList.remove('visible');
-    }
-    lastScrollY = currentY;
-  }, { passive: true });
+  if (island) island.style.display = 'none';
 }
 
 // =========================================================================
@@ -2195,3 +2183,90 @@ document.addEventListener('keydown', function(e) {
     if (typeof closeCartDrawer === 'function') closeCartDrawer();
   }
 });
+
+
+// ==========================================================================
+// UNIFIED MASTER SIDEBAR & CART DRAWER CONTROLLERS (GUARANTEED RIGHT ONLY)
+// ==========================================================================
+function openSidebar() {
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  if (sidebar) {
+    sidebar.classList.add('active');
+    sidebar.classList.add('open');
+  }
+  if (overlay) {
+    overlay.style.display = 'block';
+    setTimeout(() => {
+      overlay.classList.add('active');
+      overlay.classList.add('open');
+    }, 10);
+  }
+  document.body.style.overflow = 'hidden';
+  const stickyBar = document.getElementById('mobileStickyBar');
+  if (stickyBar) stickyBar.style.display = 'none';
+}
+
+function closeSidebar() {
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  if (sidebar) {
+    sidebar.classList.remove('active');
+    sidebar.classList.remove('open');
+  }
+  if (overlay) {
+    overlay.classList.remove('active');
+    overlay.classList.remove('open');
+    setTimeout(() => {
+      if (!overlay.classList.contains('active')) overlay.style.display = 'none';
+    }, 300);
+  }
+  document.body.style.overflow = '';
+}
+
+window.openMobileSidebar = openSidebar;
+window.closeMobileSidebar = closeSidebar;
+window.openSidebar = openSidebar;
+window.closeSidebar = closeSidebar;
+
+function openCartDrawer() {
+  const overlay = document.getElementById('cartOverlay');
+  const drawer = document.getElementById('cartDrawer');
+  if (overlay) {
+    overlay.style.display = 'block';
+    setTimeout(() => overlay.classList.add('active'), 10);
+  }
+  if (drawer) {
+    drawer.classList.add('active');
+    drawer.classList.add('open');
+  }
+  document.body.classList.add('cart-open');
+  document.body.style.overflow = 'hidden';
+  if (typeof updateCartDrawerUI === 'function') {
+    updateCartDrawerUI();
+  }
+  const stickyBar = document.getElementById('mobileStickyBar');
+  if (stickyBar) stickyBar.style.display = 'none';
+  const island = document.getElementById('floatingIsland');
+  if (island) island.style.display = 'none';
+}
+
+function closeCartDrawer() {
+  const overlay = document.getElementById('cartOverlay');
+  const drawer = document.getElementById('cartDrawer');
+  if (overlay) {
+    overlay.classList.remove('active');
+    setTimeout(() => {
+      if (!overlay.classList.contains('active')) overlay.style.display = 'none';
+    }, 250);
+  }
+  if (drawer) {
+    drawer.classList.remove('active');
+    drawer.classList.remove('open');
+  }
+  document.body.classList.remove('cart-open');
+  document.body.style.overflow = '';
+}
+
+window.openCartDrawer = openCartDrawer;
+window.closeCartDrawer = closeCartDrawer;
