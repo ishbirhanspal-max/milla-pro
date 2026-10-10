@@ -11058,16 +11058,59 @@ html, body {
 }
 
 .mh-logo {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
+}
+
+.mh-logo-main {
   font-size: 1.35rem !important;
   font-weight: 900 !important;
   color: var(--text-primary, #1C1612) !important;
-  text-decoration: none !important;
   letter-spacing: -0.025em !important;
   white-space: nowrap !important;
-  flex-shrink: 0 !important;
+  line-height: 1 !important;
 }
 
+.mh-logo-main span,
 .mh-logo span {
+  color: var(--accent, #D85A1D) !important;
+}
+
+.mh-logo-tagline,
+.sidebar-logo-tagline {
+  font-size: 0.56rem !important;
+  font-weight: 800 !important;
+  color: var(--accent, #D85A1D) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  margin-top: 3px !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  opacity: 0.95 !important;
+}
+
+.sidebar-logo {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+}
+
+.sidebar-logo-main {
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  color: var(--text-primary, #1C1612) !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1 !important;
+}
+
+.sidebar-logo-main span,
+.sidebar-logo span {
   color: var(--accent, #D85A1D) !important;
 }
 
@@ -11154,8 +11197,12 @@ html, body {
   .mh-actions {
     gap: 0.45rem !important;
   }
-  .mh-logo {
-    font-size: 1.22rem !important;
+  .mh-logo-main {
+    font-size: 1.16rem !important;
+  }
+  .mh-logo-tagline {
+    font-size: 0.50rem !important;
+    letter-spacing: 0.05em !important;
   }
   .mh-cart-btn {
     padding: 6px 12px !important;
