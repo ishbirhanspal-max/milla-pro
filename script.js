@@ -428,7 +428,7 @@ function updateCartDrawerUI() {
         totalGst += item.gst * item.qty;
         totalCount += item.qty;
 
-        const packLabel = item.id === '5kg' ? '5 KG Family Saver Pack' : '1 KG Trial Pouch';
+        const packLabel = item.id === '5kg' ? '5 KG Family Saver Pack' : '1 KG Pouch';
         const thumbSrc = item.id === '5kg' ? 'milla-pouch-cover.jpeg' : 'milla-pouch-front.jpeg';
 
         let priceLineHtml = `Qty: <strong>${item.qty}</strong> × ₹${item.price} = <strong class="cic-item-total">₹${itemTotal}</strong> <span class="cic-mrp"><strike>₹${itemMrpTotal}</strike></span>`;
