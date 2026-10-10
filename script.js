@@ -323,9 +323,10 @@ function changeQty(delta) {
 // Cart Management & Drawer
 // ==========================================
 function addToCart(packId = null, qty = null) {
-  const targetPackId = packId || currentPackId;
-  const targetQty = qty || currentQty;
-  const pack = PACKS[targetPackId];
+  let targetPackId = (packId || currentPackId || '1kg').toString().trim().toLowerCase();
+  targetPackId = targetPackId.replace('pack-', '').replace('pouch-', '');
+  const targetQty = qty || (typeof currentQty !== 'undefined' ? currentQty : 1);
+  const pack = PACKS[targetPackId] || PACKS['1kg'];
   if (!pack) return;
 
   const existing = cartItems.find(item => item.id === pack.id);
@@ -343,6 +344,9 @@ function addToCart(packId = null, qty = null) {
   }
 
   saveCart(cartItems);
+  if (typeof updateCartDrawerUI === 'function') {
+    updateCartDrawerUI();
+  }
   openCartDrawer();
 }
 
