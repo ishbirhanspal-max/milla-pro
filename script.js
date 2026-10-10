@@ -1,4 +1,14 @@
 
+// Force Permanent Clean Light Mode (No Dark Mode)
+(function() {
+  try {
+    localStorage.removeItem('milla_theme');
+    document.documentElement.removeAttribute('data-theme');
+    document.documentElement.setAttribute('data-theme', 'light');
+  } catch(e) {}
+})();
+
+
 // =========================================================================
 // Third-Party Extension Error Boundary (Suppresses Crypto Wallet inpage.js noise)
 // =========================================================================
@@ -269,6 +279,17 @@ function selectPack(packId) {
   const displayMrp = document.getElementById('displayMrp');
   const displayDiscount = document.getElementById('displayDiscount');
   const displayGstBreakdown = document.getElementById('displayGstBreakdown');
+  const heroPrice = document.getElementById('heroPrice');
+  const heroMrp = document.getElementById('heroMrp');
+  const heroSave = document.getElementById('heroSave');
+  const stickyBarText = document.getElementById('mobileStickyText');
+  if (heroPrice) heroPrice.innerText = `₹${pack.price}`;
+  if (heroMrp) heroMrp.innerText = `₹${pack.mrp}`;
+  if (heroSave) heroSave.innerText = pack.id === '5kg' ? 'Save ₹300' : 'Save ₹50';
+  if (stickyBarText) stickyBarText.innerText = `MILLA PRO ${pack.weight} - ₹${pack.price}`;
+  document.querySelectorAll('.pack-select-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-pack') === packId);
+  });
 
   if (displayPrice) displayPrice.innerText = pack.price;
   if (displayMrp) displayMrp.innerText = `MRP ₹${pack.mrp}`;
@@ -370,7 +391,7 @@ function updateCartDrawerUI() {
           <div style="font-size:3rem; margin-bottom:12px;">🌾</div>
           <h3 style="color:var(--text-dark); font-size:1.15rem; margin-bottom:6px;">Your Nutrition Cart is Empty</h3>
           <p style="color:#7A6B63; font-size:0.85rem; max-width:280px; margin:0 auto 16px;">
-            Upgrade your family's daily rotis to 15g clean plant protein.
+            Upgrade your family's daily rotis to 15g clean pure grain & seed protein.
           </p>
           <div style="display:flex; flex-direction:column; gap:8px; width:100%; max-width:260px; margin:0 auto;">
             <button type="button" onclick="quickAddToCart('1kg')" style="background:var(--secondary); border:none; color:#FFF; padding:10px 16px; border-radius:var(--radius-full); font-weight:800; font-size:0.85rem; cursor:pointer;">
@@ -570,7 +591,7 @@ function updateModalAmount() {
   const btnContinue = document.getElementById('btnContinueToPayment');
 
   if (modalTotal) modalTotal.innerText = `₹${finalPayable}`;
-  if (modalTax) modalTax.innerHTML = `Includes ₹${totalGst.toFixed(2)} (5% GST) • <strong>Delivery in 10–15 Days</strong> • <strong>Prepaid Only (No COD)</strong>`;
+  if (modalTax) modalTax.innerHTML = `Includes ₹${totalGst.toFixed(2)} (5% GST) • <strong>Delivery in 3–5 Days</strong> • <strong>Prepaid Only (No COD)</strong>`;
   if (btnContinue) btnContinue.innerHTML = `<span>Continue to Payment • ₹${finalPayable}</span> <span>&rarr;</span>`;
 }
 
@@ -898,7 +919,7 @@ function checkPincode() {
     return;
   }
 
-  res.innerText = `✓ Pincode ${pin}: Serviceable! Pan-India delivery in 10–15 Days via Bluedart / Delhivery. (100% Prepaid Orders, Strictly No COD).`;
+  res.innerText = `✓ Pincode ${pin}: Serviceable! Pan-India delivery in 3–5 Days via Bluedart / Delhivery. (100% Prepaid Orders, Strictly No COD).`;
   res.style.color = '#2E7D32';
 }
 
@@ -2062,3 +2083,87 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+// ==========================================================================
+// APPETIZING WARM MODERN LIGHT HELPERS
+// ==========================================================================
+
+function switchProductImage(src, btnEl) {
+  const mainImg = document.getElementById('mainProductImg');
+  if (mainImg) {
+    mainImg.src = src;
+  }
+  document.querySelectorAll('.hero-thumb-btn').forEach(btn => btn.classList.remove('active'));
+  if (btnEl) {
+    btnEl.classList.add('active');
+  }
+}
+
+function buyNowCurrentPack() {
+  addToCart(currentPackId, 1);
+  openCartDrawer();
+}
+
+function toggleCleanFaq(btnEl) {
+  const item = btnEl.closest('.clean-faq-item');
+  if (!item) return;
+  const isActive = item.classList.contains('active');
+  document.querySelectorAll('.clean-faq-item').forEach(el => el.classList.remove('active'));
+  if (!isActive) {
+    item.classList.add('active');
+  }
+}
+
+var currentFamilyPeople = 4;
+var currentRotisPerPerson = 3;
+
+function setHouseholdFamilySize(people) {
+  currentFamilyPeople = parseInt(people, 10) || 4;
+  document.querySelectorAll('.calc-pill-btn').forEach(function(btn) {
+    var p = parseInt(btn.getAttribute('data-people'), 10);
+    btn.classList.toggle('active', p === currentFamilyPeople);
+  });
+  updateFamilyCalculator();
+}
+
+function onMacroRotiSliderChange(val) {
+  currentRotisPerPerson = parseInt(val, 10) || 3;
+  var sliderValEl = document.getElementById('macroSliderVal');
+  if (sliderValEl) sliderValEl.textContent = currentRotisPerPerson + (currentRotisPerPerson === 1 ? ' Roti' : ' Rotis');
+  updateFamilyCalculator();
+}
+
+function updateFamilyCalculator() {
+  var familyTarget = currentFamilyPeople * 55;
+  var totalFamilyRotis = currentFamilyPeople * currentRotisPerPerson;
+  var standardAttaProtein = Math.round(totalFamilyRotis * 3);
+  var millaProtein = Math.round(totalFamilyRotis * 15);
+  var gapBoost = millaProtein - standardAttaProtein;
+  var percentMet = Math.min(100, Math.round((millaProtein / familyTarget) * 100));
+
+  var elTarget = document.getElementById('calcFamilyTarget');
+  var elStandard = document.getElementById('calcStandardProtein');
+  var elMilla = document.getElementById('calcMillaProtein');
+  var elPercent = document.getElementById('calcPercentMet');
+
+  if (elTarget) elTarget.textContent = familyTarget + 'g';
+  if (elStandard) elStandard.textContent = standardAttaProtein + 'g';
+  if (elMilla) elMilla.textContent = millaProtein + 'g (+' + gapBoost + 'g)';
+  if (elPercent) elPercent.textContent = percentMet + '%';
+}
+
+// Mobile Sticky Bar scroll watcher
+window.addEventListener('scroll', function() {
+  const stickyBar = document.getElementById('mobileStickyBar');
+  if (!stickyBar) return;
+  if (window.innerWidth <= 768) {
+    if (window.scrollY > 350) {
+      stickyBar.classList.add('visible');
+    } else {
+      stickyBar.classList.remove('visible');
+    }
+  } else {
+    stickyBar.classList.remove('visible');
+  }
+});
