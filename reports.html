@@ -25,35 +25,41 @@
 </div>
 <!-- 2. Authentic Sticky Master Header -->
 <header class="master-header">
-<div class="container header-inner">
-<a class="brand-logo" href="index.html">
-<span class="logo-main">MILLA <span>PRO</span>™</span>
-<span class="logo-sub">15G PROTEIN ATTA</span>
-</a>
-<nav class="desktop-nav">
-<a href="index.html">Home</a>
-<a class="shop-pill-nav" href="products.html">Shop Products</a>
-<a href="our-science.html">Our Science</a>
-<a href="index.html#whey-calculator">Whey Calculator</a>
-<a class="active" href="reports.html">NABL Reports</a>
-<a href="index.html#faq">FAQ</a>
-<a href="contact.html">Contact</a>
-</nav>
-<div class="header-actions">
+    <div class="mh-container">
+      <a href="index.html" class="mh-logo">
+        MILLA <span>PRO</span>™
+      </a>
 
-<a aria-label="Account" class="icon-btn" href="login.html" title="Account">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-</a>
-<button aria-label="Cart" class="icon-btn" onclick="openCartDrawer()" title="View Cart" type="button">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
-<span class="cart-badge-count" id="cartCountBadge">1</span>
-</button>
-<button aria-label="Open Menu" class="mobile-menu-btn" onclick="openMobileSidebar()" title="Menu" type="button">
-<svg fill="none" height="24" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="24"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
-</button>
-</div>
-</div>
-</header>
+      <nav class="mh-nav">
+        <a href="index.html" class="mh-nav-link">Home</a>
+        <a href="products.html" class="mh-nav-link">Shop Atta</a>
+        <a href="index.html#ingredients" class="mh-nav-link">Ingredients</a>
+        <a href="index.html#cost-comparison" class="mh-nav-link">Cost Comparison</a>
+        <a href="index.html#family-calculator" class="mh-nav-link">Calculator</a>
+        <a href="reports.html" class="mh-nav-link">Lab Reports</a>
+        <a href="faq.html" class="mh-nav-link">FAQ</a>
+      </nav>
+
+      <div class="mh-actions">
+        <a href="https://wa.me/919876543210?text=Hi%20MILLA%20PRO%2C%20I%20have%20a%20query%20about%20High-Protein%20Atta" target="_blank" rel="noopener noreferrer" class="mh-whatsapp-btn" title="WhatsApp Support">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c.969.54 1.761.735 2.806.735 3.181 0 5.767-2.586 5.768-5.766.001-3.18-2.585-5.767-5.768-5.767zm7.429 5.766c0 4.104-3.341 7.445-7.445 7.445-1.258 0-2.434-.316-3.468-.867l-3.847 1.009 1.026-3.742c-.66-1.113-1.042-2.416-1.042-3.845 0-4.104 3.341-7.445 7.445-7.445 4.104 0 7.445 3.341 7.445 7.445z"/></svg>
+          <span class="mh-whatsapp-text">WhatsApp</span>
+        </a>
+
+        <button type="button" class="mh-cart-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart" title="View Shopping Cart">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span>Cart</span>
+          <span class="mh-cart-badge" id="navCartCount">0</span>
+        </button>
+
+        <button type="button" class="mh-menu-btn" onclick="openSidebar()" aria-label="Open Navigation Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 <!-- Mobile Sidebar & Cart Drawers -->
 <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMobileSidebar()"></div>
 <aside aria-label="Navigation Menu" class="mobile-sidebar" id="mobileSidebar">
