@@ -11069,28 +11069,27 @@ html, body {
 .mh-logo-main {
   font-size: 1.35rem !important;
   font-weight: 900 !important;
-  color: var(--text-primary, #1C1612) !important;
+  color: #1C1612 !important;
   letter-spacing: -0.025em !important;
   white-space: nowrap !important;
   line-height: 1 !important;
 }
 
-.mh-logo-main span,
-.mh-logo span {
-  color: var(--accent, #D85A1D) !important;
+/* Explicitly: Only the inner span around PRO is orange, MILLA remains dark #1C1612 */
+.mh-logo-main > span {
+  color: #D85A1D !important;
 }
 
 .mh-logo-tagline,
 .sidebar-logo-tagline {
-  font-size: 0.56rem !important;
-  font-weight: 800 !important;
-  color: var(--accent, #D85A1D) !important;
+  font-size: 0.55rem !important;
+  font-weight: 700 !important;
+  color: #6B6055 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.07em !important;
+  letter-spacing: 0.06em !important;
   margin-top: 3px !important;
   white-space: nowrap !important;
   line-height: 1 !important;
-  opacity: 0.95 !important;
 }
 
 .sidebar-logo {
@@ -11104,14 +11103,13 @@ html, body {
 .sidebar-logo-main {
   font-size: 1.35rem !important;
   font-weight: 900 !important;
-  color: var(--text-primary, #1C1612) !important;
+  color: #1C1612 !important;
   letter-spacing: -0.025em !important;
   line-height: 1 !important;
 }
 
-.sidebar-logo-main span,
-.sidebar-logo span {
-  color: var(--accent, #D85A1D) !important;
+.sidebar-logo-main > span {
+  color: #D85A1D !important;
 }
 
 .mh-actions {
