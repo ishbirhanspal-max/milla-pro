@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=32.0">
+  <link rel="stylesheet" href="style.css?v=33.0">
 </head>
 <body>
 
@@ -28,18 +28,26 @@
 
   <!-- 2. MASTER HEADER -->
   <header class="master-header">
-    <div class="mh-container">
-      <a href="index.html" class="mh-logo">
-        MILLA <span>PRO</span>™
-      </a>
+        <div class="mh-container">
+      <div class="mh-left-group">
+        <button type="button" class="mh-menu-btn" onclick="openSidebar()" aria-label="Open Navigation Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+
+        <a href="index.html" class="mh-logo">
+          MILLA <span>PRO</span>™
+        </a>
+      </div>
 
       <nav class="mh-nav">
-        <a href="index.html" class="mh-nav-link">Home</a>
-        <a href="#product-details" class="mh-nav-link">Nutrition &amp; Ingredients</a>
-        <a href="#product-comparison" class="mh-nav-link">Cost Comparison</a>
-        <a href="#product-recipe" class="mh-nav-link">How to Cook</a>
-        <a href="#product-reviews" class="mh-nav-link">Reviews</a>
-        <a href="#product-faq" class="mh-nav-link">FAQ</a>
+        <a href="index.html#hero-buy" class="mh-nav-link">Shop Atta</a>
+        <a href="index.html#ingredients" class="mh-nav-link">Ingredients</a>
+        <a href="index.html#cost-comparison" class="mh-nav-link">Cost Comparison</a>
+        <a href="index.html#family-calculator" class="mh-nav-link">Calculator</a>
+        <a href="index.html#cooking-steps" class="mh-nav-link">How to Cook</a>
+        <a href="index.html#faq-trust" class="mh-nav-link">Lab Tests &amp; FAQ</a>
       </nav>
 
       <div class="mh-actions">
@@ -54,6 +62,77 @@
       </div>
     </div>
   </header>
+
+
+  <!-- MINIMALIST OFF-CANVAS SIDEBAR -->
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+  <aside id="mobileSidebar" class="minimal-sidebar" aria-label="Navigation Menu">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">
+        MILLA <span>PRO</span>™
+      </a>
+      <button type="button" class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close Navigation">✕</button>
+    </div>
+
+    <div class="sidebar-content">
+      <div class="sidebar-section">
+        <span class="sidebar-section-title">Shop Packs</span>
+        <ul class="sidebar-nav-list">
+          <li>
+            <a href="index.html#hero-buy" onclick="closeSidebar(); selectPack('1kg');" class="sidebar-nav-link">
+              <span>1 Kg Trial Pouch</span>
+              <span class="sidebar-price-tag">₹249</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#hero-buy" onclick="closeSidebar(); selectPack('5kg');" class="sidebar-nav-link">
+              <span>5 Kg Family Saver Pack</span>
+              <span class="sidebar-price-tag highlight">₹1,199</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html" onclick="closeSidebar();" class="sidebar-nav-link">
+              <span>All Products &amp; Details</span>
+              <span class="sidebar-arrow">&rarr;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-section-title">Nutrition &amp; Science</span>
+        <ul class="sidebar-nav-list">
+          <li><a href="index.html#ingredients" onclick="closeSidebar();" class="sidebar-nav-link">100% Grain Ingredients</a></li>
+          <li><a href="index.html#cost-comparison" onclick="closeSidebar();" class="sidebar-nav-link">Cost Comparison (45g Protein)</a></li>
+          <li><a href="index.html#family-calculator" onclick="closeSidebar();" class="sidebar-nav-link">Family Macro Calculator</a></li>
+          <li><a href="index.html#cooking-steps" onclick="closeSidebar();" class="sidebar-nav-link">How to Cook Soft Rotis</a></li>
+          <li><a href="reports.html" onclick="closeSidebar();" class="sidebar-nav-link">Official NABL Lab Reports</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="sidebar-section-title">Company &amp; Care</span>
+        <ul class="sidebar-nav-list">
+          <li><a href="about.html" onclick="closeSidebar();" class="sidebar-nav-link">About Our Mission</a></li>
+          <li><a href="contact.html" onclick="closeSidebar();" class="sidebar-nav-link">Contact &amp; Head Office</a></li>
+          <li><a href="index.html#faq-trust" onclick="closeSidebar();" class="sidebar-nav-link">FAQ &amp; Kneading Guide</a></li>
+          <li><a href="shipping-policy.html" onclick="closeSidebar();" class="sidebar-nav-link">Pan-India Delivery (3–5 Days)</a></li>
+          <li><a href="refund-policy.html" onclick="closeSidebar();" class="sidebar-nav-link">Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="https://wa.me/919876543210?text=Hi%20MILLA%20PRO%2C%20I%20have%20a%20query%20about%20High-Protein%20Atta" target="_blank" rel="noopener noreferrer" class="sidebar-whatsapp-btn">
+          <span>💬</span> Chat on WhatsApp
+        </a>
+        <div class="sidebar-meta">
+          <strong>A K FOODS</strong> &bull; Chembur, Mumbai - 400074<br>
+          FSSAI Lic. No: 21526007002971 &bull; 5% GST Included
+        </div>
+      </div>
+    </div>
+  </aside>
+
 
   <!-- CART OVERLAY & DRAWER -->
   <div id="cartOverlay" class="cart-overlay" onclick="closeCartDrawer()" style="display:none;"></div>
@@ -711,6 +790,6 @@
   <!-- JavaScript -->
   
 
-  <script src="script.js?v=32.0"></script>
+  <script src="script.js?v=33.0"></script>
 </body>
 </html>

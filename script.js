@@ -2167,3 +2167,31 @@ window.addEventListener('scroll', function() {
     stickyBar.classList.remove('visible');
   }
 });
+
+
+// ==========================================================================
+// UNIVERSAL MINIMALIST SIDEBAR HANDLERS
+// ==========================================================================
+function openSidebar() {
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  if (sidebar) sidebar.classList.add('active');
+  if (overlay) overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSidebar() {
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  if (sidebar) sidebar.classList.remove('active');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Keydown Escape support
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeSidebar();
+    if (typeof closeCartDrawer === 'function') closeCartDrawer();
+  }
+});
