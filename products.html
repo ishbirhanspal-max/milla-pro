@@ -276,11 +276,27 @@
               </button>
             </div>
 
-            <!-- Full-Width Orange CTA -->
-            <button type="button" class="hero-cta-btn" onclick="buyNowCurrentPack()">
-              <span>ADD TO CART / BUY NOW</span>
-              <span>&rarr;</span>
-            </button>
+            <!-- Quantity Stepper -->
+            <div class="product-qty-row">
+              <span class="qty-label">Quantity:</span>
+              <div class="qty-stepper-box">
+                <button type="button" class="qty-step-btn" onclick="changeQty(-1)" aria-label="Decrease quantity">−</button>
+                <input type="number" id="productQty" class="qty-input" value="1" min="1" max="10" readonly>
+                <button type="button" class="qty-step-btn" onclick="changeQty(1)" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+
+            <!-- Two Action Buttons: Add to Cart (Opens Drawer) & Buy Now (Instant Checkout) -->
+            <div class="buybox-actions-group">
+              <button type="button" class="hero-cta-btn" onclick="addToCart(currentPackId, currentQty)">
+                <span>ADD TO CART • <span id="heroCtaPrice">₹249</span></span>
+                <span>&rarr;</span>
+              </button>
+              <button type="button" class="hero-buy-instant-btn" onclick="buyNowCurrentPack()">
+                <span>BUY NOW (INSTANT CHECKOUT)</span>
+                <span>⚡</span>
+              </button>
+            </div>
 
             <!-- 4 Clean Trust Bullets -->
             <div class="hero-trust-bullets">

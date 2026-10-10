@@ -306,6 +306,8 @@ function selectPack(packId) {
   if (stickyPriceText) stickyPriceText.innerHTML = `₹${pack.price} <small style="font-size:0.7rem; color:#6B5B52;">(Incl. 5% GST)</small>`;
   if (mobileBarPrice) mobileBarPrice.innerHTML = `₹${pack.price} <small>(${pack.weight} Pack)</small>`;
 
+  const heroCtaPrice = document.getElementById("heroCtaPrice");
+  if (heroCtaPrice && PACKS[currentPackId]) heroCtaPrice.innerText = "₹" + (PACKS[currentPackId].price * currentQty).toLocaleString("en-IN");
   updateModalAmount();
 }
 
@@ -315,6 +317,10 @@ function changeQty(delta) {
     currentQty = newQty;
     const qtyInput = document.getElementById('productQty');
     if (qtyInput) qtyInput.value = currentQty;
+    const heroCtaPrice = document.getElementById('heroCtaPrice');
+    if (heroCtaPrice && PACKS[currentPackId]) {
+      heroCtaPrice.innerText = '₹' + (PACKS[currentPackId].price * currentQty).toLocaleString('en-IN');
+    }
     updateModalAmount();
   }
 }

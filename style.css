@@ -11746,3 +11746,98 @@ body.cart-drawer-open .mobile-sticky-buy-bar,
     height: 34px !important;
   }
 }
+
+
+/* Quantity Stepper & Instant Buy Button */
+.product-qty-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 1rem !important;
+}
+
+.qty-label {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: var(--text-secondary, #5C5248) !important;
+}
+
+.qty-stepper-box {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle, #EAE6DF) !important;
+  border-radius: 9999px !important;
+  padding: 3px 6px !important;
+  box-shadow: 0 1px 4px rgba(26, 20, 16, 0.03) !important;
+}
+
+.qty-step-btn {
+  background: transparent !important;
+  border: none !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--text-primary, #1C1612) !important;
+  cursor: pointer !important;
+  border-radius: 50% !important;
+  transition: all 0.15s ease !important;
+}
+
+.qty-step-btn:hover {
+  background: var(--bg-canvas, #FAF9F6) !important;
+  color: var(--accent, #D85A1D) !important;
+}
+
+.qty-input {
+  width: 36px !important;
+  text-align: center !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  border: none !important;
+  background: transparent !important;
+  color: var(--text-primary, #1C1612) !important;
+  -moz-appearance: textfield !important;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+.buybox-actions-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.hero-buy-instant-btn {
+  width: 100% !important;
+  background: #1C1612 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #1C1612 !important;
+  border-radius: 9999px !important;
+  padding: 13px 24px !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.25s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+.hero-buy-instant-btn:hover {
+  background: #2E251E !important;
+  border-color: #2E251E !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(28, 22, 18, 0.15) !important;
+}
