@@ -2280,3 +2280,57 @@ function closeCartDrawer() {
 
 window.openCartDrawer = openCartDrawer;
 window.closeCartDrawer = closeCartDrawer;
+
+/* ==========================================================================
+   COST COMPARISON AUTO-TICKER (MOBILE)
+   Smoothly cycles comparison cards on mobile, pausing on touch/swipe
+   ========================================================================== */
+(function initCostComparisonTicker() {
+  function setupTickers() {
+    const costGrids = document.querySelectorAll('.cost-grid-5');
+    costGrids.forEach(grid => {
+      if (grid._tickerInitialized) return;
+      grid._tickerInitialized = true;
+
+      let isPaused = false;
+      let tickerInterval = null;
+
+      grid.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+      grid.addEventListener('touchend', () => {
+        setTimeout(() => { isPaused = false; }, 3500);
+      }, { passive: true });
+      grid.addEventListener('mouseenter', () => { isPaused = true; });
+      grid.addEventListener('mouseleave', () => { isPaused = false; });
+
+      function runTicker() {
+        if (window.innerWidth <= 768) {
+          if (!tickerInterval) {
+            tickerInterval = setInterval(() => {
+              if (isPaused) return;
+              const maxScroll = grid.scrollWidth - grid.clientWidth;
+              if (grid.scrollLeft >= maxScroll - 15) {
+                grid.scrollTo({ left: 0, behavior: 'smooth' });
+              } else {
+                grid.scrollBy({ left: 225, behavior: 'smooth' });
+              }
+            }, 3000);
+          }
+        } else {
+          if (tickerInterval) {
+            clearInterval(tickerInterval);
+            tickerInterval = null;
+          }
+        }
+      }
+
+      runTicker();
+      window.addEventListener('resize', runTicker);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupTickers);
+  } else {
+    setupTickers();
+  }
+})();
