@@ -11057,32 +11057,42 @@ html, body {
   flex-shrink: 0 !important;
 }
 
-.mh-logo {
+/* Logo & Tagline Wrapper */
+.mh-logo-wrap,
+.sidebar-logo-wrap {
   display: inline-flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
   text-decoration: none !important;
-  flex-shrink: 0 !important;
   line-height: 1 !important;
+  flex-shrink: 0 !important;
 }
 
-.mh-logo-main {
+.mh-logo,
+.sidebar-logo {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
   font-size: 1.35rem !important;
   font-weight: 900 !important;
   color: #1C1612 !important;
+  text-decoration: none !important;
   letter-spacing: -0.025em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  flex-shrink: 0 !important;
   white-space: nowrap !important;
   line-height: 1 !important;
 }
 
-/* Explicitly: Only the inner span around PRO is orange, MILLA remains dark #1C1612 */
-.mh-logo-main > span {
+/* Explicitly: PRO is orange, MILLA and TM are black */
+.mh-logo span,
+.sidebar-logo span {
   color: #D85A1D !important;
 }
 
-.mh-logo-tagline,
-.sidebar-logo-tagline {
-  font-size: 0.55rem !important;
+.mh-tagline,
+.sidebar-tagline {
+  font-size: 0.52rem !important;
   font-weight: 700 !important;
   color: #6B6055 !important;
   text-transform: uppercase !important;
@@ -11090,26 +11100,7 @@ html, body {
   margin-top: 3px !important;
   white-space: nowrap !important;
   line-height: 1 !important;
-}
-
-.sidebar-logo {
-  display: inline-flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  text-decoration: none !important;
-  line-height: 1 !important;
-}
-
-.sidebar-logo-main {
-  font-size: 1.35rem !important;
-  font-weight: 900 !important;
-  color: #1C1612 !important;
-  letter-spacing: -0.025em !important;
-  line-height: 1 !important;
-}
-
-.sidebar-logo-main > span {
-  color: #D85A1D !important;
+  display: block !important;
 }
 
 .mh-actions {
@@ -11195,11 +11186,11 @@ html, body {
   .mh-actions {
     gap: 0.45rem !important;
   }
-  .mh-logo-main {
-    font-size: 1.16rem !important;
+  .mh-logo {
+    font-size: 1.18rem !important;
   }
-  .mh-logo-tagline {
-    font-size: 0.50rem !important;
+  .mh-tagline {
+    font-size: 0.46rem !important;
     letter-spacing: 0.05em !important;
   }
   .mh-cart-btn {
